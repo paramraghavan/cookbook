@@ -1,0 +1,17 @@
+# Sabudana Vettal
+- Soak 1 cup sabudana over night in water
+- Drain the water
+- To the gridnder/mixeer -Add sabudana, 2 green chillies or more and salt to taste and a pinch of asofedit.
+- Add water as needed to the above. Run the grinder to a paste consistency
+- Pour into the wok, put it on gas
+- Let it cook really well into a watery soup
+- Let it cool down
+- Once it cool, get hold of parchment paper
+- lay the parchment paaper on the floor
+- The  cooked sabudana will be of kanji consistency
+- use a small ladle/spon and pour into thin round shape.
+- The riounds should not touch each other
+- Let it dry outside in sun
+- After 4/5 hours or in the evening, flip these over and let it dry
+- these should be very very dry
+- these can be fried in oil
