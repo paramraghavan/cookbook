@@ -24,7 +24,8 @@
 - mix with 1 to 1 and 1/2 teasoon salt(salt to taste)
 - add 1/4th teaspoon turmeric and mix it well
 
-
+## Step 2.0
+- wash the lemons well and put thm in mild luke warm salt water for several hours or overnight, this can help draw out some of the bitter compounds
 
 ## Step 2
 ### make spice for pickle
@@ -37,6 +38,7 @@
 - Grind the above
 
 
+
 ## Step3
 ### Marinate pickle with oil and spices
 - Amount of Sesame oil  - 4/5 table spoon
@@ -47,7 +49,7 @@
 - Add the spice ground above to oil
 - Add the optional 1/2 teaspoon read chilli powder(optional), cook for few mins
 - Add the lemons prepared  in the step above.
-- Cook for well some time in the wok, do not dehydrate it.
+- Cook the lemon on low heat in the wok - just sautee on low heat for 3 mins, **no need to boil**. High heat or extended heat can release bitter compound.
 - Switch off the stove
 - Let it cool down
 - Optional - As it cooling down **Add a 1/2 teaspoon full of sugar to wok mix well**
