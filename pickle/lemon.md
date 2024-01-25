@@ -2,11 +2,13 @@
 
 ## Step 1
 - Large Yellow lemons in NorthAmerica
-- Used 9
-- Cut lemon into 2 halves
-- Take one half and cut it into 8 
+- Used 8
+- Steam cook the lemons in idli plates
+- Cook idli  in stockpot, leave the bottom plate empty
+- Steam like idli for 15 minutes
+- Let it cool down for 10 minutes
+- Cut the lemon into small pieces
 - Get bottle( i needed 2 28 oz bottles/jars
-- Squeeze the  lemon into the jar/bottle and cut the lemon further if can can and add the lemon to the bottle/jar
 - If possible remove the seeds
 - Add all the other 8 lemons this way into the jar
 - Add salt and turmeric to taste

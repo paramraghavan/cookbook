@@ -2,7 +2,8 @@
 <img src="https://github.com/paramraghavan/cookbook/assets/52529498/7cc45a55-7c68-4faf-807b-979c4c57977b"  width="25%" height="25%">
 
 ## Ingredients
-- 4 Large Yellow lemons in NorthAmerica
+- ~~4 Large Yellow lemons in NorthAmerica~~
+- This works best for lemons in India
 - Red dry chillies 6-9( more if you want it spicier) 
 - Methi/fenugreek 1 teaspoon
 - 1/4 teaspoon Asfodita powder(little amount)
