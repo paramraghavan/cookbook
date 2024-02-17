@@ -1,0 +1,8 @@
+- 400 gm ginger clean and cut into small sizes
+- 100 gms; 4-5 lemon size tamrind
+- 100 jaggery
+- 5 green chilly
+- curry leaves
+- sesame oil, add  sesame seeds and let it crackle
+- fry ginger, and curry leaves in 
+- 
