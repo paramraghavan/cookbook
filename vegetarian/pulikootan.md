@@ -6,7 +6,7 @@
 - Roast the above in a wok with very little oil, you should hear methi seeds crackle
 - Empty wok into a small grinder, let it cool.
 - Add a pinch of asfodita to the grinder
-- Take  3/4 table spoon shredded coconut , microwave for 30 seconds 
+- Take  3 table spoon shredded coconut , microwave for 30 seconds 
 - Dump this coconut into the grinder
 
 ## Main step
