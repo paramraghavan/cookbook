@@ -12,7 +12,11 @@
 ## Main step
 - Soak Indian lemon or lime size tamarind in 1 cup water
 - Add some oil to wok and 1/4 teaspoon sesame seed,let it crackle, add few curry leaves to the wok 
-- Add to the wok these vegetables- one small onion - cut 6/8 peices, 1 potato or tararoot or sweet potato, if you have ladyfingers - 5/6 cut 1/3
+- Add to the wok these vegetables
+   - option 1 --> one small onion - cut 6/8 peices, 1 potato or tararoot, if you have ladyfingers - 5/6 cut 1/3.
+   - option 2 --> one small onion - cut 6/8 peices, small purple brinjals 4, chop each into 4 parts, one small onion - cut 6/8 peices,
+   - option 3 --> your choice
+-   
 - Add 2 cups water, 1/4 th teaspoon turmeric and 1/2 teaspoon salt 
 - Squeeze the 1 cup tamarind water into the wok 
 - Let the vegetables cook well
