@@ -1,7 +1,7 @@
 # Puli Kottan 
 
 ## Prepare masala
-- 1 table spoon rice soak in water , 15 minutes 
+- 1 to 2 table spoon rice soak in water , 15 minutes 
 - 1/2 teaspoon methi seeds + 1 long dry red chilli 
 - Roast the above in a wok with very little oil, you should hear methi seeds crackle
 - Empty wok into a small grinder, let it cool.
@@ -16,7 +16,6 @@
    - option 1 --> one small onion - cut 6/8 peices, 1 potato or tararoot, if you have ladyfingers - 5/6 cut 1/3.
    - option 2 --> one small onion - cut 6/8 peices, small purple brinjals 4, chop each into 4 parts, one small onion - cut 6/8 peices,
    - option 3 --> your choice
--   
 - Add 2 cups water, 1/4 th teaspoon turmeric and 1/2 teaspoon salt 
 - Squeeze the 1 cup tamarind water into the wok 
 - Let the vegetables cook well
