@@ -19,5 +19,5 @@
 - Now grind the stuff in the grinder into a paste, you can add some water from the wok
 - Once the veggies are cooked in the wok , add the ground paste into the wok and get the contents to a boil
 - And it’s ready
-- Get some curry leaves - 8 10 10, wash, put 6 of them directly into  wok, keep the remaining 4 leaves aside
+- Get some curry leaves - 8 to 10, wash, put 6 of them directly into  wok, keep the remaining 4 leaves aside
 - Crackled mustard seeds in oil( I use sesame oil, any oil is ok) and add 4 curry leaves once the mustard crackles, and add this to the wok
