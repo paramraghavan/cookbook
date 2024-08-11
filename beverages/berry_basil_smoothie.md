@@ -12,4 +12,8 @@
 
 **Preparation:**
 1. In a blender add above ingredients in the same order
+<<<<<<< HEAD
 2. Blend until smooth. 
+=======
+2. Blend until smooth. 
+>>>>>>> origin/main
