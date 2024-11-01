@@ -1,0 +1,61 @@
+I'll help modify your query to ensure it gets all rules and their latest results.
+
+
+
+```gremlin
+g.V().hasLabel('ruleset')
+  .project('ruleset', 'rules')
+  .by(elementMap())
+  .by(
+    out('has_rule').hasLabel('rule')
+      .project('rule', 'latestResult')
+      .by(elementMap())
+      .by(
+        out('has_result').hasLabel('result')
+          .order().by('created_timestamp', desc)
+          .limit(1)
+          .fold()
+      )
+      .fold()
+  )
+
+```
+
+The issue with the original query was that the nested `repeat` steps were causing some paths to be dropped. Here's what the new query does:
+
+1. Starts with ruleset vertices
+2. Uses `project` to create two fields:
+   - 'ruleset': Contains all ruleset properties
+   - 'rules': Contains an array of all rules and their latest results
+
+3. For each rule:
+   - Gets all rule properties using `elementMap()`
+   - Finds the latest result using `order().by().limit(1)`
+   - Uses `fold()` to collect results into an array
+
+Alternative version using path if you prefer that format:
+
+```gremlin
+g.V().hasLabel('ruleset')
+  .out('has_rule').hasLabel('rule')
+  .as('rule')
+  .coalesce(
+    out('has_result').hasLabel('result')
+      .order().by('created_timestamp', desc)
+      .limit(1),
+    constant([])  // handles case where rule has no results
+  )
+  .as('result')
+  .select('rule', 'result')
+  .by(elementMap())
+  .by(elementMap())
+
+```
+
+Key differences from your original query:
+1. Removed the nested `repeat` steps which were causing the traversal to stop early
+2. Used `project` or `select` to explicitly structure the output
+3. Added `coalesce` in the path version to handle rules with no results
+4. Used `fold()` to properly collect all rules and results
+
+Choose the first version if you want a nested document structure, or the second version if you prefer a flatter structure with explicit paths.
