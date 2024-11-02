@@ -2,8 +2,7 @@
 Ribbon Pakoda, also known as Ribbon Murukku, is a popular South Indian snack, especially during festivals like Diwali. It's crispy, savory, and quite simple to make. Here's a straightforward recipe:
 
 ### Ingredients:
-- Gram flour (Besan) - 2 cups - sure crispy
-  - or  Gram flour (Besan) - 3 cups, make sure to the thinnest disk to make it crispy
+- Gram flour (Besan)  3 cups, make sure to the thinnest disk to make it crispy
 - Rice flour - 1 cup
 - Butter or ghee - 2 tablespoons (melted)
 - Cumin seeds or ajwain (carom seeds) - 1 teaspoon
@@ -11,12 +10,14 @@ Ribbon Pakoda, also known as Ribbon Murukku, is a popular South Indian snack, es
 - Red chili powder - 1 teaspoon (adjust to taste)
 - Salt - to taste
 - Water - as needed to make the dough
+- ajwain - 1/4the teaspoon(optional)
 - Oil - for deep frying
+- 1/4 teaspoon-1/2 teaspoon Baking powder(will make it crispy)
 
 ### Instructions:
 
 1. **Prepare the Dough**:
-   - In a large bowl, mix together gram flour, rice flour, red chili powder, asafoetida, cumin seeds or ajwain, and salt.
+   - In a large bowl, mix together gram flour, rice flour, red chili powder, asafoetida, cumin seeds or ajwain, baking powder and salt.
    - Add the melted butter or ghee and mix well until the mixture resembles breadcrumbs.
    - Gradually add water and knead to form a smooth and soft dough. The dough should not be too stiff or too sticky.
 
