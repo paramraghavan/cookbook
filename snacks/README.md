@@ -5,3 +5,4 @@
 - [Ribbon Pakoda](https://github.com/paramraghavan/cookbook/blob/master/snacks/ribbon-pakoda.md)
 - [Til Ladoo](http://htmlpreview.github.io/?https://github.com/paramraghavan/cookbook/blob/master/snacks/tilLadoo.html)
 - [Badam Burfi](https://github.com/paramraghavan/cookbook/blob/master/snacks/badam-burfi.md)
+- [parupa-vadai.md](https://github.com/paramraghavan/cookbook/blob/master/snacks/parupa-channal-dal-vada.md)
