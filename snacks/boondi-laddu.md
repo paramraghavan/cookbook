@@ -17,11 +17,11 @@
 ## Make boondis
 * Add the 1.25 cup besan to a mixing bowl. Pour in (approximately 1.25 cups of) water and mix to form a lump free batter.
 * Let the batter sit idle for 15-20 mins. After that, add in more water to adjust the consistency for a flowing consistency batter.
-* Flowing consistency batter, meaning the batter in not too thick that, otherwise, i will not flow thru the jhara, it has to be free flowing
+* Flowing consistency batter, meaning the batter in not too thick that, otherwise, it will not flow through the jhara, it has to be free flowing
 * Heat up ghee/oil in high flame, once hot take the boondi jhara and keep it about 4 inches above the ghee and pour in some batter to the jhara.
 * Once sufficient boondis have dropped to the ghee, **let them cook for a minute or until boondis stop creating bubbles.**
 * Take down to a bowl/sieve/kitchen towel lined plate.
-* **Don't make the boondi's too crispy**, if you do so the sugar syrup will have hard time penerating the boondis
+* **Don't make the boondi's too crispy**, if you do so the sugar syrup will have hard time penetrating the boondis
 * **Batter Consistency** – Test the consistency of batter by pouring some batter in the jhara and see how boondi forms. It
   should fall down drop by drop, if it flows fast, you’d get oddly shaped boondi/lumps of boondi, if it flows slowly
   you’d get hard/tailed boondi.
