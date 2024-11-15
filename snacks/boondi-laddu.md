@@ -1,11 +1,14 @@
 ## Ingredients
-* 1.25 cup fine basin
-* 1.25 cup sugar
-* 1 cup water
-* Ghee or Oil- Sunflower, Canola, Vegetable to fry boondis
-* 3-4 Cloves in full
-* ½ teaspoon cardamom powder(optional)
-
+* Boondi
+  * 1.25 cup(~160gms) fine basin
+  * Water – ¾ cup appx. (175 – 180ml)
+  * Ghee or Oil - Sunflower, Canola, Vegetable to fry boondis
+* Sugar Syrup
+  * 1 ¼ cup (260g appx) sugar
+  * 1 cup water
+  * 3-4 Cloves in full
+  * ½ teaspoon cardamom powder(optional)
+  
 ## Steps
 * Make boondis first
 * Make sugar syrup
