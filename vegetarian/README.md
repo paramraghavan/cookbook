@@ -13,4 +13,5 @@
 - [tamrind-chilli-thokku.html](http://htmlpreview.github.io/?https://github.com/paramraghavan/cookbook/blob/master/vegetarian/tamrind-chilli-thokku.html)
 - [tomato-rasam](http://htmlpreview.github.io/?https://github.com/paramraghavan/cookbook/blob/master/vegetarian/tomato-rasam.html)
 - [vetha-kolambu](https://github.com/paramraghavan/cookbook/blob/master/vegetarian/vetha-kolambu.md)
+- [bisibele-bath](https://github.com/paramraghavan/cookbook/blob/master/vegetarian/bisibele-bath.md)
 <!-- - [tamrind-chilli](http://htmlpreview.github.io/?https://github.com/paramraghavan/cookbook/blob/master/vegetarian/tamrind-chilli.html)-->
