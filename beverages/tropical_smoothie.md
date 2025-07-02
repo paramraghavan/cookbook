@@ -29,7 +29,3 @@ Absolutely! Here’s a super simple tropical smoothie recipe you can make in jus
 	•	Swap orange juice for pineapple juice for extra tang.
 	•	Use plant-based yogurt for a vegan version.
 	•	Add spinach for a nutrient boost (the fruit will hide the taste!).
-
-⸻
-
-Let me know if you’d like ideas for other flavor combos! 🌞
