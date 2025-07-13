@@ -5,4 +5,6 @@
 - [Ribbon Pakoda](https://github.com/paramraghavan/cookbook/blob/master/snacks/ribbon-pakoda.md)
 - [Til Ladoo](https://github.com/paramraghavan/cookbook/blob/master/snacks/tilLadoo.md)
 - [Badam Burfi](https://github.com/paramraghavan/cookbook/blob/master/snacks/badam-burfi.md)
-- [parupa-vadai.md](https://github.com/paramraghavan/cookbook/blob/master/snacks/parupa-channal-dal-vada.md)
+- [parupa-vadai.md](https://github.com/paramraghavan/cookbook/blob/master/snacks/parupa-channa-dal-vada.md)
+- [cold-suji-halwa.md](https://github.com/paramraghavan/cookbook/blob/master/snacks/cold-suji-halwa.md)
+
