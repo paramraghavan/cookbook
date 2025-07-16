@@ -6,6 +6,7 @@
 * ½ cup **strawberries** (frozen)
 * ½ cup **blueberries** (frozen)
 * ½ banana (fresh or frozen)
+  * Banana alternative 1/2 cup Avocardo or Mango or Yogurt.
 * ½ cup **cranberry juice** or **water** (for blending)
 * 1–2 tsp **honey** or agave (optional, to taste)
 * Ice (optional, if you want it colder/thicker)
