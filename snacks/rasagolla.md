@@ -10,6 +10,7 @@
 * **Optional binders (use only if needed):** ½ tsp fine semolina (sooji) *or* ½ tsp cornstarch
 
 **Tools:** wide deep pot with lid, slotted spoon, plate for kneading, measuring cups, bowl.
+> To knead you can use the dry home grinder, bset is to with hand as you have more control
 
 ---
 
