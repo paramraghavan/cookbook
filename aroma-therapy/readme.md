@@ -1,6 +1,6 @@
 # Aroma Therapy and Essential oil
 - Sandalwood for mediation
-- sweek basil oil for exam preparation, concentration for studies
+- sweet basil oil for exam preparation, concentration for studies
 - Lavendar - destresser, helps you sleep in the evening
 
 # Make you own diffuser using baking soda
@@ -70,3 +70,4 @@ Here are a couple of easy ways:
 * Use **eucalyptus or peppermint** in study/work areas (focus & fresh).
 * When the scent fades, just add more drops of oil—no need to replace all the baking soda right away.
 
+ref: https://youtu.be/BaOJD7WiohU?si=aMkwz1Ln8Zu7yuwp
