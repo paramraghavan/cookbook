@@ -11,11 +11,11 @@
 - Water (as needed)
 - Oil (for deep frying)
 
-**How to roast store-bought rice flour:
-	1.	Heat a heavy pan on low flame.
-	2.	Add the rice flour and dry-roast for 2–3 minutes, stirring continuously.
-	3.	Stop once you see slight steam rising and the flour feels lighter (don’t let it brown).
-	4.	Cool completely before using.
+> How to roast store-bought rice flour:
+1.	Heat a heavy pan on low flame.
+2.	Add the rice flour and dry-roast for 2–3 minutes, stirring continuously.
+3.	Stop once you see slight steam rising and the flour feels lighter (don’t let it brown).
+4.	Cool completely before using.
 
 👉 Do the same with urad dal flour too (roast before grinding, or roast the flour lightly if bought).
 
