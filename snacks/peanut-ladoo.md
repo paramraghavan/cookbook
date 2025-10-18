@@ -1,4 +1,4 @@
-## Ingredients
+# Ingredients
 * 2 Cups Unsalted roasted peanuts
 * 200 Grams jaggery
 * ¼ cup water
