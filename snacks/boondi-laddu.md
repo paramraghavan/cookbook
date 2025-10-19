@@ -54,9 +54,4 @@
 
 ## 🌡️ Sugar Syrup Temperature Reference
 
-| Stage | Temp (°F / °C) | Description | Use |
-|--------|----------------|--------------|-----|
-| Thread | 215–219°F / 101–104°C | Very thin thread | For chashni (light syrup) |
-| **One-String (Soft-Ball)** | **220–225°F / 104–107°C** | Single thin string forms | ✅ Perfect for Boondi Ladoo |
-| Two-String | 226–228°F / 108–109°C | Thicker, sticky syrup | For firmer ladoos |
-| Hard-Ball | 240°F+ / 115°C+ | Hard crystals form | ❌ Too dry for ladoos |
+- see thermometer test

@@ -42,7 +42,7 @@ A traditional, sliceable coconut burfi made using thawed frozen coconut and one-
 #### How to Check:
 - 🖐️ **Finger test:** Touch a small drop between thumb and forefinger — pull apart gently; a single thin string should form.  
 - 💧 **Cold water test:** Drop a bit in cold water — it should form a soft, pliable ball.  
-- 🌡️ **Thermometer:** The syrup should reach 220°F–222°F (104°C–106°C).
+- 🌡️ **Thermometer:** see thermometer test
 
 ✅ *At this point, lower the heat.*
 
