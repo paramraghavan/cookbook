@@ -8,7 +8,7 @@ A traditional, sliceable coconut burfi made using thawed frozen coconut and one-
 
 - 2 cups frozen grated coconut (unsweetened, thawed completely)  
 - 1.125 to 1.25 cup white sugar  
-  > **Note:** 1 cup organic sugar raw cane sugar
+  > **Note:** 1 cup organic sugar or raw cane sugar
 - ½ cup water  
 - 2 tbsp ghee (clarified butter)  
 - ½ tsp cardamom powder
