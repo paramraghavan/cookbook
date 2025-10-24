@@ -4,7 +4,8 @@
 
 * **4 cups grated coconut** (fresh or thawed frozen)
 * **¾ cup milk**
-* **3 cups sugar**
+* **3 cups sugar** 
+ > **Note:** I used 3 cups, next time will use 2.5 cups organic sugar raw cane sugar
 * **3 tbsp ghee** (clarified butter)
 * **6 green cardamom pods**, powdered (or ½ tsp cardamom powder)
 * Extra ghee for greasing the tray
