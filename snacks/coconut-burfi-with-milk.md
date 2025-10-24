@@ -9,12 +9,13 @@
 * **6 green cardamom pods**, powdered (or ½ tsp cardamom powder)
 * Extra ghee for greasing the tray
 
----
 
 ## Step-by-Step Instructions
 
 1. **Prepare the coconut**  
    Grate the white flesh of fresh coconut (remove brown skin for a snow-white look). Measure 4 cups.
+   > I did not do this, but you can grind the thawed coconut in blender, this way it is little more well blended, but 
+   > do not grind it that it becomes like a smooth paste  
 
 2. **Fry the coconut in ghee**  
    Heat a heavy-bottomed pan or kadai over medium heat. Add **3 tbsp ghee**. Once melted, stir in the grated coconut.  

@@ -7,11 +7,10 @@ A traditional, sliceable coconut burfi made using thawed frozen coconut and one-
 ## 🧾 Ingredients
 
 - 2 cups frozen grated coconut (unsweetened, thawed completely)  
-- 1 cup white sugar  
+- 1.125 to 1.25 cup white sugar  
 - ½ cup water  
 - 2 tbsp ghee (clarified butter)  
-- ½ tsp cardamom powder  
-- 1–2 tbsp milk powder (optional, for richer taste)  
+- ½ tsp cardamom powder
 - Chopped nuts for garnish (optional)
 
 ---
@@ -34,7 +33,7 @@ A traditional, sliceable coconut burfi made using thawed frozen coconut and one-
 
 ### 3️⃣ Make the Sugar Syrup
 1. In a heavy-bottomed non-stick pan, add:  
-   - 1 cup sugar  
+   - 1.125 cup sugar  
    - ½ cup water  
 2. Heat on medium flame, stirring until sugar dissolves.  
 3. Let it boil steadily (do not stir constantly) until it reaches one-string consistency.
@@ -42,7 +41,7 @@ A traditional, sliceable coconut burfi made using thawed frozen coconut and one-
 #### How to Check:
 - 🖐️ **Finger test:** Touch a small drop between thumb and forefinger — pull apart gently; a single thin string should form.  
 - 💧 **Cold water test:** Drop a bit in cold water — it should form a soft, pliable ball.  
-- 🌡️ **Thermometer:** see thermometer test
+- 🌡️ **Thermometer:** [candy_thermometer_test.md](candy_thermometer_test.md)
 
 ✅ *At this point, lower the heat.*
 
@@ -70,19 +69,8 @@ A traditional, sliceable coconut burfi made using thawed frozen coconut and one-
 - Sprinkle chopped nuts if desired and press lightly.  
 - Let it cool for 20–30 minutes at room temperature.
 
----
 
 ### 7️⃣ Cut and Serve
 - Once set and firm, cut into squares or diamonds.  
-- Store in an airtight container:  
-  - **Room temperature:** up to 3–4 days  
-  - **Refrigerator:** up to 1 week
 
----
 
-## 🧠 Tips for Perfect Texture
-- ⏱️ Don’t overcook the syrup — beyond one-string, the burfi may become grainy or hard.  
-- 🔥 Stir constantly after adding coconut to avoid sticking or burning.  
-- 🥛 For a softer burfi, add 2 tbsp milk after the syrup stage.  
-- 🥥 For a vegan version, replace ghee with coconut oil.
-```
