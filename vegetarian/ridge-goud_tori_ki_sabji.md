@@ -32,3 +32,5 @@ Simple tori ki sabji to eat with chapati or rice
 * Let it cook for some more time, you should be all set
 
 
+## Picture
+![ridge_gourd.png](ridge_gourd.png)
