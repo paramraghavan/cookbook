@@ -12,7 +12,7 @@ Perfect! Here’s the traditional **South Indian Iyer-style Peerkangai Thol Thog
 ### 🧂 Ingredients
 
 * Ridge gourd peel (from 2 medium gourds) – roughly 1 cup, chopped
-* Coconut (fresh grated) – 2 tbsp
+* Coconut (fresh grated) – 2 tbsp (optional)
 * Split urad dal – 1 tbsp
 * Red chilies (dry) – 2–3 (adjust spice)
 * Tamarind – a small piece (size of a marble)
