@@ -65,7 +65,7 @@ class CookbookGenerator:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#2D5F3F">
+    <meta name="theme-color" content="#4CAF50">
     <title>{recipe['name']} - Vegetarian Cookbook</title>
     <link rel="manifest" href="../manifest.json">
     <link rel="stylesheet" href="../styles.css">
@@ -106,6 +106,7 @@ class CookbookGenerator:
             
             categories_html += f'''
             <div class="category-card" onclick="showCategory('{category}')">
+                <div class="category-icon">🥗</div>
                 <h2>{category_display}</h2>
                 <p>{recipe_count} recipe{'s' if recipe_count != 1 else ''}</p>
             </div>
@@ -116,7 +117,7 @@ class CookbookGenerator:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#2D5F3F">
+    <meta name="theme-color" content="#4CAF50">
     <meta name="description" content="A collection of delicious vegetarian recipes">
     <title>Vegetarian Cookbook</title>
     <link rel="manifest" href="manifest.json">
@@ -171,71 +172,44 @@ class CookbookGenerator:
 }
 
 :root {
-    --primary-color: #2D5F3F;
-    --primary-light: #4A8B5C;
-    --primary-dark: #1A3A28;
-    --secondary-color: #D97D54;
-    --accent-color: #F4A460;
-    --background: #FAF8F3;
-    --background-pattern: #F5F1E8;
-    --card-bg: #FFFFFF;
-    --card-border: #E8E3D6;
-    --text-primary: #2C2C2C;
-    --text-secondary: #6B6B6B;
-    --shadow: 0 2px 12px rgba(45, 95, 63, 0.08);
-    --shadow-hover: 0 6px 20px rgba(45, 95, 63, 0.12);
-    --gradient-start: #2D5F3F;
-    --gradient-end: #4A8B5C;
+    --primary-color: #4CAF50;
+    --primary-dark: #388E3C;
+    --secondary-color: #FF9800;
+    --background: #f5f5f5;
+    --card-bg: #ffffff;
+    --text-primary: #212121;
+    --text-secondary: #757575;
+    --shadow: 0 2px 8px rgba(0,0,0,0.1);
+    --shadow-hover: 0 4px 16px rgba(0,0,0,0.15);
 }
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background: linear-gradient(135deg, var(--background) 0%, var(--background-pattern) 100%);
-    background-attachment: fixed;
+    background: var(--background);
     color: var(--text-primary);
     line-height: 1.6;
     padding-bottom: 2rem;
-    position: relative;
-}
-
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.03;
-    z-index: -1;
-    background-image: 
-        repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(45, 95, 63, 0.03) 35px, rgba(45, 95, 63, 0.03) 70px);
-    pointer-events: none;
 }
 
 header {
-    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
     color: white;
-    padding: 2.5rem 1.5rem;
+    padding: 2rem 1rem;
     text-align: center;
     box-shadow: var(--shadow);
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 3px solid var(--secondary-color);
 }
 
 header h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
 }
 
 .subtitle {
-    opacity: 0.95;
-    font-size: 1.1rem;
-    font-weight: 300;
-    letter-spacing: 0.5px;
+    opacity: 0.9;
+    font-size: 1rem;
 }
 
 main {
@@ -245,25 +219,22 @@ main {
 }
 
 .search-box {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 .search-box input {
     width: 100%;
-    padding: 1.2rem 1.5rem;
-    border: 2px solid var(--card-border);
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
     border-radius: 50px;
     font-size: 1rem;
-    transition: all 0.3s ease;
-    background: var(--card-bg);
-    box-shadow: var(--shadow);
+    transition: all 0.3s;
 }
 
 .search-box input:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 4px rgba(45, 95, 63, 0.1);
-    transform: translateY(-2px);
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
 }
 
 .categories-grid {
@@ -275,49 +246,31 @@ main {
 .category-card {
     background: var(--card-bg);
     border-radius: 16px;
-    padding: 2.5rem 2rem;
+    padding: 2rem;
     text-align: center;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s;
     box-shadow: var(--shadow);
-    border: 2px solid var(--card-border);
-    position: relative;
-    overflow: hidden;
-}
-
-.category-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-}
-
-.category-card:hover::before {
-    transform: scaleX(1);
 }
 
 .category-card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-4px);
     box-shadow: var(--shadow-hover);
-    border-color: var(--primary-light);
+}
+
+.category-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
 .category-card h2 {
     color: var(--primary-color);
-    font-size: 1.6rem;
-    margin-bottom: 0.8rem;
-    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .category-card p {
     color: var(--text-secondary);
-    font-size: 0.95rem;
-    font-weight: 500;
 }
 
 .recipes-grid {
@@ -329,144 +282,105 @@ main {
 .recipe-card {
     background: var(--card-bg);
     border-radius: 12px;
-    padding: 1.8rem;
+    padding: 1.5rem;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s;
     box-shadow: var(--shadow);
-    border-left: 4px solid var(--primary-color);
-    border: 2px solid var(--card-border);
     border-left: 4px solid var(--primary-color);
 }
 
 .recipe-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-2px);
     box-shadow: var(--shadow-hover);
     border-left-color: var(--secondary-color);
 }
 
 .recipe-card h3 {
     color: var(--text-primary);
-    font-size: 1.3rem;
-    font-weight: 600;
+    font-size: 1.25rem;
 }
 
 .back-btn {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    background: var(--primary-color);
     color: white;
     border: none;
-    padding: 0.85rem 1.8rem;
+    padding: 0.75rem 1.5rem;
     border-radius: 50px;
     font-size: 1rem;
     cursor: pointer;
     margin-bottom: 1.5rem;
-    transition: all 0.3s ease;
-    font-weight: 600;
-    box-shadow: var(--shadow);
+    transition: all 0.3s;
+    font-weight: 500;
 }
 
 .back-btn:hover {
-    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+    background: var(--primary-dark);
     transform: translateX(-4px);
-    box-shadow: var(--shadow-hover);
 }
 
 .recipe-content {
     background: var(--card-bg);
     max-width: 800px;
     margin: 2rem auto;
-    padding: 2.5rem;
+    padding: 2rem;
     border-radius: 16px;
-    box-shadow: var(--shadow-hover);
-    border: 2px solid var(--card-border);
+    box-shadow: var(--shadow);
 }
 
 .recipe-content h1, .recipe-content h2, .recipe-content h3 {
     color: var(--primary-color);
-    margin-top: 1.8rem;
+    margin-top: 1.5rem;
     margin-bottom: 1rem;
-}
-
-.recipe-content h1 {
-    font-size: 2.2rem;
-    margin-top: 0;
-    color: var(--primary-dark);
-    border-bottom: 3px solid var(--secondary-color);
-    padding-bottom: 0.8rem;
-}
-
-.recipe-content h2 {
-    font-size: 1.6rem;
-    margin-top: 2rem;
 }
 
 .recipe-content ul, .recipe-content ol {
     margin-left: 1.5rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
 }
 
 .recipe-content li {
-    margin-bottom: 0.6rem;
-    line-height: 1.8;
+    margin-bottom: 0.5rem;
 }
 
 .recipe-content p {
-    margin-bottom: 1.2rem;
-    line-height: 1.8;
+    margin-bottom: 1rem;
 }
 
 .recipe-content img {
     max-width: 100%;
     height: auto;
-    border-radius: 12px;
-    margin: 1.5rem 0;
-    box-shadow: var(--shadow);
-}
-
-.recipe-content strong {
-    color: var(--primary-dark);
-    font-weight: 600;
+    border-radius: 8px;
+    margin: 1rem 0;
 }
 
 .install-prompt {
     position: fixed;
-    bottom: 1.5rem;
+    bottom: 1rem;
     left: 50%;
     transform: translateX(-50%);
     background: var(--card-bg);
-    padding: 1.2rem 2rem;
+    padding: 1rem 2rem;
     border-radius: 50px;
-    box-shadow: 0 8px 24px rgba(45, 95, 63, 0.2);
+    box-shadow: var(--shadow-hover);
     display: flex;
     align-items: center;
     gap: 1rem;
     z-index: 1000;
-    border: 2px solid var(--primary-light);
 }
 
 .install-prompt button {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    background: var(--primary-color);
     color: white;
     border: none;
-    padding: 0.6rem 1.3rem;
+    padding: 0.5rem 1rem;
     border-radius: 50px;
     cursor: pointer;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.install-prompt button:hover {
-    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
-    transform: scale(1.05);
+    font-weight: 500;
 }
 
 .install-prompt button:last-child {
     background: transparent;
     color: var(--text-secondary);
-}
-
-.install-prompt button:last-child:hover {
-    background: rgba(45, 95, 63, 0.05);
-    color: var(--primary-color);
 }
 
 @media (max-width: 768px) {
@@ -663,8 +577,8 @@ self.addEventListener('activate', (event) => {
             "description": "A collection of delicious vegetarian recipes",
             "start_url": "/",
             "display": "standalone",
-            "background_color": "#FAF8F3",
-            "theme_color": "#2D5F3F",
+            "background_color": "#ffffff",
+            "theme_color": "#4CAF50",
             "orientation": "portrait",
             "icons": [
                 {
@@ -689,7 +603,7 @@ self.addEventListener('activate', (event) => {
         """Generate simple icon files"""
         # Create a simple SVG icon and save as PNG placeholder
         svg_icon = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-    <rect width="512" height="512" fill="#2D5F3F"/>
+    <rect width="512" height="512" fill="#4CAF50"/>
     <text x="256" y="300" font-size="256" text-anchor="middle" fill="white">🌱</text>
 </svg>'''
         
