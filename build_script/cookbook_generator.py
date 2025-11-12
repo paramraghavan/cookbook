@@ -127,7 +127,7 @@ class CookbookGenerator:
 <body>
     <header>
         <h1>🌱 Vegetarian Cookbook</h1>
-        <p class="subtitle">Delicious plant-based recipes</p>
+        <p class="subtitle">Delicious plant, milk and nut based recipes.</p>
     </header>
     
     <main>
