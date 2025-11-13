@@ -32,6 +32,8 @@ class CookbookGenerator:
                 
                 for recipe_file in folder.iterdir():
                     if recipe_file.suffix in ['.md', '.html']:
+                        if 'readme' in recipe_file.lower():
+                            continue
                         recipe_name = recipe_file.stem
                         self.recipes[folder_name].append({
                             'name': recipe_name,
