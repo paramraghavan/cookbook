@@ -32,15 +32,17 @@ class CookbookGenerator:
                 
                 for recipe_file in folder.iterdir():
                     if recipe_file.suffix in ['.md', '.html']:
-                        if 'readme' in recipe_file.lower():
-                            continue
                         recipe_name = recipe_file.stem
+                        if 'readme' in recipe_name.lower():
+                            continue
                         self.recipes[folder_name].append({
                             'name': recipe_name,
                             'file': recipe_file,
                             'type': recipe_file.suffix
                         })
-                
+                receipes = self.recipes[folder_name]
+                self.recipes[folder_name] = sorted(receipes, key=lambda x: x["name"])
+                print(f"  Found {len(self.recipes[folder_name])} recipes in '{folder_name}'")
                 print(f"  Found {len(self.recipes[folder_name])} recipes in '{folder_name}'")
     
     def convert_markdown_to_html(self, md_content):
@@ -74,8 +76,9 @@ class CookbookGenerator:
     <link rel="icon" type="image/png" href="../icon-192.png">
 </head>
 <body>
+    <button class="back-btn" onclick="history.back()">Back</button>
+    
     <header>
-        <button class="back-btn" onclick="history.back()">← Back</button>
         <h1>{recipe['name']}</h1>
     </header>
     
@@ -127,9 +130,10 @@ class CookbookGenerator:
     <link rel="apple-touch-icon" href="icon-192.png">
 </head>
 <body>
+    <button class="back-btn" id="backBtn" style="display: none;" onclick="showCategories()">Back</button>
+    
     <header>
         <h1>🌱 Vegetarian Cookbook</h1>
-        <p class="subtitle">Delicious plant, milk and nut based recipes.</p>
     </header>
     
     <main>
@@ -142,7 +146,6 @@ class CookbookGenerator:
         </div>
         
         <div id="recipesView" class="recipes-view" style="display: none;">
-            <button class="back-btn" onclick="showCategories()">← Back to Categories</button>
             <h2 id="categoryTitle"></h2>
             <div id="recipesList" class="recipes-grid"></div>
         </div>
@@ -217,27 +220,28 @@ body::before {
 header {
     background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
     color: white;
-    padding: 2.5rem 1.5rem;
+    padding: 1rem 1rem;
     text-align: center;
     box-shadow: var(--shadow);
     position: sticky;
     top: 0;
     z-index: 100;
     border-bottom: 3px solid var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;
 }
 
 header h1 {
-    font-size: 2.2rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    margin: 0;
     font-weight: 700;
     letter-spacing: 0.5px;
 }
 
 .subtitle {
-    opacity: 0.95;
-    font-size: 1.1rem;
-    font-weight: 300;
-    letter-spacing: 0.5px;
+    display: none;
 }
 
 main {
@@ -328,6 +332,14 @@ main {
     gap: 1.5rem;
 }
 
+#categoryTitle {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    padding-top: 0.5rem;
+}
+
 .recipe-card {
     background: var(--card-bg);
     border-radius: 12px;
@@ -353,23 +365,35 @@ main {
 }
 
 .back-btn {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-    color: white;
-    border: none;
-    padding: 0.85rem 1.8rem;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 0.6rem 1rem;
     border-radius: 50px;
-    font-size: 1rem;
+    font-size: 0.95rem;
     cursor: pointer;
-    margin-bottom: 1.5rem;
     transition: all 0.3s ease;
     font-weight: 600;
     box-shadow: var(--shadow);
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
 }
 
 .back-btn:hover {
-    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+    background: var(--primary-color);
+    color: white;
     transform: translateX(-4px);
     box-shadow: var(--shadow-hover);
+}
+
+.back-btn::before {
+    content: "←";
+    font-size: 1.1rem;
 }
 
 .recipe-content {
@@ -473,7 +497,7 @@ main {
 
 @media (max-width: 768px) {
     header h1 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     
     .categories-grid {
@@ -488,6 +512,17 @@ main {
     .recipe-content {
         padding: 1.5rem;
         margin: 1rem;
+    }
+    
+    .back-btn {
+        top: 8px;
+        left: 8px;
+        padding: 0.5rem 0.8rem;
+        font-size: 0.85rem;
+    }
+    
+    #categoryTitle {
+        font-size: 1.4rem;
     }
     
     .install-prompt {
@@ -537,6 +572,8 @@ function dismissInstall() {
 function showCategory(category) {
     document.getElementById('categoriesView').style.display = 'none';
     document.getElementById('recipesView').style.display = 'block';
+    const backBtn = document.getElementById('backBtn');
+    if (backBtn) backBtn.style.display = 'flex';
     
     const categoryTitle = category.replace(/_/g, ' ').replace(/\\b\\w/g, l => l.toUpperCase());
     document.getElementById('categoryTitle').textContent = categoryTitle;
@@ -561,21 +598,26 @@ function showCategory(category) {
 function showCategories() {
     document.getElementById('categoriesView').style.display = 'grid';
     document.getElementById('recipesView').style.display = 'none';
+    const backBtn = document.getElementById('backBtn');
+    if (backBtn) backBtn.style.display = 'none';
     document.getElementById('searchInput').value = '';
 }
 
 // Search Function
 function searchRecipes() {
     const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    const backBtn = document.getElementById('backBtn');
     
     if (searchTerm.length === 0) {
         document.getElementById('categoriesView').style.display = 'grid';
         document.getElementById('recipesView').style.display = 'none';
+        if (backBtn) backBtn.style.display = 'none';
         return;
     }
     
     document.getElementById('categoriesView').style.display = 'none';
     document.getElementById('recipesView').style.display = 'block';
+    if (backBtn) backBtn.style.display = 'flex';
     document.getElementById('categoryTitle').textContent = 'Search Results';
     
     const recipesList = document.getElementById('recipesList');
