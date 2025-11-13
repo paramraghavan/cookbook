@@ -157,6 +157,31 @@ class CookbookGenerator:
         <button onclick="dismissInstall()">Later</button>
     </div>
     
+    <div id="iosInstallModal" class="ios-install-modal" style="display: none;">
+        <div class="ios-install-content">
+            <h3>📱 Install App</h3>
+            <p>Add this cookbook to your home screen for quick access!</p>
+            
+            <div class="ios-install-steps">
+                <div class="ios-install-step">
+                    <div class="step-number">1</div>
+                    <div class="step-text">Tap the Share button <span class="step-icon">⎋</span> at the bottom of Safari</div>
+                </div>
+                <div class="ios-install-step">
+                    <div class="step-number">2</div>
+                    <div class="step-text">Scroll down and tap <strong>"Add to Home Screen"</strong> <span class="step-icon">➕</span></div>
+                </div>
+                <div class="ios-install-step">
+                    <div class="step-number">3</div>
+                    <div class="step-text">Tap <strong>"Add"</strong> in the top right corner</div>
+                </div>
+            </div>
+            
+            <button onclick="closeIosModal()">Got It!</button>
+            <span class="dont-show-again" onclick="dontShowAgain()">Don't show again</span>
+        </div>
+    </div>
+    
     <script>
         const recipesData = {json.dumps(self.recipes, default=str)};
     </script>
@@ -495,6 +520,133 @@ main {
     color: var(--primary-color);
 }
 
+.ios-install-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    backdrop-filter: blur(5px);
+}
+
+.ios-install-content {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 20px;
+    max-width: 400px;
+    margin: 1rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ios-install-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.ios-install-content p {
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.ios-install-steps {
+    background: var(--background);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+    text-align: left;
+}
+
+.ios-install-step {
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+.ios-install-step:last-child {
+    margin-bottom: 0;
+}
+
+.step-number {
+    background: var(--primary-color);
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.step-text {
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    padding-top: 0.2rem;
+}
+
+.step-icon {
+    font-size: 1.3rem;
+    margin: 0 0.3rem;
+}
+
+.ios-install-content button {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.ios-install-content button:hover {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+    transform: translateY(-2px);
+}
+
+.dont-show-again {
+    display: block;
+    margin-top: 1rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.dont-show-again:hover {
+    color: var(--primary-color);
+}
+
+
 @media (max-width: 768px) {
     header h1 {
         font-size: 1.2rem;
@@ -531,6 +683,28 @@ main {
         right: 1rem;
         transform: none;
     }
+    
+    .ios-install-content {
+        margin: 1rem;
+        padding: 1.5rem;
+        max-width: calc(100% - 2rem);
+    }
+    
+    .ios-install-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .ios-install-steps {
+        padding: 1rem;
+    }
+    
+    .ios-install-step {
+        gap: 0.8rem;
+    }
+    
+    .step-text {
+        font-size: 0.9rem;
+    }
 }'''
         
         with open(self.deploy_dir / 'styles.css', 'w', encoding='utf-8') as f:
@@ -538,20 +712,70 @@ main {
     
     def generate_javascript(self):
         """Generate JavaScript for interactivity"""
-        js = '''// Service Worker Registration
+        js = '''// iOS Detection and Install Prompt
+function isIOS() {
+    return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+}
+
+function isInStandaloneMode() {
+    return window.matchMedia('(display-mode: standalone)').matches || 
+           window.navigator.standalone === true;
+}
+
+function shouldShowIOSPrompt() {
+    // Don't show if already installed
+    if (isInStandaloneMode()) return false;
+    
+    // Don't show if user dismissed it
+    if (localStorage.getItem('iosInstallDismissed') === 'true') return false;
+    
+    // Don't show if shown in last 7 days
+    const lastShown = localStorage.getItem('iosInstallLastShown');
+    if (lastShown) {
+        const daysSinceLastShown = (Date.now() - parseInt(lastShown)) / (1000 * 60 * 60 * 24);
+        if (daysSinceLastShown < 7) return false;
+    }
+    
+    return true;
+}
+
+// Show iOS install prompt on first visit
+window.addEventListener('load', () => {
+    if (isIOS() && shouldShowIOSPrompt()) {
+        // Show after a short delay so page loads first
+        setTimeout(() => {
+            document.getElementById('iosInstallModal').style.display = 'flex';
+            localStorage.setItem('iosInstallLastShown', Date.now().toString());
+        }, 2000); // 2 second delay
+    }
+});
+
+function closeIosModal() {
+    document.getElementById('iosInstallModal').style.display = 'none';
+}
+
+function dontShowAgain() {
+    localStorage.setItem('iosInstallDismissed', 'true');
+    closeIosModal();
+}
+
+// Service Worker Registration
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('sw.js')
         .then(reg => console.log('Service Worker registered'))
         .catch(err => console.log('Service Worker registration failed'));
 }
 
-// PWA Install Prompt
+// PWA Install Prompt (for Android/Desktop)
 let deferredPrompt;
 
 window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     deferredPrompt = e;
-    document.getElementById('installPrompt').style.display = 'flex';
+    // Only show for non-iOS devices
+    if (!isIOS()) {
+        document.getElementById('installPrompt').style.display = 'flex';
+    }
 });
 
 function installApp() {
