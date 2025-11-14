@@ -922,14 +922,15 @@ self.addEventListener('activate', (event) => {
         
         with open(self.deploy_dir / 'sw.js', 'w', encoding='utf-8') as f:
             f.write(sw)
-    
+    # for testing with localhost - python -m http.server 8000, use
+    #  "start_url":
     def generate_manifest(self):
         """Generate PWA manifest"""
         manifest = {
             "name": "Vegetarian Cookbook",
             "short_name": "VegCookbook",
             "description": "A collection of delicious vegetarian recipes",
-            "start_url": "/",
+            "start_url": "https://s3.amazonaws.com/ygpsquare.com/storefront/3f6c814e-8b43-49b4-b9cb-97cb4e89d0b5/index.html",
             "display": "standalone",
             "background_color": "#FAF8F3",
             "theme_color": "#2D5F3F",
