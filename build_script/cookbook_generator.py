@@ -165,7 +165,7 @@ class CookbookGenerator:
             <div class="ios-install-steps">
                 <div class="ios-install-step">
                     <div class="step-number">1</div>
-                    <div class="step-text">Tap the Share button <span class="step-icon">⎋</span> at the bottom of Safari</div>
+                    <div class="step-text">Tap the 3 dots <span class="step-icon">⋯</span> and then Share button <span class="step-icon">⎋</span> at the bottom of Safari</div>
                 </div>
                 <div class="ios-install-step">
                     <div class="step-number">2</div>
