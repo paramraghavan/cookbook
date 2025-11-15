@@ -119,6 +119,7 @@ class CookbookGenerator:
             'dessert': '🍰',
             'sweets': '🍬',
             'main_dishes': '🍲',
+            'maindishes': '🍲',
             'main': '🍲',
             'curry': '🍛',
             'rice': '🍚',
