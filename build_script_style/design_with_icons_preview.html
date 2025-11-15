@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Update Preview - With Icons & Footer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #FAF8F3 0%, #F5F1E8 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+        
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.03;
+            z-index: -1;
+            background-image: 
+                repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(45, 95, 63, 0.03) 35px, rgba(45, 95, 63, 0.03) 70px);
+            pointer-events: none;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2D5F3F;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #6B6B6B;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+        
+        .section {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 12px rgba(45, 95, 63, 0.08);
+            border: 2px solid #E8E3D6;
+        }
+        
+        .section h2 {
+            color: #2D5F3F;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #D97D54;
+            padding-bottom: 0.5rem;
+        }
+        
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .category-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 12px rgba(45, 95, 63, 0.08);
+            border: 2px solid #E8E3D6;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .category-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #2D5F3F, #D97D54);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .category-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .category-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 6px 20px rgba(45, 95, 63, 0.12);
+            border-color: #4A8B5C;
+        }
+        
+        .category-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            display: block;
+            filter: grayscale(20%);
+            transition: all 0.3s ease;
+        }
+        
+        .category-card:hover .category-icon {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+        
+        .category-card h3 {
+            color: #2D5F3F;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .category-card p {
+            color: #6B6B6B;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+        
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        
+        .comparison-box {
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 2px solid #E8E3D6;
+        }
+        
+        .before {
+            background: #f9f9f9;
+        }
+        
+        .after {
+            background: #E8F5E9;
+        }
+        
+        .comparison-box h4 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .before h4 { color: #757575; }
+        .after h4 { color: #2D5F3F; }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #2D5F3F;
+            font-weight: bold;
+        }
+        
+        .footer-demo {
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+            color: #6B6B6B;
+            font-size: 1rem;
+            border-top: 2px solid #E8E3D6;
+            background: #F5F1E8;
+            border-radius: 12px;
+        }
+        
+        .heart {
+            color: #D97D54;
+            display: inline-block;
+            animation: heartbeat 1.5s infinite;
+        }
+        
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            10% { transform: scale(1.1); }
+            20% { transform: scale(1); }
+        }
+        
+        .footer-demo a {
+            color: #2D5F3F;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .footer-demo a:hover {
+            color: #D97D54;
+        }
+        
+        .icon-legend {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .icon-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem;
+            background: #FAF8F3;
+            border-radius: 8px;
+        }
+        
+        .icon-item span:first-child {
+            font-size: 1.5rem;
+        }
+        
+        .icon-item span:last-child {
+            font-size: 0.85rem;
+            color: #6B6B6B;
+        }
+        
+        @media (max-width: 768px) {
+            .comparison {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 New Design Preview</h1>
+        <p class="subtitle">Inspired by your original cookbook design!</p>
+        
+        <div class="section">
+            <h2>Category Cards with Icons</h2>
+            <p style="margin-bottom: 1rem; color: #6B6B6B;">Hover over the cards to see the animation!</p>
+            <div class="demo-grid">
+                <div class="category-card">
+                    <div class="category-icon">🌿</div>
+                    <h3>Vegetarian</h3>
+                    <p>12 recipes</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🥜</div>
+                    <h3>Snacks</h3>
+                    <p>8 recipes</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🥐</div>
+                    <h3>Bakery</h3>
+                    <p>6 recipes</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">☕</div>
+                    <h3>Beverages</h3>
+                    <p>4 recipes</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🍰</div>
+                    <h3>Desserts</h3>
+                    <p>10 recipes</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🍲</div>
+                    <h3>Main Dishes</h3>
+                    <p>15 recipes</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Available Icons</h2>
+            <p style="margin-bottom: 1rem; color: #6B6B6B;">Icons automatically assigned based on category names</p>
+            <div class="icon-legend">
+                <div class="icon-item"><span>🌿</span><span>Vegetarian</span></div>
+                <div class="icon-item"><span>🌱</span><span>Vegan</span></div>
+                <div class="icon-item"><span>🥜</span><span>Snacks</span></div>
+                <div class="icon-item"><span>🥐</span><span>Bakery</span></div>
+                <div class="icon-item"><span>🍞</span><span>Breads</span></div>
+                <div class="icon-item"><span>☕</span><span>Beverages</span></div>
+                <div class="icon-item"><span>🥤</span><span>Drinks</span></div>
+                <div class="icon-item"><span>🍰</span><span>Desserts</span></div>
+                <div class="icon-item"><span>🍬</span><span>Sweets</span></div>
+                <div class="icon-item"><span>🍲</span><span>Main Dishes</span></div>
+                <div class="icon-item"><span>🍛</span><span>Curry</span></div>
+                <div class="icon-item"><span>🍚</span><span>Rice</span></div>
+                <div class="icon-item"><span>🥒</span><span>Pickles</span></div>
+                <div class="icon-item"><span>🥣</span><span>Chutney</span></div>
+                <div class="icon-item"><span>🥘</span><span>Soup</span></div>
+                <div class="icon-item"><span>🥗</span><span>Salad</span></div>
+                <div class="icon-item"><span>🍳</span><span>Breakfast</span></div>
+                <div class="icon-item"><span>🍱</span><span>Lunch</span></div>
+                <div class="icon-item"><span>📖</span><span>Default</span></div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Before & After Comparison</h2>
+            <div class="comparison">
+                <div class="comparison-box before">
+                    <h4>❌ Before</h4>
+                    <ul class="feature-list">
+                        <li>No category icons</li>
+                        <li>Text-only cards</li>
+                        <li>No footer</li>
+                        <li>Less visual appeal</li>
+                    </ul>
+                </div>
+                <div class="comparison-box after">
+                    <h4>✅ After (Your Design)</h4>
+                    <ul class="feature-list">
+                        <li>Beautiful category icons</li>
+                        <li>Visual recognition</li>
+                        <li>Friendly footer</li>
+                        <li>More engaging</li>
+                        <li>Hover animations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Icon Animation</h2>
+            <p style="color: #6B6B6B; margin-bottom: 1rem;">Icons have a subtle grayscale effect that animates on hover:</p>
+            <ul class="feature-list" style="margin-left: 1.5rem;">
+                <li><strong>Default:</strong> 20% grayscale (subtle desaturation)</li>
+                <li><strong>On Hover:</strong> Full color + 10% scale up</li>
+                <li><strong>Smooth transition:</strong> 0.3s ease animation</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Friendly Footer</h2>
+            <p style="color: #6B6B6B; margin-bottom: 1rem;">Inspired by your original "Made with love by a Foodie" footer:</p>
+            <div class="footer-demo">
+                <p>Made with <span class="heart">❤️</span> by a <a href="#">Foodie</a></p>
+            </div>
+            <ul class="feature-list" style="margin-left: 1.5rem; margin-top: 1rem;">
+                <li>Animated heartbeat on ❤️</li>
+                <li>Clickable link back to home</li>
+                <li>Warm, personal touch</li>
+                <li>Matches original style</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Key Features Kept</h2>
+            <p style="color: #6B6B6B; margin-bottom: 1rem;">All your favorite navigation features are still here:</p>
+            <ul class="feature-list" style="margin-left: 1.5rem;">
+                <li>Search bar for quick recipe finding</li>
+                <li>Category-based organization</li>
+                <li>Back button in standard position</li>
+                <li>Compact header (50% smaller)</li>
+                <li>Mobile-responsive design</li>
+                <li>PWA capabilities (install, offline)</li>
+                <li>iOS install prompt</li>
+                <li>Beautiful forest green theme</li>
+            </ul>
+        </div>
+        
+        <div class="section" style="background: linear-gradient(135deg, #2D5F3F, #4A8B5C); color: white; border: none;">
+            <h2 style="color: white; border: none;">✨ Best of Both Worlds!</h2>
+            <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-top: 1rem;">
+                Your original cookbook's friendly icons + Modern PWA features = Perfect combination! 🎉
+            </p>
+        </div>
+    </div>
+    
+    <div class="footer-demo" style="max-width: 1200px; margin: 2rem auto;">
+        <p>Made with <span class="heart">❤️</span> by a <a href="#">Foodie</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+- https://s3.us-east-1.amazonaws.com/ygpsquare.com/storefront/5c4512050224d161c91a3ee4ff964c711c7c35c42238997969874e4c66efcd36/index.html
