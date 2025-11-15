@@ -112,7 +112,7 @@ class CookbookGenerator:
             'bakery': '🥐',
             'bread': '🍞',
             'breads': '🍞',
-            'beverages': '☕',
+            'beverages': '🥤',
             'beverage': '☕',
             'drinks': '🥤',
             'desserts': '🍰',
@@ -127,11 +127,13 @@ class CookbookGenerator:
             'chutney': '🥣',
             'soup': '🥘',
             'salad': '🥗',
-            'breakfast': '🍳',
+            'breakfast': '🥯',
             'lunch': '🍱',
             'dinner': '🍽️',
             'appetizers': '🥙',
-            'sides': '🥙'
+            'sides': '🥙',
+            'icecream': '🍦',
+            'papad': '🌕'
         }
         
         categories_html = ""
