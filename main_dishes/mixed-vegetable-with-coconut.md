@@ -35,8 +35,6 @@
 
 ---
 
-# 👩‍🍳 **Method (Adjusted for Frozen Veg)**
-
 ## 1️⃣ Make Coconut Masala Paste
 
 Blend the following into a smooth paste:
