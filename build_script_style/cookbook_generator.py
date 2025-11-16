@@ -10,18 +10,61 @@ from pathlib import Path
 import markdown
 import json
 
+force_refresh_html = """
+<style>
+.force-refresh-btn {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 9999;
+  background: #fff;
+  color: #222;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+  cursor: pointer;
+  font-size: 1.7rem;
+  transition: background 0.16s;
+}
+.force-refresh-btn:active {
+  background: #eee;
+}
+.force-refresh-btn svg {
+  width: 28px;
+  height: 28px;
+  fill: #222;
+}
+</style>
+
+<button class="force-refresh-btn" onclick="forceRefresh()" aria-label="Force Refresh">
+  <svg viewBox="0 0 24 24"><path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6a5.998 5.998 0 0 1-6 6c-2.76 0-5.13-2.12-5.84-4.74l-1.97.51C5.54 18.37 8.53 21 12 21c4.42 0 8-3.58 8-8s-3.58-8-8-8z"></path></svg>
+</button>
+
+<script>
+function forceRefresh() {
+  window.location.href = window.location.pathname + "?refresh=" + new Date().getTime();
+}
+</script>
+"""
+
+
 class CookbookGenerator:
     def __init__(self, build_dir='build', deploy_dir='deploy'):
         self.build_dir = Path(build_dir)
         self.deploy_dir = Path(deploy_dir)
         self.recipes = {}
-        
+
     def clean_deploy_dir(self):
         """Clean and create deploy directory"""
         if self.deploy_dir.exists():
             shutil.rmtree(self.deploy_dir)
         self.deploy_dir.mkdir(parents=True)
-        
+
     def scan_recipes(self):
         """Scan all folders and recipes"""
         print("Scanning recipes...")
@@ -29,7 +72,7 @@ class CookbookGenerator:
             if folder.is_dir() and not folder.name.startswith('.'):
                 folder_name = folder.name
                 self.recipes[folder_name] = []
-                
+
                 for recipe_file in folder.iterdir():
                     if recipe_file.suffix in ['.md', '.html']:
                         recipe_name = recipe_file.stem
@@ -38,28 +81,28 @@ class CookbookGenerator:
                             'file': recipe_file,
                             'type': recipe_file.suffix
                         })
-                
+
                 print(f"  Found {len(self.recipes[folder_name])} recipes in '{folder_name}'")
-    
+
     def convert_markdown_to_html(self, md_content):
         """Convert markdown to HTML"""
         return markdown.markdown(md_content, extensions=['extra', 'nl2br'])
-    
+
     def read_recipe_content(self, recipe):
         """Read and convert recipe content to HTML"""
         with open(recipe['file'], 'r', encoding='utf-8') as f:
             content = f.read()
-        
+
         if recipe['type'] == '.md':
             return self.convert_markdown_to_html(content)
         else:
             return content
-    
+
     def generate_recipe_page(self, category, recipe):
         """Generate individual recipe page"""
         content = self.read_recipe_content(recipe)
         recipe_id = f"{category}_{recipe['name']}".replace(' ', '_')
-        
+
         html = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,6 +115,7 @@ class CookbookGenerator:
     <link rel="icon" type="image/png" href="../icon-192.png">
 </head>
 <body>
+    {force_refresh_html}
     <button class="back-btn" onclick="history.back()">Back</button>
     
     <header>
@@ -89,18 +133,18 @@ class CookbookGenerator:
     <script src="../app.js"></script>
 </body>
 </html>'''
-        
+
         # Create category folder in deploy
         category_dir = self.deploy_dir / category
         category_dir.mkdir(exist_ok=True)
-        
+
         # Write recipe file
         recipe_path = category_dir / f"{recipe['name'].replace(' ', '_')}.html"
         with open(recipe_path, 'w', encoding='utf-8') as f:
             f.write(html)
-        
+
         return recipe_id
-    
+
     def generate_index_page(self):
         """Generate main index page"""
         # Category icons mapping - using emoji icons
@@ -136,17 +180,17 @@ class CookbookGenerator:
             'icecream': '🍦',
             'papad': '🌕'
         }
-        
+
         categories_html = ""
-        
+
         for category, recipes in sorted(self.recipes.items()):
             recipe_count = len(recipes)
             category_display = category.replace('_', ' ').title()
-            
+
             # Get icon for category (default to recipe book emoji if not found)
             category_lower = category.lower().replace('_', '').replace(' ', '')
             icon = category_icons.get(category_lower, '📖')
-            
+
             categories_html += f'''
             <div class="category-card" onclick="showCategory('{category}')">
                 <div class="category-icon">{icon}</div>
@@ -154,7 +198,7 @@ class CookbookGenerator:
                 <p>{recipe_count} recipe{'s' if recipe_count != 1 else ''}</p>
             </div>
             '''
-        
+
         html = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -169,6 +213,7 @@ class CookbookGenerator:
     <link rel="apple-touch-icon" href="icon-192.png">
 </head>
 <body>
+    {force_refresh_html}
     <button class="back-btn" id="backBtn" style="display: none;" onclick="showCategories()">Back</button>
     
     <header>
@@ -231,10 +276,10 @@ class CookbookGenerator:
     <script src="app.js"></script>
 </body>
 </html>'''
-        
+
         with open(self.deploy_dir / 'index.html', 'w', encoding='utf-8') as f:
             f.write(html)
-    
+
     def generate_styles(self):
         """Generate CSS styles"""
         css = '''* {
@@ -799,10 +844,10 @@ footer a:hover {
         font-size: 0.9rem;
     }
 }'''
-        
+
         with open(self.deploy_dir / 'styles.css', 'w', encoding='utf-8') as f:
             f.write(css)
-    
+
     def generate_javascript(self):
         """Generate JavaScript for interactivity"""
         js = '''// iOS Detection and Install Prompt
@@ -968,10 +1013,10 @@ function searchRecipes() {
         recipesList.innerHTML = '<p style="text-align: center; color: var(--text-secondary);">No recipes found</p>';
     }
 }'''
-        
+
         with open(self.deploy_dir / 'app.js', 'w', encoding='utf-8') as f:
             f.write(js)
-    
+
     def generate_service_worker(self):
         """Generate Service Worker for offline support"""
         sw = '''const CACHE_NAME = 'vegetarian-cookbook-v1';
@@ -1012,10 +1057,10 @@ self.addEventListener('activate', (event) => {
         })
     );
 });'''
-        
+
         with open(self.deploy_dir / 'sw.js', 'w', encoding='utf-8') as f:
             f.write(sw)
-    
+
     def generate_manifest(self):
         """Generate PWA manifest"""
         manifest = {
@@ -1043,10 +1088,10 @@ self.addEventListener('activate', (event) => {
                 }
             ]
         }
-        
+
         with open(self.deploy_dir / 'manifest.json', 'w', encoding='utf-8') as f:
             json.dump(manifest, f, indent=2)
-    
+
     def generate_icons(self):
         """Generate simple icon files"""
         # Create a simple SVG icon and save as PNG placeholder
@@ -1054,51 +1099,51 @@ self.addEventListener('activate', (event) => {
     <rect width="512" height="512" fill="#2D5F3F"/>
     <text x="256" y="300" font-size="256" text-anchor="middle" fill="white">🌱</text>
 </svg>'''
-        
+
         with open(self.deploy_dir / 'icon.svg', 'w', encoding='utf-8') as f:
             f.write(svg_icon)
-        
+
         # Create placeholder PNG files (user should replace with actual icons)
         icon_placeholder = f'''<!-- Icon Placeholder -->
 <!-- Please replace icon-192.png and icon-512.png with actual PNG images -->
 <!-- You can use the icon.svg as a reference -->
 <!-- Or create icons using: https://favicon.io/ or similar tools -->
 '''
-        
+
         with open(self.deploy_dir / 'ICONS_README.txt', 'w', encoding='utf-8') as f:
             f.write(icon_placeholder)
-        
+
         # Create minimal PNG placeholders (1x1 pixel)
         # Note: User should replace these with actual icons
         print("  Note: Created icon placeholders. Please add actual icon-192.png and icon-512.png images.")
-    
+
     def generate(self):
         """Main generation process"""
         print("\n🌱 Vegetarian Cookbook PWA Generator\n")
-        
+
         # Step 1: Clean deploy directory
         print("1. Cleaning deploy directory...")
         self.clean_deploy_dir()
-        
+
         # Step 2: Scan recipes
         print("\n2. Scanning recipes...")
         self.scan_recipes()
-        
+
         if not self.recipes:
             print("  ⚠️  No recipe folders found in 'build' directory!")
             return
-        
+
         # Step 3: Generate recipe pages
         print("\n3. Generating recipe pages...")
         for category, recipes in self.recipes.items():
             for recipe in recipes:
                 self.generate_recipe_page(category, recipe)
         print(f"  ✓ Generated {sum(len(r) for r in self.recipes.values())} recipe pages")
-        
+
         # Step 4: Generate main index
         print("\n4. Generating index page...")
         self.generate_index_page()
-        
+
         # Step 5: Generate assets
         print("\n5. Generating assets...")
         self.generate_styles()
@@ -1106,13 +1151,14 @@ self.addEventListener('activate', (event) => {
         self.generate_service_worker()
         self.generate_manifest()
         self.generate_icons()
-        
+
         print("\n✅ Generation complete!")
         print(f"\n📁 Your PWA is ready in the '{self.deploy_dir}' folder")
         print("\nTo test locally:")
         print(f"  cd {self.deploy_dir}")
         print("  python -m http.server 8000")
         print("  Then open: http://localhost:8000\n")
+
 
 if __name__ == '__main__':
     generator = CookbookGenerator()
