@@ -52,6 +52,36 @@ function forceRefresh() {
 </script>
 """
 
+share_link_html="""
+<style>
+.share-btn {
+  position: fixed;
+  top: 18px;
+  right: 72px;  /* to the left of refresh */
+  z-index: 9999;
+  background: #2D5F3F;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+  cursor: pointer;
+  font-size: 1.3rem;
+  transition: background 0.16s;
+}
+.share-btn:active {
+  background: #244c32;
+}
+</style>
+<button class="share-btn" onclick="shareRecipe()" aria-label="Share Recipe">
+  ⇪
+</button>
+"""
+
 
 class CookbookGenerator:
     def __init__(self, build_dir='build', deploy_dir='deploy'):
@@ -68,6 +98,8 @@ class CookbookGenerator:
     def scan_recipes(self):
         """Scan all folders and recipes"""
         print("Scanning recipes...")
+        excluded_files = ['readme', 'index']  # Files to exclude (case-insensitive)
+
         for folder in self.build_dir.iterdir():
             if folder.is_dir() and not folder.name.startswith('.'):
                 folder_name = folder.name
@@ -76,6 +108,12 @@ class CookbookGenerator:
                 for recipe_file in folder.iterdir():
                     if recipe_file.suffix in ['.md', '.html']:
                         recipe_name = recipe_file.stem
+
+                        # Skip README and index files
+                        if recipe_name.lower() in excluded_files:
+                            print(f"  Skipping '{recipe_file.name}' in '{folder_name}'")
+                            continue
+
                         self.recipes[folder_name].append({
                             'name': recipe_name,
                             'file': recipe_file,
@@ -115,7 +153,7 @@ class CookbookGenerator:
     <link rel="icon" type="image/png" href="../icon-192.png">
 </head>
 <body>
-    {force_refresh_html}
+    {share_link_html}
     <button class="back-btn" onclick="history.back()">Back</button>
     
     <header>
@@ -1012,6 +1050,40 @@ function searchRecipes() {
     if (!resultsFound) {
         recipesList.innerHTML = '<p style="text-align: center; color: var(--text-secondary);">No recipes found</p>';
     }
+}
+
+// Share recipe function – uses main.recipe-content
+async function shareRecipe() {
+  const titleEl = document.querySelector("main.recipe-content h1");
+  const recipeTitle = titleEl ? titleEl.textContent.trim() : document.title;
+
+  // Get all visible text from recipe content area
+  const mainEl = document.querySelector("main.recipe-content");
+  const recipeText = mainEl ? mainEl.innerText.trim() : "";
+
+  const shareText =
+    recipeTitle + '     ' + recipeText + '     Recipe link: ' + window.location.href;
+
+  if (navigator.share) {
+    try {
+      await navigator.share({
+        title: recipeTitle,
+        text: shareText,
+        url: window.location.href,
+      });
+    } catch (err) {
+      console.log("Share canceled or failed", err);
+    }
+  } else if (navigator.clipboard) {
+    try {
+      await navigator.clipboard.writeText(shareText);
+      alert("Recipe copied to clipboard!");
+    } catch (err) {
+      alert('Sharing not supported on this browser.');
+    }
+  } else {
+    alert('Sharing not supported on this browser.');
+  }
 }'''
 
         with open(self.deploy_dir / 'app.js', 'w', encoding='utf-8') as f:
