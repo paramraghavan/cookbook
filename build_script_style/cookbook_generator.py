@@ -1061,8 +1061,8 @@ async function shareRecipe() {
   const mainEl = document.querySelector("main.recipe-content");
   const recipeText = mainEl ? mainEl.innerText.trim() : "";
 
-  const shareText =
-    recipeTitle + '     ' + recipeText + '     Recipe link: ' + window.location.href;
+  const shareText = recipeTitle + '---->  Recipe link: ' + window.location.href;
+    //recipeTitle + '     ' + recipeText + '     Recipe link: ' + window.location.href;
 
   if (navigator.share) {
     try {
