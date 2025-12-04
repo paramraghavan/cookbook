@@ -1,10 +1,25 @@
-# 🍘 **Pori Urundai (Kheel / Murmura Jaggery Balls) for Karthigai**
+# Pori Urundai Recipe (Murmura Laddu)
 
-### *Traditional South Indian Jaggery Balls – Perfect Round Shape*
+## Overview
+
+- **Course:** Sweet
+- **Prep Time:** 5 minutes
+- **Cook Time:** 15 minutes
+- **Total Time:** 20 minutes
+- **Servings:** ~20 ladoo (urundai)
 
 ---
 
-## ⭐ Ingredients (Makes 10–12 Balls)
+## Ingredients
+
+- **4½ cups murmura / puffed rice (pori)**
+- **1½ cups jaggery**
+- **¾ cup water**
+- **½ tsp cardamom powder**
+- **1 tsp ghee**
+- **½ tsp** dry ginger powder *(optional)*
+
+> If you do not want to make into round ladoos(like a ball) then use the following measurements
 
 * **4 cups** puffed rice (kheel / pori / murmura)
 * **1 cup** jaggery (vellam), powdered
@@ -15,77 +30,42 @@
 
 ---
 
-## 🍯 Instructions
+## Instructions
 
-### **1. Prep the puffed rice**
+1. **Melt the jaggery**
 
-* Dry roast the puffed rice on low heat for **2–3 minutes** until crisp.
-* Transfer to a large bowl.
+   - In a heavy-bottomed pan, add **1½ cups jaggery** and **¾ cup water**.
+   - Mix well and heat on medium flame until the jaggery melts completely.
+2. **Boil to hard-ball consistency**
 
----
+   - Continue boiling the jaggery syrup on **medium flame**.
+   - Check the consistency by dropping a little syrup into a bowl of water:
+     - It should form a **hard ball** and make a **crystalline snapping sound** when pressed.
+     - If it doesn’t, boil for **another minute** and check again.
+3. **Add flavours**
 
-### **2. Make the jaggery syrup**
+   - Once the syrup reaches hard-ball stage, add:
+     - **½ tsp cardamom powder**
+     - **1 tsp ghee**
+   - Mix well.
+4. **Mix with pori**
 
-1. Add jaggery + water to a pan.
-2. Heat until jaggery melts completely.
-3. Strain to remove impurities.
-4. Return syrup to the pan and boil until it reaches **soft-ball stage**.
+   - Turn the heat to low.
+   - Add **4½ cups murmura / puffed rice** to the hot jaggery syrup.
+   - Mix gently but quickly so every grain of pori is well coated.
+5. **Shape the urundai**
 
----
-
-## 🟠 Soft-Ball Stage (Most Important)
-
-Your jaggery syrup is ready when:
-
-* **Cold Water Test:**
-
-    * Drop a little syrup into cold water.
-    * It should form a **soft but firm ball** that holds shape.
-
-**OR**
-
-* **1-String Test:**
-
-    * When pulled between two fingers, syrup forms **one thin string**.
-
-This ensures the balls bind properly and don’t crumble.
+   - Grease your palms with a little **ghee** (or lightly wet them).
+   - While the mixture is still hot, take small portions and **press tightly into round balls**.
+   - Work quickly, as the mixture will harden as it cools.
 
 ---
 
-### **3. Add flavoring**
+## Tips
 
-Once the syrup is ready, add:
-
-* Ghee
-* Cardamom powder
-* Dry ginger powder *(optional)*
-
-Mix well.
+- If the mixture is **too sticky**, the syrup is undercooked – boil a bit longer next time.
+- If it becomes **too hard** to shape, the syrup is overcooked – sprinkle 1–2 tsp water and warm slightly.
+- Use **fresh, crispy puffed rice** for best texture.
+- Store cooled pori urundai in an **airtight container**; they stay good for several days.
 
 ---
-
-### **4. Combine with puffed rice**
-
-* Pour hot syrup onto the roasted puffed rice.
-* Mix quickly so all pori is evenly coated.
-* Let it cool for **30–40 seconds** until safe to touch but still warm.
-
----
-
-### **5. Shape into balls**
-
-1. Grease palms with a little ghee.
-2. Scoop and press the warm mixture firmly into **round balls**.
-3. Hold each ball for **5–6 seconds** so it sets.
-
----
-
-## ⚠️ Troubleshooting
-
-**Mixture not binding?**
-
-* Syrup too thin. Heat for 1–2 minutes and mix again.
-
-**Mixture turning hard?**
-
-* Syrup overcooked. Add **1 tsp hot water** and mix quickly.
