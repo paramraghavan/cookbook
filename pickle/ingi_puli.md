@@ -1,83 +1,140 @@
-# Authentic Kerala Sadya-style Inji Puli
+# Palakkad Iyer Style Inji Puli (With Sesame & Jeera)
+A traditional **Palakkad Iyer sadya-style** inji puli — thick, dark, sweet-sour with **roasted sesame & jeera finish**.
 
-## Ingredients
+# Ingredients
 
-* 1 cup ginger — very finely chopped
-* 2 tbsp chopped green chilies
+## Main
+
+* 1 cup ginger (very finely chopped)
+* 2 tbsp green chilies (finely chopped)
 * Small lemon-size tamarind
-* 3–4 tbsp jaggery (adjust later)
+* 3–4 tbsp jaggery (adjust)
 * 3 tbsp sesame oil (preferred) or coconut oil
+* 1/4 tsp turmeric powder
+* 1/2 tsp red chili powder (optional)
+* salt to taste
+* 1½ cups water
+
+## Tempering
+
 * 1 tsp mustard seeds
 * 2 dried red chilies
 * 1 sprig curry leaves
-* ¼ tsp turmeric powder
-* ½ tsp red chili powder (optional but traditional)
-* Salt to taste
-* 1½ cups water
 
-## Step-by-step
+## Palakkad Iyer Finish (Important)
+* 1 tbsp sesame seeds
+* 1/2 tsp jeera
+* pinch fenugreek powder (optional)
 
-1. **Prep tamarind**
-   Soak tamarind in warm water 15 min. Squeeze and extract thick juice. Strain.
+# Instructions
 
-2. **Fry ginger properly (important)**
-   Heat oil in a pan.
-   Add chopped ginger + green chilies.
-   Cook on **medium-low** until:
+## 1. Extract Tamarind
 
-    * ginger turns slightly brown
-    * raw smell disappears
-    * oil separates slightly
+* Soak tamarind in warm water 15 minutes
+* Squeeze and extract thick juice
+* Strain and keep aside
 
-   > (This step gives authentic taste.)
 
-3. Add turmeric + red chili powder. Stir 20 seconds.
+## 2. Fry Ginger (Key step)
 
-4. Pour tamarind extract + salt. Mix.
+Heat oil in a heavy pan.
 
-5. Add jaggery. Stir until dissolved.
+Add:
+* chopped ginger
+* green chilies
 
-6. **Simmer until thick**
-   Cook on low until:
+Cook on **medium-low** until:
 
-    * mixture becomes dark brown
-    * glossy
-    * thick like chutney
+* ginger turns light golden
+* raw smell disappears
+* oil begins to separate
 
-7. **Tempering (final flavor)**
-   Heat 1 tsp oil:
 
-    * mustard seeds
-    * dried red chilies
-    * curry leaves
+## 3. Add spices
+Add:
 
-   Pour over and mix.
+* turmeric
+* red chili powder
 
-## Taste Balance (Very Important)
+Stir for 20 seconds.
 
-**Sadya inji puli should be:**
+
+## 4. Add tamarind
+Pour tamarind extract.
+
+Add salt.
+Simmer 3–4 minutes.
+
+## 5. Add jaggery
+Add jaggery and mix until dissolved.
+Cook on **low flame** until:
+
+* mixture becomes dark brown
+* glossy
+* thick chutney consistency
+
+Stir occasionally.
+
+
+## 6. Tempering
+Heat 1 tsp oil.
+
+Add:
+* mustard seeds
+* dried red chilies
+* curry leaves
+
+Pour into inji puli.  Mix well.
+
+## 7. Palakkad Iyer Finish (Signature step)
+
+Dry roast:
+* sesame seeds
+* jeera
+
+Roast until fragrant.
+Cool completely.
+
+Grind to **coarse powder**.
+
+Add to inji puli **after turning off heat**.
+
+Mix gently.
+
+Optional: add pinch fenugreek powder/asafoetida
+
+
+
+# Final Consistency
+
+* Thick
+* Glossy
+* Spoon coating
+* Not watery
+
+It thickens further after cooling.
+
+---
+
+# Taste Balance
+
+Should be:
 
 * Sweet
 * Sour
 * Spicy
-* Strong ginger flavor
+* Gingery
+* Slight nutty finish
 
-**Adjust at end:**
+Adjust:
 
-* too sour → add jaggery
-* too sweet → add little tamarind
-* too sharp → cook 2 more minutes
+* more jaggery → sweeter
+* more tamarind → sour
+* more salt → balance
 
-## Perfect consistency
 
-* Not watery
-* Not dry
-* Thick, glossy, spoon-coating
+# Storage
 
-> It thickens more after cooling.
-
-## Storage
-
-* Lasts **1–2 weeks in fridge**
-* Always use dry spoon
-* Flavor improves next day
+* Keeps 1–2 weeks refrigerated
+* Use dry spoon
+* Tastes better next day
