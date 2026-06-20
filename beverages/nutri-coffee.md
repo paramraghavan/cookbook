@@ -21,7 +21,7 @@ If you're making a **Nutri (or Nutri-style) coffee protein shake** for a **long 
 
 ### My favorite combination
 - 1 Nutri coffee shake
-- ½ frozen banana
+- ~~½ frozen banana~~
 - ½ tsp instant coffee
 - ½ tsp vanilla extract
 - 1 tbsp peanut butter
