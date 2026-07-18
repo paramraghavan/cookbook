@@ -1,0 +1,1 @@
+[View Indian Cooking Tricks](https://htmlpreview.github.io/?https://github.com/paramraghavan/cookbook/blob/main/tip-and-tricks/indian_cooking_tricks.html)
