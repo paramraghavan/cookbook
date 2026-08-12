@@ -1,5 +1,7 @@
 # Chemistry Lab Floor Storage Shelf (Shelf A)
 
+<img src="floor_table_shelfa.png" width="50%">
+
 ## Complete Step-by-Step DIY Build & Material Guide
 
 ---
