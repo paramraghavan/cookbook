@@ -12,6 +12,11 @@
 
 ![stiffer_bar_clears_base_skids.png](stiffer_bar_clears_base_skids.png)
 
+
+## Interactive 3D model
+[![3D Floor Shelf Model](https://img.shields.io/badge/360°_Interactive_Model-Click_to_Open-blue?style=for-the-badge&logo=3D)](https://ygpsquare.com/storefront/24c373f5c9d33f02e56026229e16a44b96ea886ad26a96de8c017e08378d62a2/floor_shelf.html)
+
+> 🔗 **Interactive 3D View:** [Open 360° Floor Shelf Viewer in Browser](https://ygpsquare.com/storefront/24c373f5c9d33f02e56026229e16a44b96ea886ad26a96de8c017e08378d62a2/floor_shelf.html)
 ---
 
 ### Key Specifications
