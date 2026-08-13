@@ -1,6 +1,16 @@
 # Chemistry Lab Floor Storage Shelf (Shelf A)
 
+<img src="floor_table_shelfa.png" width="50%">
+
 ## Complete Step-by-Step DIY Build & Material Guide
+### Front View
+
+![front_view.png](front_view.png)
+
+
+## View at an anglw showing stiffer bars, Cleats, base skids
+
+![stiffer_bar_clears_base_skids.png](stiffer_bar_clears_base_skids.png)
 
 ---
 

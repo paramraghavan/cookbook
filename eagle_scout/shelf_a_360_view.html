@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>360° Interactive 3D Model - Chemistry Lab Storage Shelf A (Raw Plywood)</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #1a202c;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #e2e8f0;
+        }
+        #canvas-container {
+            width: 100vw;
+            height: 100vh;
+        }
+        #ui-overlay {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(26, 32, 44, 0.85);
+            padding: 15px 20px;
+            border-radius: 8px;
+            border: 1px solid #4a5568;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            pointer-events: none;
+            max-width: 320px;
+        }
+        h1 {
+            margin: 0 0 5px 0;
+            font-size: 18px;
+            color: #edf2f7;
+        }
+        p {
+            margin: 5px 0;
+            font-size: 13px;
+            color: #a0aec0;
+        }
+        .controls-hint {
+            margin-top: 10px;
+            padding-top: 8px;
+            border-top: 1px solid #4a5568;
+            font-weight: bold;
+            color: #cbd5e0;
+        }
+        #legend {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(26, 32, 44, 0.85);
+            padding: 12px 18px;
+            border-radius: 8px;
+            border: 1px solid #4a5568;
+            font-size: 12px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+        .color-box {
+            width: 14px;
+            height: 14px;
+            margin-right: 8px;
+            border-radius: 2px;
+        }
+    </style>
+
+    <!-- Three.js and OrbitControls CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body>
+    <div id="ui-overlay">
+        <h1>Shelf A (Raw Plywood View)</h1>
+        <p><b>Status:</b> Unsanded / Unpainted Construction Stage</p>
+        <p><b>Dimensions:</b> 92" W × 23.25" D × 25.5" H</p>
+        <div class="controls-hint">
+            🖱️ Left Click + Drag: Rotate 360°<br>
+            🔍 Scroll Wheel: Zoom In/Out<br>
+            ✋ Right Click + Drag: Pan
+        </div>
+    </div>
+
+    <div id="legend">
+        <b>Part Material Legend:</b>
+        <div class="legend-item"><div class="color-box" style="background:#d4a373;"></div> 3/4" Plywood (P1-P8)</div>
+        <div class="legend-item"><div class="color-box" style="background:#faedcd;"></div> 1x2 Solid Pine Cleats & Lip (P9, P10)</div>
+        <div class="legend-item"><div class="color-box" style="background:#bc6c25;"></div> 2x4 Base Elevation Skids (P11)</div>
+    </div>
+
+    <div id="canvas-container"></div>
+
+    <script>
+        // Scene setup
+        const container = document.getElementById('canvas-container');
+        const scene = new THREE.Scene();
+        scene.background = new THREE.Color(0x1a202c);
+
+        // Camera setup
+        const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
+        camera.position.set(100, 70, 120);
+
+        // Renderer setup
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.shadowMap.enabled = true;
+        renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+        container.appendChild(renderer.domElement);
+
+        // OrbitControls
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.05;
+        controls.target.set(0, 12, 0);
+
+        // Lighting
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+        scene.add(ambientLight);
+
+        const dirLight = new THREE.DirectionalLight(0xffffff, 0.7);
+        dirLight.position.set(80, 120, 90);
+        dirLight.castShadow = true;
+        dirLight.shadow.mapSize.width = 2048;
+        dirLight.shadow.mapSize.height = 2048;
+        scene.add(dirLight);
+
+        const fillLight = new THREE.DirectionalLight(0xffd1b3, 0.3);
+        fillLight.position.set(-80, 40, -90);
+        scene.add(fillLight);
+
+        // Materials (Raw unsanded plywood & pine aesthetics)
+        const plywoodMat = new THREE.MeshStandardMaterial({
+            color: 0xd4a373,
+            roughness: 0.8,
+            metalness: 0.1
+        });
+
+        const pineMat = new THREE.MeshStandardMaterial({
+            color: 0xfaedcd,
+            roughness: 0.7,
+            metalness: 0.05
+        });
+
+        const skidMat = new THREE.MeshStandardMaterial({
+            color: 0xbc6c25,
+            roughness: 0.9,
+            metalness: 0.1
+        });
+
+        const edgeMat = new THREE.LineBasicMaterial({ color: 0x5c3d2e, linewidth: 1 });
+
+        function createPart(w, h, d, x, y, z, mat) {
+            const geo = new THREE.BoxGeometry(w, h, d);
+            const mesh = new THREE.Mesh(geo, mat);
+            mesh.position.set(x, y, z);
+            mesh.castShadow = true;
+            mesh.receiveShadow = true;
+
+            const edges = new THREE.EdgesGeometry(geo);
+            const line = new THREE.LineSegments(edges, edgeMat);
+            mesh.add(line);
+
+            scene.add(mesh);
+            return mesh;
+        }
+
+        // Scale & Dimensions in Inches (Centered at 0,0,0)
+        // Table overall: W=92", H=25.5", D=23.25"
+        // Center offset: Y starts at skids
+
+        // P11: Base Skids (2x4: 1.5" H x 3.5" W x 23.25" D)
+        createPart(3.5, 1.5, 23.25, -44.25, 0.75, 0, skidMat); // Left Skid
+        createPart(3.5, 1.5, 23.25, 0, 0.75, 0, skidMat);       // Center Skid
+        createPart(3.5, 1.5, 23.25, 44.25, 0.75, 0, skidMat);  // Right Skid
+
+        // P2: Bottom Panel (92" W x 0.75" H x 23.25" D)
+        createPart(92, 0.75, 23.25, 0, 1.875, 0, plywoodMat);
+
+        // P4: Left Side Panel (0.75" W x 22.5" H x 23.25" D)
+        createPart(0.75, 22.5, 23.25, -45.625, 13.5, 0, plywoodMat);
+
+        // P5: Right Side Panel (0.75" W x 22.5" H x 23.25" D)
+        createPart(0.75, 22.5, 23.25, 45.625, 13.5, 0, plywoodMat);
+
+        // P6: Center Divider (0.75" W x 22.5" H x 23.25" D)
+        // Positioned between small left section (29.5") and long right section (60.25")
+        // Left side inside: -45.25. Divider center = -45.25 + 29.5 + 0.375 = -15.375
+        const dividerX = -15.375;
+        createPart(0.75, 22.5, 23.25, dividerX, 13.5, 0, plywoodMat);
+
+        // P1: Top Panel (92" W x 0.75" H x 23.25" D)
+        createPart(92, 0.75, 23.25, 0, 25.125, 0, plywoodMat);
+
+        // P3: Back Panel (92" W x 22.5" H x 0.75" D)
+        createPart(92, 22.5, 0.75, 0, 13.5, -11.25, plywoodMat);
+
+        // P10: Cleats for Left Section (3 shelves = 6 cleats on left outer & divider left)
+        const leftCleatX1 = -45.25 + 0.375 + 0.375; // inside left panel
+        const leftCleatX2 = dividerX - 0.375 - 0.375; // left face divider
+        const cleatYOffsets = [5.5 + 1.5, 11.0 + 1.5, 16.5 + 1.5]; // From bottom panel top
+
+        cleatYOffsets.forEach(y => {
+            // Cleats are 0.75" thick, 1.5" high, 20" long. Shifted towards back
+            createPart(0.75, 1.5, 20, -45.25 + 0.375, y - 0.75, 1.625, pineMat);
+            createPart(0.75, 1.5, 20, dividerX - 0.375, y - 0.75, 1.625, pineMat);
+        });
+
+        // P8: Small Shelves (3x) (29.5" W x 0.75" H x 23.25" D)
+        const smallShelfX = (-45.25 + 0.75 + dividerX - 0.375) / 2;
+        cleatYOffsets.forEach(y => {
+            createPart(29.5, 0.75, 23.25, smallShelfX, y + 0.375, 0, plywoodMat);
+        });
+
+        // P10: Cleat for Right Section (1 long shelf at 14.5" high)
+        const longCleatY = 14.5 + 1.5;
+        createPart(0.75, 1.5, 20, dividerX + 0.375, longCleatY - 0.75, 1.625, pineMat);
+        createPart(0.75, 1.5, 20, 45.25 - 0.375, longCleatY - 0.75, 1.625, pineMat);
+
+        // P7: Long Shelf (60.25" W x 0.75" H x 23.25" D)
+        const longShelfX = (dividerX + 0.375 + 45.25 - 0.375) / 2;
+        createPart(60.25, 0.75, 23.25, longShelfX, longCleatY + 0.375, 0, plywoodMat);
+
+        // P9: Stiffener Lip under Long Shelf (60.25" W x 1.5" H x 0.75" D)
+        createPart(60.25, 1.5, 0.75, longShelfX, longCleatY - 0.375, 11.25 - 0.375, pineMat);
+
+        // Floor Grid Plane
+        const gridHelper = new THREE.GridHelper(200, 40, 0x4a5568, 0x2d3748);
+        gridHelper.position.y = 0;
+        scene.add(gridHelper);
+
+        // Animation loop
+        function animate() {
+            requestAnimationFrame(animate);
+            controls.update();
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        // Responsive resize
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+    </script>
+</body>
+</html>
