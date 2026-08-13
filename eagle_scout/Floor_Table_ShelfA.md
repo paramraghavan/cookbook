@@ -8,73 +8,64 @@
 
 ### Key Specifications
 
-* **Overall Dimensions:** 92" Wide × 23.25" Deep × 25.5" High (24" Body + 1.5" Base Skids)
-* **Design Features:** Easy cleat assembly, anti-sag long shelf reinforcement, base elevation skids against damp floors,
-  dual-fastened shelves, and chemical-resistant finishing for lab use.
-* **Wall Mounting Restriction:** **NO WALL MOUNTING ALLOWED.** This unit is engineered to be strictly free-standing.
-  Structural stability, squareness, and anti-racking strength are provided by internal side cleats, base skids, and the
-  full 3/4" rear backing panel.
+* **Overall Dimensions:** 92" Wide × 23.25" Deep × 25.5" High (24" Body + 1.5" Base Skids [P11])
+* **Design Features:** Easy cleat assembly [P10], anti-sag long shelf reinforcement [P9], base elevation skids against damp floors [P11], dual-fastened shelves [P7, P8], and chemical-resistant finishing for lab use.
+* **Wall Mounting Restriction:** **NO WALL MOUNTING ALLOWED.** This unit is engineered to be strictly free-standing. Structural stability, squareness, and anti-racking strength are provided by internal side cleats [P10], base skids [P11], and the full 3/4" rear backing panel [P3].
 
-> **CRITICAL SAFETY RULE: NO WALL MOUNTING**
-> Do not anchor or screw this shelf into room walls. It must remain fully free-standing. Always build on a flat surface,
-> verify diagonal squareness, and ensure the back panel is glued and fastened securely to lock the cabinet rigid.
+> **NOTE**  
+> Do not anchor or screw this shelf into room walls. It must remain fully free-standing. Always build on a flat surface, verify diagonal squareness, and ensure the back panel [P3] is glued and fastened securely to lock the cabinet rigid.
 
 ---
 
-### 1. Shopping List (Home Depot / Lowe's)
+### 1. Materials to Buy
 
 #### Lumber & Plywood
 
-* **3 Sheets — 3/4" × 4' × 8' Sanded Plywood:** Select **BCX** or **Sandeply Birch**. (Used for frame, back panel, and
-  shelves).
-* **2 Boards — 1" × 2" × 8' Select Pine:** One board for the Long Shelf stiffener lip (cut to full 60.25" shelf width);
-  one board for side support cleats.
-* **1 Board — 2" × 4" × 8' Construction Pine:** Cut into base skids/feet underneath the unit to elevate it off damp lab
-  floors.
+| Qty | Item | Use |
+|---|---|---|
+| **3 Sheets** | 3/4" × 4' × 8' Sanded Plywood (BCX or Sandeply Birch) | Outer frame (P1, P2, P4, P5, P6), back panel (P3), and shelves (P7, P8) |
+| **2 Boards** | 1" × 2" × 8' Select Pine Board | Long shelf stiffener lip (P9) and side support cleats (P10) |
+| **1 Board** | 2" × 4" × 8' Construction Pine Board | Base skids / feet underneath unit (P11) |
 
-> **Pro Scout Tip:** Ask the store associate at the Home Depot or Lowe's lumber panel saw to rip your 4' × 8' sheets
-> into the 23.25" and 24.0" wide strips for free or cheap. This makes transporting the wood much easier and guarantees
-> straight cuts!
+> **Pro Scout Tip:** Ask the store associate at the Home Depot or Lowe's lumber panel saw to rip your 4' × 8' sheets into the 23.25" and 24.0" wide strips for free or cheap. This makes transporting the wood much easier and guarantees straight cuts!
 
 #### Fasteners, Hardware & Glue
 
-* **1 Bottle — Titebond II Wood Glue (16 oz):** Waterproof/water-resistant glue (provides 80%+ structural strength).
-* **1 Box — 2" #8 Star-Drive Cabinet/Wood Screws:** Main assembly fasteners for attaching base skids, top, bottom, and
-  outer frame.
-* **1 Box / Pack — 1-1/4" to 1-1/2" Finish Nails (or 1-1/4" Wood Screws):** For attaching support cleats, stiffener bar,
-  and nailing shelves down vertically into cleats.
-* **1 Box / Pack — 1-1/2" to 2" Finish Nails (or 1-5/8" Trim Screws):** For horizontal fastening through exterior side
-  panels directly into shelf ends.
-* **1 Box / Pack — 1" to 1-1/4" Brad Nails or Screws:** For securing the 3/4" rear back panel.
-* **1 Bit — 1/8" Countersink Drill Bit Combination:** Pre-drills pilot holes and carves a small pocket so screw heads
-  sit flush with the wood without splitting it.
+| Qty | Item | Use |
+|---|---|---|
+| **1 Bottle** | Titebond II Wood Glue (16 oz) | Primary structural bonding across all wood-to-wood joints (80%+ total strength) |
+| **1 Box** | 2" #8 Star-Drive Wood/Cabinet Screws | Main assembly fasteners for attaching base skids (P11), top panel (P1), bottom panel (P2), and outer frame |
+| **1 Pack** | 1-1/4" to 1-1/2" Finish Nails (or 1-1/4" Wood Screws) | Attaching support cleats (P10), stiffener bar (P9), and securing shelves (P7, P8) vertically down into cleats |
+| **1 Pack** | 1-1/2" to 2" Finish Nails (or 1-5/8" Trim Screws) | Horizontal fastening through exterior side panels (P4, P5) and divider (P6) directly into shelf end cores |
+| **1 Pack** | 1" to 1-1/4" Brad Nails or Wood Screws | Mounting the 3/4" rear back panel (P3) around perimeter and center divider |
+| **1 Bit** | 1/8" Countersink Drill Bit Combination | Pre-drilling pilot holes and recessing screw heads flush without splitting plywood |
 
 #### Lab-Grade Paint & Finishing
 
-* **1 Quart — Latex Wood Primer:** Seals raw plywood edges so they don't soak up paint.
-* **1 Gallon — Semi-Gloss or Gloss Interior Enamel Paint:** Creates a smooth, washable finish that resists water and
-  common chemical splashes.
-* **1 Quart — Water-Based Polyurethane (Clear):** Adds a tough protective clear coat over horizontal shelf surfaces for
-  maximum scratch and stain resistance.
-* **1 Pack — 120-Grit Sandpaper + 4" Foam Rollers & Brushes**
+| Qty | Item | Use | Priority |
+|---|---|---|---|
+| **1 Quart** | Latex Wood Primer | Seals raw plywood edges and surfaces prior to paint application | Mandatory |
+| **1 Gallon** | Semi-Gloss or Gloss Interior Enamel Paint | Smooth, washable body finish resisting water and chemical splashes | Mandatory |
+| **1 Quart** | Water-Based Polyurethane (Clear) | Tough clear coat over top working surface and shelf tops for scratch/stain protection | Optional |
+| **1 Pack** | 120-Grit Sandpaper + 4" Foam Rollers & Brushes | Surface sanding and smooth paint/sealer application | Mandatory |
 
 ---
 
 ### 2. Master Cut List
 
-| Part Name             | Qty | Material       | Cut Dimensions (W × D or H) | Function / Location                                                 |
-|-----------------------|-----|----------------|-----------------------------|---------------------------------------------------------------------|
-| **Top Panel**         | 1   | 3/4" Plywood   | $92.00'' \times 23.25''$    | Top exterior cover cap                                              |
-| **Bottom Panel**      | 1   | 3/4" Plywood   | $92.00'' \times 23.25''$    | Bottom exterior base                                                |
-| **Back Panel**        | 1   | 3/4" Plywood   | $92.00'' \times 24.00''$    | Full rear panel (locks box square; eliminates wall anchoring)       |
-| **Left Side Panel**   | 1   | 3/4" Plywood   | $22.50'' \times 23.25''$    | Left outer wall                                                     |
-| **Right Side Panel**  | 1   | 3/4" Plywood   | $22.50'' \times 23.25''$    | Right outer wall                                                    |
-| **Center Divider**    | 1   | 3/4" Plywood   | $22.50'' \times 23.25''$    | Main vertical divider                                               |
-| **Long Shelf**        | 1   | 3/4" Plywood   | $60.25'' \times 23.25''$    | Horizontal shelf for right section                                  |
-| **Small Shelves**     | 3   | 3/4" Plywood   | $29.50'' \times 23.25''$    | Horizontal shelves for left section                                 |
-| **Shelf Stiffener**   | 1   | 1x2 Pine Board | **$60.25'' \times 1.50''$** | Aligned flush under front edge of Long Shelf (full 60.25" span)     |
-| **Shelf Cleats**      | 8   | 1x2 Pine Board | **$20.00'' \times 1.50''$** | Support ledges mounted on inside side/divider walls                 |
-| **Base Skids (Feet)** | 3   | 2x4 Lumber     | **$23.25'' \times 3.50''$** | Floor elevation skids mounted under bottom panel (water protection) |
+| PartId | Part Name | Qty | Material | Cut Dimensions (W × D or H) | Function / Location |
+|---|---|---|---|---|---|
+| **P1** | Top Panel | 1 | 3/4" Plywood | $92.00'' \times 23.25''$ | Top exterior cover cap |
+| **P2** | Bottom Panel | 1 | 3/4" Plywood | $92.00'' \times 23.25''$ | Bottom exterior base |
+| **P3** | Back Panel | 1 | 3/4" Plywood | $92.00'' \times 24.00''$ | Full rear panel (locks box square; eliminates wall anchoring) |
+| **P4** | Left Side Panel | 1 | 3/4" Plywood | $22.50'' \times 23.25''$ | Left outer wall |
+| **P5** | Right Side Panel | 1 | 3/4" Plywood | $22.50'' \times 23.25''$ | Right outer wall |
+| **P6** | Center Divider | 1 | 3/4" Plywood | $22.50'' \times 23.25''$ | Main vertical divider |
+| **P7** | Long Shelf | 1 | 3/4" Plywood | $60.25'' \times 23.25''$ | Horizontal shelf for right section |
+| **P8** | Small Shelves | 3 | 3/4" Plywood | $29.50'' \times 23.25''$ | Horizontal shelves for left section |
+| **P9** | Shelf Stiffener | 1 | 1x2 Pine Board | **$60.25'' \times 1.50''$** | Aligned flush under front edge of Long Shelf (P7) |
+| **P10** | Shelf Cleats | 8 | 1x2 Pine Board | **$20.00'' \times 1.50''$** | Support ledges mounted on inside side/divider walls |
+| **P11** | Base Skids (Feet) | 3 | 2x4 Lumber | **$23.25'' \times 3.50''$** | Floor elevation skids mounted under bottom panel (P2) |
 
 ---
 
@@ -83,29 +74,28 @@
 ```text
 PLYWOOD SHEET 1 (48" x 96" x 3/4")
 +-----------------------------------------------------------------------------------------+
-|                              Top Panel: 92.0" x 23.25"                      | Remainder |
+|                        [P1] Top Panel: 92.0" x 23.25"                       | Remainder |
 +-----------------------------------------------------------------------------------------+
-|                           Bottom Panel: 92.0" x 23.25"                      | Remainder |
+|                       [P2] Bottom Panel: 92.0" x 23.25"                     | Remainder |
 +-----------------------------------------------------------------------------------------+
 
 PLYWOOD SHEET 2 (48" x 96" x 3/4")
 +-----------------------------------------------------------------------------------------+
-|                              Back Panel: 92.0" x 24.00"                     | Remainder |
+|                        [P3] Back Panel: 92.0" x 24.00"                      | Remainder |
 +-----------------------------------------------------------------------------------------+
-|             Long Shelf: 60.25" x 23.25"          |   Small Shelf 1: 29.5"       | Remainder |
+|       [P7] Long Shelf: 60.25" x 23.25"       |   [P8a] Small Shelf 1: 29.5"   | Remainder |
 +-----------------------------------------------------------------------------------------+
 
 PLYWOOD SHEET 3 (48" x 96" x 3/4")
 +-----------------------------------------------------------------------------------------+
-|   Small Shelf 2: 29.5"    |   Small Shelf 3: 29.5"    |           Scrap                 |
+|   [P8b] Small Shelf 2: 29.5"  |   [P8c] Small Shelf 3: 29.5"  |         Scrap           |
 +-----------------------------------------------------------------------------------------+
-| Left Side Wall: 22.5"     | Right Side Wall: 22.5"    | Center Divider: 22.5" |   Scrap   |
+| [P4] Left Side: 22.5"     | [P5] Right Side: 22.5"    | [P6] Center Divider: 22.5" | Scrap |
 +-----------------------------------------------------------------------------------------+
 
-1x2 PINE BOARD #1 (Lip)   : Cut 1 piece @ 60.25" long (Stiffener Lip) + 35.75" Scrap
-1x2 PINE BOARD #2 (Cleats): Cut 8 pieces @ 20.00" long (Support Cleats)
-2x4 PINE BOARD (Skids)   : Cut 3 pieces @ 23.25" long (Floor Base Feet)
-
+1x2 PINE BOARD #1 (Lip)   : Cut 1 piece @ 60.25" long [P9] (Stiffener Lip) + 35.75" Scrap
+1x2 PINE BOARD #2 (Cleats): Cut 8 pieces @ 20.00" long [P10] (Support Cleats)
+2x4 PINE BOARD (Skids)   : Cut 3 pieces @ 23.25" long [P11] (Floor Base Feet)
 ```
 
 ---
@@ -262,6 +252,6 @@ RIGHT SECTION WALLS (Right Face of Center Divider & Inside Right Side Panel)
 
 ---
 
-> **Safety Warning for Scout Leaders:** When fully assembled, three sheets of 3/4" plywood weigh approximately 160 lbs!
+> **NOTE** When fully assembled, three sheets of 3/4" plywood weigh approximately 160 lbs!
 > Assemble this shelf unit inside or right next to the chemistry lab room where it will stay. Always have 3 to 4 Scouts
 > work together when lifting, moving, or flipping the cabinet frame.
