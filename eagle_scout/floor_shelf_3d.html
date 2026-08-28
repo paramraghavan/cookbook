@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>360° Interactive 3D Model - Chemistry Lab Storage Shelf A (with Part IDs)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #e2e8f0;
+            background-color: #0f1419;
+        }
+
+        #canvas-container {
+            width: 100%;
+            height: 60vh;
+        }
+
+        .info-panel {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(26, 32, 44, 0.95);
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #667eea;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            max-width: 350px;
+            z-index: 100;
+            pointer-events: none;
+        }
+
+        .info-panel h2 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .info-panel p {
+            font-size: 12px;
+            color: #a0aec0;
+            margin: 5px 0;
+            line-height: 1.4;
+        }
+
+        .info-panel strong {
+            color: #cbd5e0;
+        }
+
+        .controls-hint {
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid #4a5568;
+            font-weight: bold;
+            color: #cbd5e0;
+            font-size: 12px;
+        }
+
+        #legend {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(26, 32, 44, 0.95);
+            padding: 15px 20px;
+            border-radius: 8px;
+            border: 2px solid #667eea;
+            font-size: 11px;
+            max-width: 300px;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+
+        #parts-panel {
+            position: fixed;
+            right: 20px;
+            top: 20px;
+            background: rgba(26, 32, 44, 0.95);
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #667eea;
+            font-size: 11px;
+            max-width: 280px;
+            max-height: 80vh;
+            overflow-y: auto;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+
+        #parts-panel h3 {
+            color: #667eea;
+            margin-bottom: 12px;
+            font-size: 13px;
+            border-bottom: 1px solid #4a5568;
+            padding-bottom: 8px;
+        }
+
+        .part-item-list {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .part-item-list button {
+            background: rgba(102, 126, 234, 0.2);
+            border: 1px solid #667eea;
+            color: #cbd5e0;
+            padding: 6px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 10px;
+            text-align: left;
+            transition: all 0.3s;
+        }
+
+        .part-item-list button:hover {
+            background: rgba(102, 126, 234, 0.4);
+            color: #ffffff;
+        }
+
+        .part-item-list button.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        #part-info-popup {
+            position: fixed;
+            background: rgba(26, 32, 44, 0.98);
+            padding: 15px 20px;
+            border-radius: 8px;
+            border: 2px solid #ffc107;
+            z-index: 200;
+            display: none;
+            min-width: 250px;
+            box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
+            cursor: move;
+        }
+
+        #hover-tooltip {
+            position: fixed;
+            background: rgba(102, 126, 234, 0.95);
+            border: 2px solid #667eea;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-weight: bold;
+            color: white;
+            font-size: 14px;
+            z-index: 150;
+            display: none;
+            pointer-events: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+        }
+
+        #part-info-popup h4 {
+            color: #ffc107;
+            margin: 0 0 8px 0;
+            font-size: 14px;
+        }
+
+        #part-info-popup p {
+            color: #cbd5e0;
+            margin: 4px 0;
+            font-size: 11px;
+        }
+
+        .highlight-material {
+            emissive: 0xffff00 !important;
+        }
+
+        #legend b {
+            display: block;
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+
+        .color-box {
+            width: 16px;
+            height: 16px;
+            margin-right: 8px;
+            border-radius: 2px;
+            border: 1px solid #666;
+        }
+
+        .legend-item span {
+            font-size: 10px;
+            color: #a0aec0;
+        }
+
+        .parts-table {
+            width: 100%;
+            background: rgba(26, 32, 44, 0.95);
+            border-collapse: collapse;
+            border-top: 2px solid #667eea;
+            margin-top: 20px;
+        }
+
+        .parts-table th {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .parts-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #2d3748;
+            font-size: 11px;
+            color: #a0aec0;
+        }
+
+        .parts-table tr:hover {
+            background: rgba(102, 126, 234, 0.1);
+        }
+
+        .part-id {
+            font-weight: bold;
+            color: #667eea;
+            font-family: monospace;
+            display: inline-block;
+            background: rgba(102, 126, 234, 0.2);
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+
+        .material-type {
+            font-size: 10px;
+            color: #90cdf4;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #a0aec0;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        .part-details {
+            background: rgba(102, 126, 234, 0.1);
+            border: 1px solid #667eea;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .part-details h3 {
+            color: #667eea;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .part-details p {
+            color: #cbd5e0;
+            font-size: 12px;
+            margin: 4px 0;
+        }
+    </style>
+
+    <!-- Three.js and OrbitControls CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body>
+    <div class="info-panel">
+        <h2>📦 Shelf A - 3D Model</h2>
+        <p><b>Status:</b> Unsanded / Unpainted</p>
+        <p><b>Dimensions:</b> 92" W × 23.25" D × 25.5" H</p>
+        <p><b>Total Parts:</b> 11 (P1-P11)</p>
+        <div class="controls-hint">
+            🖱️ Click + Drag: Rotate<br>
+            🔍 Scroll: Zoom<br>
+            ✋ Right Click + Drag: Pan
+        </div>
+    </div>
+
+    <div id="legend">
+        <b>Material Legend & Parts List</b>
+        <div class="legend-item">
+            <div class="color-box" style="background:#d4a373;"></div>
+            <span>3/4" Plywood (P1-P8)</span>
+        </div>
+        <div class="legend-item">
+            <div class="color-box" style="background:#faedcd;"></div>
+            <span>1×2 Pine (P9, P10)</span>
+        </div>
+        <div class="legend-item">
+            <div class="color-box" style="background:#bc6c25;"></div>
+            <span>2×4 Skids (P11)</span>
+        </div>
+        <hr style="border: none; border-top: 1px solid #4a5568; margin: 10px 0;">
+        <div style="font-size: 10px; color: #cbd5e0; line-height: 1.6;">
+            <b style="display: block; margin-bottom: 5px; color: #667eea;">All Parts:</b>
+            P1: Top Panel | P2: Bottom<br>
+            P3: Back Panel<br>
+            P4: Left Side | P5: Right Side<br>
+            P6: Center Divider<br>
+            P7: Long Shelf | P8: Small Shelves<br>
+            P9: Stiffener | P10: Cleats<br>
+            P11: Base Skids (×3)
+        </div>
+    </div>
+
+    <div id="canvas-container"></div>
+
+    <div id="parts-panel">
+        <h3>📦 Part IDs Reference</h3>
+        <div class="part-item-list" id="parts-list"></div>
+    </div>
+
+    <div id="part-info-popup">
+        <h4 id="popup-id"></h4>
+        <p id="popup-name"></p>
+        <p id="popup-dims"></p>
+        <p id="popup-material"></p>
+    </div>
+
+    <div id="hover-tooltip"></div>
+
+    <div class="container">
+        <h1>Chemistry Lab Floor Storage Shelf A - Interactive 3D Model</h1>
+        <p class="subtitle">Rotate to view all part IDs. See table below for complete part specifications.</p>
+
+        <table class="parts-table">
+            <thead>
+                <tr>
+                    <th>Part ID</th>
+                    <th>Part Name</th>
+                    <th>Qty</th>
+                    <th>Material & Dimensions</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="part-id">P1</span></td>
+                    <td>Top Panel</td>
+                    <td>1</td>
+                    <td><span class="material-type">3/4" Plywood</span><br>92" × 23.25"</td>
+                    <td>Top exterior cap</td>
+                </tr>
+                <tr>
+                    <td><span class="part-id">P2</span></td>
+                    <td>Bottom Panel</td>
+                    <td>1</td>
+                    <td><span class="material-type">3/4" Plywood</span><br>92" × 23.25"</td>
+                    <td>Bottom exterior base</td>
+                </tr>
+                <tr>
+                    <td><span class="part-id">P3</span></td>
+                    <td>Back Panel</td>
+                    <td>1</td>
+                    <td><span class="material-type">3/4" Plywood</span><br>92" × 24"</td>
+                    <td>Rear face - provides rigidity</td>
+                </tr>
+                <tr>
+                    <td><span class="part-id">P4</span></td>
+                    <td>Left Side Panel</td>
+                    <td>1</td>
+                    <td><span class="material-type">3/4" Plywood</span><br>22.5" × 23.25"</td>
+                    <td>Left outer wall</td>
+                </tr>
+                <tr>
+                    <td><span class="part-id">P5</span></td>
+                    <td>Right Side Panel</td>
+                    <td>1</td>
+                    <td><span class="material-type">3/4" Plywood</span><br>22.5" × 23.25"</td>
+                    <td>Right outer wall</td>
+                </tr>
+                <tr>
+                    <td><span class="part-id">P6</span></td>
+                    <td>Center Divider</td>
+                    <td>1</td>
+                    <td><span class="material-type">3/4" Plywood</span><br>22.5" × 23.25"</td>
+                    <td>Main vertical divider</td>
+                </tr>
+                <tr>
+                    <td><span class="part-id">P7</span></td>
+                    <td>Long Shelf</td>
+                    <td>1</td>
+                    <td><span class="material-type">3/4" Plywood</span><br>60.25" × 23.25"</td>
+                    <td>Right section shelf</td>
+                </tr>
+                <tr>
+                    <td><span class="part-id">P8</span></td>
+                    <td>Small Shelves</td>
+                    <td>3</td>
+                    <td><span class="material-type">3/4" Plywood</span><br>29.5" × 23.25"</td>
+                    <td>Left section shelves</td>
+                </tr>
+                <tr>
+                    <td><span class="part-id">P9</span></td>
+                    <td>Stiffener Lip</td>
+                    <td>1</td>
+                    <td><span class="material-type">1×2 Pine</span><br>60.25" × 1.5"</td>
+                    <td>Under P7 front edge</td>
+                </tr>
+                <tr>
+                    <td><span class="part-id">P10</span></td>
+                    <td>Shelf Cleats</td>
+                    <td>8</td>
+                    <td><span class="material-type">1×2 Pine</span><br>20" × 1.5"</td>
+                    <td>Support ledges on walls</td>
+                </tr>
+                <tr>
+                    <td><span class="part-id">P11</span></td>
+                    <td>Base Skids</td>
+                    <td>3</td>
+                    <td><span class="material-type">2×4 Lumber</span><br>23.25" × 3.5"</td>
+                    <td>Floor elevation (moisture protection)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="part-details">
+            <h3>📐 Assembly Summary</h3>
+            <p><b>Total Parts:</b> 11 different part types (P1-P11)</p>
+            <p><b>Sheets Required:</b> 3 × 3/4" plywood (4'×8')</p>
+            <p><b>Lumber Required:</b> 2 × 1×2 boards, 1 × 2×4 board</p>
+            <p><b>Total Weight (Assembled):</b> ~160 lbs</p>
+            <p><b>Assembly Time:</b> 6-8 hours + drying/finishing</p>
+        </div>
+    </div>
+
+    <script>
+        // Scene setup
+        const container = document.getElementById('canvas-container');
+        const scene = new THREE.Scene();
+        scene.background = new THREE.Color(0x0f1419);
+
+        // Camera setup
+        const camera = new THREE.PerspectiveCamera(45, window.innerWidth / (window.innerHeight * 0.6), 1, 1000);
+        camera.position.set(100, 70, 120);
+
+        // Renderer setup
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight * 0.6);
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.shadowMap.enabled = true;
+        renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+        container.appendChild(renderer.domElement);
+
+        // OrbitControls
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.05;
+        controls.target.set(0, 12, 0);
+
+        // Lighting
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+        scene.add(ambientLight);
+
+        const dirLight = new THREE.DirectionalLight(0xffffff, 0.7);
+        dirLight.position.set(80, 120, 90);
+        dirLight.castShadow = true;
+        dirLight.shadow.mapSize.width = 2048;
+        dirLight.shadow.mapSize.height = 2048;
+        scene.add(dirLight);
+
+        const fillLight = new THREE.DirectionalLight(0xffd1b3, 0.3);
+        fillLight.position.set(-80, 40, -90);
+        scene.add(fillLight);
+
+        // Materials
+        const plywoodMat = new THREE.MeshStandardMaterial({
+            color: 0xd4a373,
+            roughness: 0.8,
+            metalness: 0.1
+        });
+
+        const pineMat = new THREE.MeshStandardMaterial({
+            color: 0xfaedcd,
+            roughness: 0.7,
+            metalness: 0.05
+        });
+
+        const skidMat = new THREE.MeshStandardMaterial({
+            color: 0xbc6c25,
+            roughness: 0.9,
+            metalness: 0.1
+        });
+
+        const edgeMat = new THREE.LineBasicMaterial({ color: 0x5c3d2e, linewidth: 1 });
+
+        // Store parts with IDs
+        const parts = [];
+        const raycaster = new THREE.Raycaster();
+        const mouse = new THREE.Vector2();
+        let selectedPart = null;
+        const highlightMat = new THREE.MeshStandardMaterial({
+            color: 0xffff00,
+            roughness: 0.6,
+            metalness: 0.3,
+            emissive: 0xffff00
+        });
+
+        function createPart(w, h, d, x, y, z, mat, partId, partName) {
+            const geo = new THREE.BoxGeometry(w, h, d);
+            const mesh = new THREE.Mesh(geo, mat);
+            mesh.position.set(x, y, z);
+            mesh.castShadow = true;
+            mesh.receiveShadow = true;
+
+            const edges = new THREE.EdgesGeometry(geo);
+            const line = new THREE.LineSegments(edges, edgeMat);
+            mesh.add(line);
+
+            scene.add(mesh);
+
+            // Add text label
+            createLabel(partId, x, y, z, mesh);
+
+            parts.push({ mesh, partId, partName, position: { x, y, z } });
+            return mesh;
+        }
+
+        function createLabel(text, x, y, z, mesh) {
+            // Create high-resolution canvas texture for label
+            const canvas = document.createElement('canvas');
+            canvas.width = 256;
+            canvas.height = 128;
+            const ctx = canvas.getContext('2d');
+
+            // Background
+            ctx.fillStyle = 'rgba(102, 126, 234, 0.95)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Border
+            ctx.strokeStyle = '#ffffff';
+            ctx.lineWidth = 3;
+            ctx.strokeRect(2, 2, canvas.width - 4, canvas.height - 4);
+
+            // Text
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 72px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.shadowColor = 'rgba(0, 0, 0, 0.8)';
+            ctx.shadowBlur = 4;
+            ctx.shadowOffsetX = 2;
+            ctx.shadowOffsetY = 2;
+            ctx.fillText(text, canvas.width / 2, canvas.height / 2);
+
+            const texture = new THREE.CanvasTexture(canvas);
+            texture.magFilter = THREE.LinearFilter;
+            texture.minFilter = THREE.LinearFilter;
+
+            const spriteMat = new THREE.SpriteMaterial({
+                map: texture,
+                sizeAttenuation: true
+            });
+            const sprite = new THREE.Sprite(spriteMat);
+
+            // Scale based on mesh size for better visibility
+            sprite.scale.set(8, 4, 1);
+            sprite.position.set(0, 0.5, 1.5);
+
+            mesh.add(sprite);
+        }
+
+        // P11: Base Skids
+        createPart(3.5, 1.5, 23.25, -44.25, 0.75, 0, skidMat, 'P11', 'Left Skid');
+        createPart(3.5, 1.5, 23.25, 0, 0.75, 0, skidMat, 'P11', 'Center Skid');
+        createPart(3.5, 1.5, 23.25, 44.25, 0.75, 0, skidMat, 'P11', 'Right Skid');
+
+        // P2: Bottom Panel
+        createPart(92, 0.75, 23.25, 0, 1.875, 0, plywoodMat, 'P2', 'Bottom Panel');
+
+        // P4: Left Side Panel
+        createPart(0.75, 22.5, 23.25, -45.625, 13.5, 0, plywoodMat, 'P4', 'Left Side');
+
+        // P5: Right Side Panel
+        createPart(0.75, 22.5, 23.25, 45.625, 13.5, 0, plywoodMat, 'P5', 'Right Side');
+
+        // P6: Center Divider
+        const dividerX = -15.375;
+        createPart(0.75, 22.5, 23.25, dividerX, 13.5, 0, plywoodMat, 'P6', 'Center Divider');
+
+        // P1: Top Panel
+        createPart(92, 0.75, 23.25, 0, 25.125, 0, plywoodMat, 'P1', 'Top Panel');
+
+        // P3: Back Panel
+        createPart(92, 22.5, 0.75, 0, 13.5, -11.25, plywoodMat, 'P3', 'Back Panel');
+
+        // P10: Cleats
+        const cleatYOffsets = [5.5 + 1.5, 11.0 + 1.5, 16.5 + 1.5];
+        let cleatCount = 0;
+        cleatYOffsets.forEach(y => {
+            createPart(0.75, 1.5, 20, -45.25 + 0.375, y - 0.75, 1.625, pineMat, 'P10', 'Left Cleat');
+            createPart(0.75, 1.5, 20, dividerX - 0.375, y - 0.75, 1.625, pineMat, 'P10', 'Divider Cleat');
+            cleatCount += 2;
+        });
+
+        // P8: Small Shelves
+        const smallShelfX = (-45.25 + 0.75 + dividerX - 0.375) / 2;
+        let shelfCount = 1;
+        cleatYOffsets.forEach(y => {
+            createPart(29.5, 0.75, 23.25, smallShelfX, y + 0.375, 0, plywoodMat, 'P8', `Small Shelf ${shelfCount}`);
+            shelfCount++;
+        });
+
+        // P10: Right Section Cleats
+        const longCleatY = 14.5 + 1.5;
+        createPart(0.75, 1.5, 20, dividerX + 0.375, longCleatY - 0.75, 1.625, pineMat, 'P10', 'Right Cleat');
+        createPart(0.75, 1.5, 20, 45.25 - 0.375, longCleatY - 0.75, 1.625, pineMat, 'P10', 'Right Cleat');
+
+        // P7: Long Shelf
+        const longShelfX = (dividerX + 0.375 + 45.25 - 0.375) / 2;
+        createPart(60.25, 0.75, 23.25, longShelfX, longCleatY + 0.375, 0, plywoodMat, 'P7', 'Long Shelf');
+
+        // P9: Stiffener Lip
+        createPart(60.25, 1.5, 0.75, longShelfX, longCleatY - 0.375, 11.25 - 0.375, pineMat, 'P9', 'Stiffener Lip');
+
+        // Floor Grid
+        const gridHelper = new THREE.GridHelper(200, 40, 0x4a5568, 0x2d3748);
+        gridHelper.position.y = 0;
+        scene.add(gridHelper);
+
+        // Mouse click handler for part selection
+        const onCanvasClick = (event) => {
+            const rect = renderer.domElement.getBoundingClientRect();
+            mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+            mouse.y = -((event.clientY - rect.top) / (rect.height * 0.6)) * 2 + 1;
+
+            raycaster.setFromCamera(mouse, camera);
+            const intersects = raycaster.intersectObjects(scene.children, true);
+
+            if (intersects.length > 0) {
+                for (let i = 0; i < intersects.length; i++) {
+                    const obj = intersects[i].object;
+                    if (obj.userData && obj.userData.partId) {
+                        selectPart(obj, event);
+                        break;
+                    }
+                    let parent = obj.parent;
+                    while (parent) {
+                        if (parent.userData && parent.userData.partId) {
+                            selectPart(parent, event);
+                            return;
+                        }
+                        parent = parent.parent;
+                    }
+                }
+            }
+        };
+
+        function selectPart(mesh, event) {
+            if (selectedPart) {
+                selectedPart.mesh.material = selectedPart.originalMat;
+            }
+
+            const partId = mesh.userData.partId;
+            selectedPart = {
+                mesh: mesh,
+                originalMat: mesh.material,
+                partId: partId
+            };
+
+            mesh.material = highlightMat;
+
+            const partData = partsData.find(p => p.id === partId);
+            if (partData) {
+                document.getElementById('popup-id').textContent = `${partData.id}`;
+                document.getElementById('popup-name').textContent = `${partData.name}`;
+                document.getElementById('popup-dims').textContent = `Dimensions: ${partData.dims}`;
+                document.getElementById('popup-material').textContent = `Material: ${partData.material}`;
+
+                const popup = document.getElementById('part-info-popup');
+                popup.style.display = 'block';
+                popup.style.left = (event.clientX + 20) + 'px';
+                popup.style.top = (event.clientY + 20) + 'px';
+            }
+
+            document.querySelectorAll('#parts-list button').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent.includes(partId)) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+
+        renderer.domElement.addEventListener('click', onCanvasClick);
+
+        // Mouse move handler for hover tooltip
+        let lastHoveredPart = null;
+        renderer.domElement.addEventListener('mousemove', (event) => {
+            const rect = renderer.domElement.getBoundingClientRect();
+            mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+            mouse.y = -((event.clientY - rect.top) / (rect.height * 0.6)) * 2 + 1;
+
+            raycaster.setFromCamera(mouse, camera);
+            const intersects = raycaster.intersectObjects(scene.children, true);
+
+            const tooltip = document.getElementById('hover-tooltip');
+            let hoveredPart = null;
+
+            if (intersects.length > 0) {
+                for (let i = 0; i < intersects.length; i++) {
+                    const obj = intersects[i].object;
+                    if (obj.userData && obj.userData.partId) {
+                        hoveredPart = obj.userData.partId;
+                        break;
+                    }
+                    let parent = obj.parent;
+                    while (parent) {
+                        if (parent.userData && parent.userData.partId) {
+                            hoveredPart = parent.userData.partId;
+                            break;
+                        }
+                        parent = parent.parent;
+                    }
+                    if (hoveredPart) break;
+                }
+            }
+
+            if (hoveredPart) {
+                tooltip.textContent = hoveredPart;
+                tooltip.style.display = 'block';
+                tooltip.style.left = (event.clientX + 15) + 'px';
+                tooltip.style.top = (event.clientY - 10) + 'px';
+            } else {
+                tooltip.style.display = 'none';
+            }
+
+            lastHoveredPart = hoveredPart;
+        });
+
+        // Make part info popup draggable
+        let isDragging = false;
+        let dragOffset = { x: 0, y: 0 };
+
+        document.getElementById('part-info-popup').addEventListener('mousedown', (e) => {
+            isDragging = true;
+            const popup = document.getElementById('part-info-popup');
+            dragOffset.x = e.clientX - popup.offsetLeft;
+            dragOffset.y = e.clientY - popup.offsetTop;
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (isDragging) {
+                const popup = document.getElementById('part-info-popup');
+                popup.style.left = (e.clientX - dragOffset.x) + 'px';
+                popup.style.top = (e.clientY - dragOffset.y) + 'px';
+            }
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        // Animation loop
+        function animate() {
+            requestAnimationFrame(animate);
+            controls.update();
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        // Responsive resize
+        window.addEventListener('resize', () => {
+            const newHeight = window.innerHeight * 0.6;
+            camera.aspect = window.innerWidth / newHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, newHeight);
+        });
+
+        // Populate parts panel with all unique part IDs
+        const partsData = [
+            { id: 'P1', name: 'Top Panel', qty: 1, material: '3/4" Plywood', dims: '92" × 23.25"' },
+            { id: 'P2', name: 'Bottom Panel', qty: 1, material: '3/4" Plywood', dims: '92" × 23.25"' },
+            { id: 'P3', name: 'Back Panel', qty: 1, material: '3/4" Plywood', dims: '92" × 24"' },
+            { id: 'P4', name: 'Left Side Panel', qty: 1, material: '3/4" Plywood', dims: '22.5" × 23.25"' },
+            { id: 'P5', name: 'Right Side Panel', qty: 1, material: '3/4" Plywood', dims: '22.5" × 23.25"' },
+            { id: 'P6', name: 'Center Divider', qty: 1, material: '3/4" Plywood', dims: '22.5" × 23.25"' },
+            { id: 'P7', name: 'Long Shelf', qty: 1, material: '3/4" Plywood', dims: '60.25" × 23.25"' },
+            { id: 'P8', name: 'Small Shelves', qty: 3, material: '3/4" Plywood', dims: '29.5" × 23.25"' },
+            { id: 'P9', name: 'Stiffener Lip', qty: 1, material: '1×2 Pine', dims: '60.25" × 1.5"' },
+            { id: 'P10', name: 'Shelf Cleats', qty: 8, material: '1×2 Pine', dims: '20" × 1.5"' },
+            { id: 'P11', name: 'Base Skids', qty: 3, material: '2×4 Lumber', dims: '23.25" × 3.5"' }
+        ];
+
+        const partsList = document.getElementById('parts-list');
+        partsData.forEach(part => {
+            const btn = document.createElement('button');
+            btn.innerHTML = `<strong>${part.id}</strong> - ${part.name}<br><span style="opacity: 0.7; font-size: 9px;">Qty: ${part.qty} | ${part.material}</span>`;
+            btn.title = `${part.name}: ${part.dims}`;
+            btn.addEventListener('click', () => {
+                // Remove active state from all buttons
+                document.querySelectorAll('#parts-list button').forEach(b => b.classList.remove('active'));
+                // Add active state to clicked button
+                btn.classList.add('active');
+            });
+            partsList.appendChild(btn);
+        });
+    </script>
+</body>
+</html>

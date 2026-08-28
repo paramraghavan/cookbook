@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10% Scale Quick Mockup - Shopping List & Build Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            color: #333;
+            padding: 20px;
+        }
+
+        .page {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .specs {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .spec {
+            background: #f0f4ff;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #dde4ff;
+        }
+
+        .spec-label {
+            font-size: 12px;
+            color: #667eea;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .spec-value {
+            font-size: 16px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 18px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 8px;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .checklist {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .item {
+            display: flex;
+            align-items: flex-start;
+            background: #f9f9f9;
+            padding: 12px;
+            border-radius: 6px;
+            border-left: 3px solid #667eea;
+        }
+
+        .checkbox {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #667eea;
+            border-radius: 3px;
+            margin-right: 12px;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .item-content {
+            flex-grow: 1;
+        }
+
+        .item-name {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 3px;
+        }
+
+        .item-details {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .item-cost {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 13px;
+            margin-top: 4px;
+        }
+
+        .note {
+            background: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 12px;
+            margin: 15px 0;
+            border-radius: 4px;
+            color: #0c5460;
+            font-size: 13px;
+        }
+
+        .advantage {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 12px;
+            margin: 15px 0;
+            border-radius: 4px;
+            color: #155724;
+            font-size: 13px;
+        }
+
+        .total-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 30px 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .total-label {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+
+        .total-amount {
+            font-size: 32px;
+        }
+
+        .free-items {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 12px;
+            margin: 15px 0;
+            border-radius: 4px;
+            color: #856404;
+            font-size: 13px;
+        }
+
+        .section-divider {
+            height: 1px;
+            background: #ddd;
+            margin: 25px 0;
+        }
+
+        .dimensions {
+            background: #f7f7f7;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+            font-size: 13px;
+        }
+
+        .dimensions-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .dim-item {
+            background: white;
+            padding: 10px;
+            border-radius: 4px;
+            border-left: 3px solid #667eea;
+        }
+
+        .dim-label {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 11px;
+        }
+
+        .dim-value {
+            font-size: 14px;
+            color: #333;
+            margin-top: 4px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .print-btn {
+            display: block;
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 20px auto;
+            font-weight: bold;
+        }
+
+        .print-btn:hover {
+            background: #764ba2;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                background: white;
+            }
+
+            .page {
+                box-shadow: none;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .print-btn {
+                display: none;
+            }
+        }
+
+        ul, ol {
+            margin: 8px 0 8px 20px;
+            font-size: 13px;
+        }
+
+        li {
+            margin: 4px 0;
+        }
+
+        .step {
+            background: #f9f9f9;
+            padding: 12px;
+            margin: 10px 0;
+            border-left: 3px solid #667eea;
+            border-radius: 4px;
+        }
+
+        .step-num {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 14px;
+        }
+
+        .step-title {
+            font-weight: bold;
+            margin-top: 4px;
+            color: #333;
+        }
+
+        .step-details {
+            font-size: 12px;
+            color: #666;
+            margin-top: 6px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 13px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background: #667eea;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <h1>⚡ 10% Scale Quick Mockup</h1>
+            <p class="subtitle">Floor Storage Shelf - Visual Prototype Build</p>
+        </header>
+
+        <div class="specs">
+            <div class="spec">
+                <div class="spec-label">MODEL SIZE</div>
+                <div class="spec-value">10% Scale</div>
+            </div>
+            <div class="spec">
+                <div class="spec-label">BUILD TIME</div>
+                <div class="spec-value">20-30 Min</div>
+            </div>
+            <div class="spec">
+                <div class="spec-label">TOTAL COST</div>
+                <div class="spec-value">$5-8</div>
+            </div>
+            <div class="spec">
+                <div class="spec-label">PURPOSE</div>
+                <div class="spec-value">Visual Test</div>
+            </div>
+        </div>
+
+        <div class="advantage">
+            <strong>✓ What You Get:</strong>
+            <ul style="margin-top: 8px;">
+                <li>Quick visual mockup to see overall design proportions</li>
+                <li>Fast build - perfect for lunch break or quick demo</li>
+                <li>Cheap - minimal material investment</li>
+                <li>Great for showing concept to others</li>
+                <li>Hand-held reference model for your desk</li>
+            </ul>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="section">
+            <h2>10% Scale Dimensions</h2>
+
+            <div class="dimensions">
+                <strong>This is a hand-held model (about the size of a small cereal box):</strong>
+                <div class="dimensions-grid">
+                    <div class="dim-item">
+                        <div class="dim-label">WIDTH (P1, P2)</div>
+                        <div class="dim-value">9.2 inches</div>
+                    </div>
+                    <div class="dim-item">
+                        <div class="dim-label">DEPTH (P1, P2)</div>
+                        <div class="dim-value">2.3 inches</div>
+                    </div>
+                    <div class="dim-item">
+                        <div class="dim-label">HEIGHT (total)</div>
+                        <div class="dim-value">2.55 inches</div>
+                    </div>
+                    <div class="dim-item">
+                        <div class="dim-label">SHELF HEIGHT (P8)</div>
+                        <div class="dim-value">2.3 inches</div>
+                    </div>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Part ID</th>
+                        <th>Part Name</th>
+                        <th>10% Scale Dimensions</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>P1</strong></td>
+                        <td>Top Panel</td>
+                        <td>9.2" × 2.3"</td>
+                        <td>Thin cardboard (1 layer)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>P2</strong></td>
+                        <td>Bottom Panel</td>
+                        <td>9.2" × 2.3"</td>
+                        <td>Thin cardboard (1 layer)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>P3</strong></td>
+                        <td>Back Panel</td>
+                        <td>9.2" × 2.4"</td>
+                        <td>Single layer cardboard</td>
+                    </tr>
+                    <tr>
+                        <td><strong>P4, P5</strong></td>
+                        <td>Side Panels</td>
+                        <td>2.25" × 2.3" (each)</td>
+                        <td>Thin cardboard</td>
+                    </tr>
+                    <tr>
+                        <td><strong>P6</strong></td>
+                        <td>Center Divider</td>
+                        <td>2.25" × 2.3"</td>
+                        <td>Thin cardboard</td>
+                    </tr>
+                    <tr>
+                        <td><strong>P7</strong></td>
+                        <td>Long Shelf</td>
+                        <td>6" × 2.3"</td>
+                        <td>Thin cardboard</td>
+                    </tr>
+                    <tr>
+                        <td><strong>P8</strong></td>
+                        <td>Small Shelves</td>
+                        <td>3" × 2.3" (×3)</td>
+                        <td>Thin cardboard</td>
+                    </tr>
+                    <tr>
+                        <td><strong>P9</strong></td>
+                        <td>Stiffener Lip</td>
+                        <td>6" × 0.5"</td>
+                        <td>Cardboard strip (optional)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>P10</strong></td>
+                        <td>Cleats</td>
+                        <td>2" × 0.5" (×8)</td>
+                        <td>Small cardboard strips</td>
+                    </tr>
+                    <tr>
+                        <td><strong>P11</strong></td>
+                        <td>Base Skids</td>
+                        <td>2.3" × 0.5" (×3)</td>
+                        <td>Small cardboard strips</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="section">
+            <h2>SHOPPING LIST - MINIMAL</h2>
+
+            <p style="color: #666; margin-bottom: 12px;">
+                <strong>You'll need almost nothing!</strong>
+            </p>
+
+            <div class="checklist">
+                <div class="item">
+                    <div class="checkbox"></div>
+                    <div class="item-content">
+                        <div class="item-name">White Craft Glue</div>
+                        <div class="item-details">Small bottle (2-4 oz) - Elmer's or generic</div>
+                        <div class="item-cost">$1-2 | Craft/School aisle</div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="checkbox"></div>
+                    <div class="item-content">
+                        <div class="item-name">Clear Tape or Masking Tape</div>
+                        <div class="item-details">1 roll (standard 3/4" or 1" wide)</div>
+                        <div class="item-cost">$1-2 | Office/Packing aisle</div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="checkbox"></div>
+                    <div class="item-content">
+                        <div class="item-name">Optional: Duct Tape</div>
+                        <div class="item-details">For reinforcing joints (you may have at home)</div>
+                        <div class="item-cost">$2-3 | Hardware aisle</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="total-box">
+                <div class="total-label">TOTAL PURCHASE COST:</div>
+                <div class="total-amount">$3-5</div>
+                <div style="font-size: 12px; margin-top: 10px;">(Even less if you have glue & tape at home)</div>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="section">
+            <h2>FREE MATERIALS - SALVAGE</h2>
+
+            <div class="free-items">
+                <strong>✓ Cardboard (Completely FREE)</strong>
+                <ul style="margin-top: 8px;">
+                    <li><strong>Cereal boxes, cracker boxes</strong> - Perfect size for this scale</li>
+                    <li><strong>Tissue boxes, soap boxes</strong> - Already the right dimensions!</li>
+                    <li><strong>Amazon boxes, gift boxes</strong> - Salvage from shipping</li>
+                    <li><strong>Thin cardboard scraps</strong> - Grocery store, recycling bin</li>
+                    <li><strong>Paper towel tubes</strong> - For making small cleats</li>
+                </ul>
+            </div>
+
+            <div class="note">
+                <strong>💡 Easiest Source:</strong> Check your recycling bin at home! You probably have everything you need already. This is a zero-cost project if you have glue and tape.
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="section">
+            <h2>QUICK BUILD STEPS (20-30 Minutes)</h2>
+
+            <div class="step">
+                <span class="step-num">STEP 1:</span>
+                <div class="step-title">Gather & Cut Cardboard</div>
+                <div class="step-details">
+                    Cut small cardboard pieces using dimensions from table above. Use a utility knife or scissors. Mark each piece with its Part ID (P1-P11).
+                </div>
+            </div>
+
+            <div class="step">
+                <span class="step-num">STEP 2:</span>
+                <div class="step-title">Assemble Vertical Frame</div>
+                <div class="step-details">
+                    Glue P4 (left), P5 (right), and P6 (center) vertically together. These are your main support walls. Let dry 5 minutes.
+                </div>
+            </div>
+
+            <div class="step">
+                <span class="step-num">STEP 3:</span>
+                <div class="step-title">Add Support Cleats (P10)</div>
+                <div class="step-details">
+                    Glue small cardboard strips (P10 cleats) horizontally on the inside faces at shelf heights. Total of 8 small cleats. Let dry 5 minutes.
+                </div>
+            </div>
+
+            <div class="step">
+                <span class="step-num">STEP 4:</span>
+                <div class="step-title">Position Shelves</div>
+                <div class="step-details">
+                    Glue small shelf pieces (P8) and long shelf (P7) on top of the cleats. This shows your shelf layout. Let dry 5 minutes.
+                </div>
+            </div>
+
+            <div class="step">
+                <span class="step-num">STEP 5:</span>
+                <div class="step-title">Attach Top, Bottom, Back</div>
+                <div class="step-details">
+                    Glue P1 (top) and P2 (bottom) panels to the frame. Glue P3 (back panel) to lock everything square. Use tape to reinforce joints.
+                </div>
+            </div>
+
+            <div class="step">
+                <span class="step-num">STEP 6:</span>
+                <div class="step-title">Add Base Skids (Optional)</div>
+                <div class="step-details">
+                    Glue three small P11 skids under the bottom panel. This shows elevation concept. Let dry 5 minutes.
+                </div>
+            </div>
+
+            <div class="note">
+                <strong>Total Time:</strong> ~25 minutes (most time is glue drying)
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="section">
+            <h2>WHAT TO LOOK AT</h2>
+
+            <ul>
+                <li><strong>✓ Overall Proportions:</strong> Does the shape/ratio look right?</li>
+                <li><strong>✓ Shelf Layout:</strong> Are 3 small + 1 long shelf arrangement good?</li>
+                <li><strong>✓ Height Distribution:</strong> Is the spacing between shelves appropriate?</li>
+                <li><strong>✓ Back Panel Effect:</strong> Does back panel lock it square?</li>
+                <li><strong>✓ Visual Concept:</strong> Does design look good overall?</li>
+                <li><strong>✓ Reference Model:</strong> Good desk decoration or design reference</li>
+            </ul>
+
+            <div class="note">
+                <strong>Note:</strong> This is NOT for testing load capacity or assembly techniques. It's purely a visual reference to see if the design looks right before building full-size.
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="section">
+            <h2>AFTER BUILDING</h2>
+
+            <ul>
+                <li>📸 Take photos from multiple angles for reference</li>
+                <li>📝 Note any proportions that need adjustment</li>
+                <li>🏆 Great visual aid to show others the design</li>
+                <li>🎓 Good learning about scaled design</li>
+                <li>💾 Keep as a reference model for the full build</li>
+            </ul>
+        </div>
+
+        <button class="print-btn" onclick="window.print()">🖨️ PRINT THIS GUIDE</button>
+
+        <div class="footer">
+            <p><strong>10% Scale Quick Mockup</strong></p>
+            <p>Build this visual reference in 20-30 minutes with $3-5 in materials</p>
+            <p style="margin-top: 10px;">Then move on to the full plywood build when ready!</p>
+        </div>
+    </div>
+</body>
+</html>

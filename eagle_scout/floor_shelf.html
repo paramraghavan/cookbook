@@ -3,250 +3,1180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>360° Interactive 3D Model - Chemistry Lab Storage Shelf A (Raw Plywood)</title>
+    <title>Chemistry Lab Floor Storage Shelf A - Step-by-Step Assembly Guide</title>
     <style>
-        body {
+        * {
             margin: 0;
             padding: 0;
-            overflow: hidden;
-            background-color: #1a202c;
+            box-sizing: border-box;
+        }
+
+        body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #e2e8f0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
         }
-        #canvas-container {
-            width: 100vw;
-            height: 100vh;
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
-        #ui-overlay {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background: rgba(26, 32, 44, 0.85);
-            padding: 15px 20px;
+
+        header {
+            background: white;
+            padding: 30px;
             border-radius: 8px;
-            border: 1px solid #4a5568;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-            pointer-events: none;
-            max-width: 320px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
+
         h1 {
-            margin: 0 0 5px 0;
-            font-size: 18px;
-            color: #edf2f7;
+            color: #667eea;
+            margin-bottom: 10px;
         }
-        p {
-            margin: 5px 0;
-            font-size: 13px;
-            color: #a0aec0;
+
+        .specs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
         }
-        .controls-hint {
-            margin-top: 10px;
-            padding-top: 8px;
-            border-top: 1px solid #4a5568;
-            font-weight: bold;
-            color: #cbd5e0;
+
+        .spec-item {
+            background: #f7f7f7;
+            padding: 12px;
+            border-radius: 6px;
+            border-left: 4px solid #667eea;
         }
-        #legend {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            background: rgba(26, 32, 44, 0.85);
-            padding: 12px 18px;
+
+        .spec-item strong {
+            display: block;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .section {
+            background: white;
+            padding: 30px;
             border-radius: 8px;
-            border: 1px solid #4a5568;
-            font-size: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
+
+        h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        h3 {
+            color: #764ba2;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+
+        .step {
+            background: #f9f9f9;
+            border-left: 5px solid #667eea;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+
+        .step-number {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: bold;
+            margin-right: 12px;
+        }
+
+        .step-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #764ba2;
+            margin-bottom: 15px;
+        }
+
+        .parts-list {
+            background: #f0f4ff;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+            border: 1px solid #dde4ff;
+        }
+
+        .parts-list strong {
+            display: block;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .part-item {
+            margin: 8px 0;
+            padding: 8px;
+            background: white;
+            border-radius: 4px;
+            border-left: 3px solid #667eea;
+        }
+
+        .part-id {
+            font-weight: bold;
+            color: #667eea;
+            font-family: monospace;
+        }
+
+        .fastener-info {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 12px;
+            margin: 12px 0;
+            border-radius: 4px;
+        }
+
+        .glue-info {
+            background: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 12px;
+            margin: 12px 0;
+            border-radius: 4px;
+        }
+
+        .warning {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 12px;
+            margin: 12px 0;
+            border-radius: 4px;
+            color: #721c24;
+        }
+
+        .diagram {
+            background: #f7f7f7;
+            border: 2px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .diagram-code {
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            white-space: pre;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        .image-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .image-label {
+            font-size: 12px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background: #667eea;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:hover {
+            background: #f5f5f5;
+        }
+
+        .legend {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin: 20px 0;
+        }
+
         .legend-item {
             display: flex;
             align-items: center;
-            margin-bottom: 4px;
+            padding: 10px;
+            background: #f7f7f7;
+            border-radius: 4px;
         }
+
         .color-box {
-            width: 14px;
-            height: 14px;
-            margin-right: 8px;
-            border-radius: 2px;
+            width: 30px;
+            height: 30px;
+            margin-right: 12px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .toc {
+            background: #f7f7f7;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border-left: 4px solid #667eea;
+        }
+
+        .toc ul {
+            list-style-position: inside;
+            margin: 0;
+        }
+
+        .toc li {
+            margin: 8px 0;
+        }
+
+        .toc a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: white;
+            font-size: 14px;
+        }
+
+        .dimension {
+            font-family: monospace;
+            background: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 3px;
         }
     </style>
-
-    <!-- Three.js and OrbitControls CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 </head>
 <body>
-    <div id="ui-overlay">
-        <h1>Shelf A (Raw Plywood View)</h1>
-        <p><b>Status:</b> Unsanded / Unpainted Construction Stage</p>
-        <p><b>Dimensions:</b> 92" W × 23.25" D × 25.5" H</p>
-        <div class="controls-hint">
-            🖱️ Left Click + Drag: Rotate 360°<br>
-            🔍 Scroll Wheel: Zoom In/Out<br>
-            ✋ Right Click + Drag: Pan
+    <div class="container">
+        <!-- HEADER -->
+        <header>
+            <h1>Chemistry Lab Floor Storage Shelf A</h1>
+            <p>Complete Step-by-Step Assembly & Build Guide</p>
+            <p style="margin-top: 10px; color: #666; font-size: 14px;">
+                For handover to any builder. Follow each step in order with clear part identification, glue application points, and fastener specifications.
+            </p>
+
+            <div class="image-container" style="margin: 20px 0;">
+                <img src="floor_shelfa.png" alt="Chemistry Lab Floor Storage Shelf A - 3D assembly view" style="max-width: 700px;">
+                <div class="image-label">Figure 0: Complete 3D assembly - showing all parts (P1-P11) in their final positions</div>
+            </div>
+
+            <div class="specs">
+                <div class="spec-item">
+                    <strong>Overall Dimensions</strong>
+                    92" W × 23.25" D × 25.5" H
+                </div>
+                <div class="spec-item">
+                    <strong>Storage Capacity</strong>
+                    3 Small Shelves (Left) + 1 Long Shelf (Right)
+                </div>
+                <div class="spec-item">
+                    <strong>Material</strong>
+                    3/4" Plywood + 1x2 & 2x4 Pine
+                </div>
+                <div class="spec-item">
+                    <strong>Assembly Time</strong>
+                    6-8 hours (with prep)
+                </div>
+            </div>
+        </header>
+
+        <!-- TABLE OF CONTENTS -->
+        <div class="section toc">
+            <strong>Quick Navigation:</strong>
+            <ul>
+                <li><a href="#parts">Complete Parts List & IDs</a></li>
+                <li><a href="#materials">Materials & Fasteners</a></li>
+                <li><a href="#cutting">Master Cut List</a></li>
+                <li><a href="#diagrams">Assembly Diagrams (A, B, C)</a></li>
+                <li><a href="#steps">Step-by-Step Instructions</a></li>
+                <li><a href="#finishing">Finishing & Paint</a></li>
+            </ul>
+        </div>
+
+        <!-- PART IDs SECTION -->
+        <div class="section" id="parts">
+            <h2>Complete Parts List with IDs</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Part ID</th>
+                        <th>Part Name</th>
+                        <th>Qty</th>
+                        <th>Material</th>
+                        <th>Dimensions</th>
+                        <th>Location & Function</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="part-id">P1</span></td>
+                        <td>Top Panel</td>
+                        <td>1</td>
+                        <td>3/4" Plywood</td>
+                        <td><span class="dimension">92" × 23.25"</span></td>
+                        <td>Top exterior cap (horizontal)</td>
+                    </tr>
+                    <tr>
+                        <td><span class="part-id">P2</span></td>
+                        <td>Bottom Panel</td>
+                        <td>1</td>
+                        <td>3/4" Plywood</td>
+                        <td><span class="dimension">92" × 23.25"</span></td>
+                        <td>Bottom exterior base (horizontal)</td>
+                    </tr>
+                    <tr>
+                        <td><span class="part-id">P3</span></td>
+                        <td>Back Panel</td>
+                        <td>1</td>
+                        <td>3/4" Plywood</td>
+                        <td><span class="dimension">92" × 24"</span></td>
+                        <td>Full rear panel - provides rigidity & prevents wall mounting</td>
+                    </tr>
+                    <tr>
+                        <td><span class="part-id">P4</span></td>
+                        <td>Left Side Panel</td>
+                        <td>1</td>
+                        <td>3/4" Plywood</td>
+                        <td><span class="dimension">22.5" × 23.25"</span></td>
+                        <td>Left outer wall (vertical)</td>
+                    </tr>
+                    <tr>
+                        <td><span class="part-id">P5</span></td>
+                        <td>Right Side Panel</td>
+                        <td>1</td>
+                        <td>3/4" Plywood</td>
+                        <td><span class="dimension">22.5" × 23.25"</span></td>
+                        <td>Right outer wall (vertical)</td>
+                    </tr>
+                    <tr>
+                        <td><span class="part-id">P6</span></td>
+                        <td>Center Divider</td>
+                        <td>1</td>
+                        <td>3/4" Plywood</td>
+                        <td><span class="dimension">22.5" × 23.25"</span></td>
+                        <td>Main vertical divider (separates left & right sections)</td>
+                    </tr>
+                    <tr>
+                        <td><span class="part-id">P7</span></td>
+                        <td>Long Shelf</td>
+                        <td>1</td>
+                        <td>3/4" Plywood</td>
+                        <td><span class="dimension">60.25" × 23.25"</span></td>
+                        <td>Single horizontal shelf for right section</td>
+                    </tr>
+                    <tr>
+                        <td><span class="part-id">P8</span></td>
+                        <td>Small Shelves</td>
+                        <td>3</td>
+                        <td>3/4" Plywood</td>
+                        <td><span class="dimension">29.5" × 23.25" (each)</span></td>
+                        <td>Three horizontal shelves for left section</td>
+                    </tr>
+                    <tr>
+                        <td><span class="part-id">P9</span></td>
+                        <td>Shelf Stiffener Lip</td>
+                        <td>1</td>
+                        <td>1×2 Pine Board</td>
+                        <td><span class="dimension">60.25" × 1.5"</span></td>
+                        <td>Reinforcement under front edge of long shelf (P7)</td>
+                    </tr>
+                    <tr>
+                        <td><span class="part-id">P10</span></td>
+                        <td>Shelf Cleats</td>
+                        <td>8</td>
+                        <td>1×2 Pine Board</td>
+                        <td><span class="dimension">20" × 1.5" (each)</span></td>
+                        <td>Support ledges mounted on inside of side/divider walls</td>
+                    </tr>
+                    <tr>
+                        <td><span class="part-id">P11</span></td>
+                        <td>Base Skids (Feet)</td>
+                        <td>3</td>
+                        <td>2×4 Lumber</td>
+                        <td><span class="dimension">23.25" × 3.5" (each)</span></td>
+                        <td>Floor elevation - mounted under bottom panel (P2) for moisture protection</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- MATERIALS SECTION -->
+        <div class="section" id="materials">
+            <h2>Materials to Buy</h2>
+
+            <h3>Lumber & Plywood</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Qty</th>
+                        <th>Item</th>
+                        <th>Use (Parts)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>3 Sheets</td>
+                        <td>3/4" × 4' × 8' Sanded Plywood (BCX or Sandeply Birch)</td>
+                        <td>P1, P2, P3, P4, P5, P6, P7, P8</td>
+                    </tr>
+                    <tr>
+                        <td>2 Boards</td>
+                        <td>1" × 2" × 8' Select Pine Board</td>
+                        <td>P9 (Stiffener), P10 (Cleats)</td>
+                    </tr>
+                    <tr>
+                        <td>1 Board</td>
+                        <td>2" × 4" × 8' Construction Pine Board</td>
+                        <td>P11 (Base Skids)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Fasteners & Glue</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Qty</th>
+                        <th>Item</th>
+                        <th>Specification & Use</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1 Bottle</td>
+                        <td>Titebond II Wood Glue</td>
+                        <td>16 oz - Primary bonding for ALL wood-to-wood joints (80%+ strength)</td>
+                    </tr>
+                    <tr>
+                        <td>1 Box</td>
+                        <td>2" #8 Star-Drive Wood Screws</td>
+                        <td>Main fasteners: P11 to P2, P1 to vertical panels, P2 to vertical panels</td>
+                    </tr>
+                    <tr>
+                        <td>1 Pack</td>
+                        <td>1.25" - 1.5" Finish Nails (or 1.25" Wood Screws)</td>
+                        <td>Vertical fastening: P10 cleats to walls, P9 to P7, shelves to cleats (3 per cleat)</td>
+                    </tr>
+                    <tr>
+                        <td>1 Pack</td>
+                        <td>1.5" - 2" Finish Nails (or 1.625" Trim Screws)</td>
+                        <td>Horizontal fastening: P4, P5, P6 through to shelf edges (2-3 per shelf)</td>
+                    </tr>
+                    <tr>
+                        <td>1 Pack</td>
+                        <td>1" - 1.25" Brad Nails (or 1" Wood Screws)</td>
+                        <td>P3 (back panel) mounting around perimeter & center divider (every 6-8")</td>
+                    </tr>
+                    <tr>
+                        <td>1 Bit</td>
+                        <td>1/8" Countersink Drill Bit</td>
+                        <td>Pre-drilling pilot holes & recessing screw heads flush</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Finishing Materials</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Qty</th>
+                        <th>Item</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1 Quart</td>
+                        <td>Latex Wood Primer</td>
+                        <td>Seals plywood edges & surfaces (Mandatory)</td>
+                    </tr>
+                    <tr>
+                        <td>1 Gallon</td>
+                        <td>Semi-Gloss or Gloss Interior Enamel Paint</td>
+                        <td>Chemical-resistant body finish (Mandatory)</td>
+                    </tr>
+                    <tr>
+                        <td>1 Quart</td>
+                        <td>Water-Based Polyurethane (Clear)</td>
+                        <td>Protective top coat for shelves (Optional)</td>
+                    </tr>
+                    <tr>
+                        <td>1 Pack</td>
+                        <td>120-Grit Sandpaper + Foam Rollers & Brushes</td>
+                        <td>Sanding & paint application (Mandatory)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- CUTTING PLAN -->
+        <div class="section" id="cutting">
+            <h2>Master Cut List</h2>
+
+            <h3>Plywood Sheet Cutting Plan (3 sheets needed)</h3>
+
+            <div class="diagram">
+                <div class="diagram-code">PLYWOOD SHEET 1 (48" x 96" x 3/4")
++---------------------------------------------------------------------------------+
+|    [P1] Top Panel: 92" x 23.25"                                | Remainder    |
++---------------------------------------------------------------------------------+
+|    [P2] Bottom Panel: 92" x 23.25"                             | Remainder    |
++---------------------------------------------------------------------------------+
+
+PLYWOOD SHEET 2 (48" x 96" x 3/4")
++---------------------------------------------------------------------------------+
+|    [P3] Back Panel: 92" x 24"                                  | Remainder    |
++---------------------------------------------------------------------------------+
+| [P7] Long Shelf: 60.25" x 23.25" | [P8a] Shelf 1: 29.5" x 23.25" | Scrap   |
++---------------------------------------------------------------------------------+
+
+PLYWOOD SHEET 3 (48" x 96" x 3/4")
++---------------------------------------------------------------------------------+
+| [P8b] Shelf 2: 29.5"   | [P8c] Shelf 3: 29.5"  | [P4] Left Side: 22.5"        |
++---------------------------------------------------------------------------------+
+| [P5] Right Side: 22.5" | [P6] Center Divider: 22.5"                      | Scrap
++---------------------------------------------------------------------------------+
+
+PINE LUMBER CUTS
+1×2 Board #1: Cut [P9] Stiffener @ 60.25" long (+ 35.75" scrap)
+1×2 Board #2: Cut 8x [P10] Cleats @ 20.00" long each
+2×4 Board:    Cut 3x [P11] Skids @ 23.25" long each</div>
+            </div>
+        </div>
+
+        <!-- ASSEMBLY DIAGRAMS -->
+        <div class="section" id="diagrams">
+            <h2>Assembly Diagrams</h2>
+
+            <h3>Diagram A: Long Shelf Stiffener Lip (End Cross-Section)</h3>
+            <p>The stiffener [P9] is mounted vertically under the front edge of the long shelf [P7] to prevent sagging.</p>
+
+            <div class="diagram">
+                <div class="diagram-code">SIDE VIEW: Looking down length of shelf
+
+        Front Edge                          Back Edge
+             |                                  |
+             v                                  v
+    +------- | ----------------------------------+
+    |        |      [P7] Long Shelf (3/4")      |  ← Top surface (horizontal)
+    |        |                                  |
+    |   [P9] |    (1x2 Pine Board runs full    |
+    |  1x2   |     length: 60.25")             |
+    |  Lip   |                                  |
+    |  (V)   |                                  |
+    +------- | --+                              |
+             |   |← Mounted underneath, flush
+             v   v   to front edge</div>
+            </div>
+
+            <div class="glue-info">
+                <strong>Glue Application:</strong> Apply Titebond II along entire contact joint between P9 underside and P7 bottom.
+            </div>
+
+            <div class="fastener-info">
+                <strong>Fastening P9 to P7:</strong> Drive 1.25"-1.5" finish nails vertically DOWN through the TOP face of P7 into P9 below. Space every 6-8 inches (approximately 8 nails total). Or use 1.25" wood screws with countersink.
+            </div>
+
+            <div class="image-container">
+                <img src="stiffer_bar_clears_base_skids.png" alt="Stiffener and base skids detail view" style="max-width: 600px;">
+                <div class="image-label">Photo Reference: P9 stiffener lip (1×2) under front of P7, with P11 base skids (2×4) visible underneath</div>
+            </div>
+
+            <h3>Diagram B: Support Cleat Placement (Interior Wall View)</h3>
+            <p>Cleats [P10] are mounted on the inside faces of vertical panels to support shelves. Different heights for left vs right sections.</p>
+
+            <div class="diagram">
+                <div class="diagram-code">LEFT SECTION - Inside P4 & P6 (Left Face) - Total 6 cleats (3 per wall)
++-----------------------------------------------------------------------+
+|                                                     (Top: 22.5" high) |
+|                                                                       |
+|  [========== P10 Cleat #3 ==========]              ← Cleat top at 16.5"
+|                                                                       |
+|  [========== P10 Cleat #2 ==========]              ← Cleat top at 11.0"
+|                                                                       |
+|  [========== P10 Cleat #1 ==========]              ← Cleat top at 5.5"
+|                                                                       |
++----------|------ Front                 ----| Back Edge --------+
+  3.25" Gap (empty) |← 20" Long Cleat →| Mounted flat against wall
+
+
+RIGHT SECTION - Inside P6 (Right Face) & P5 - Total 2 cleats
++-----------------------------------------------------------------------+
+|                                                     (Top: 22.5" high) |
+|  [========== P10 Long Shelf Cleat ==========]       ← Cleat top at 14.5"
+|                                                                       |
++----------|------ Front                 ----| Back Edge --------+
+  3.25" Gap (empty) |← 20" Long Cleat →| Mounted flat against wall</div>
+            </div>
+
+            <div class="glue-info">
+                <strong>Glue Application:</strong> Apply Titebond II to the BACK face of each cleat [P10] before mounting.
+            </div>
+
+            <div class="fastener-info">
+                <strong>Fastening Cleats:</strong>
+                <ul style="margin: 10px 0; margin-left: 20px;">
+                    <li>Drive 1.25" finish nails or screws through P10 into the vertical panel (P4, P5, or P6)</li>
+                    <li>Use 3 fasteners per cleat (left end, center, right end)</li>
+                    <li>Nails should be driven HORIZONTALLY through the cleat into the wall</li>
+                </ul>
+            </div>
+
+            <h3>Diagram C: Cabinet Assembly - Front Exploded View</h3>
+            <p>Shows how all parts fit together in the final assembly.</p>
+
+            <div class="diagram">
+                <div class="diagram-code">                    [P1] Top Panel: 92" x 23.25"
+                    ╔═══════════════════════════════════════╗
+
+    ┌─────────────────────────────────────────────────────────────────┐
+    │                                                                   │
+    │ [P4]        │[P8a]   │       [P6]        │     [P7]             │
+    │ Left Side   │Shelf 1 │     Center        │   Long Shelf         │
+    │ 22.5"x23.25"│        │    Divider        │   60.25"x23.25"      │
+    │             │        │                   │                      │
+    │ [P10]       │[P10]   │    [P10]          │   [P10]              │
+    │             │        │     (2x)          │    (2x)              │
+    │ [P8b]       │ Shelf  │                   │                      │
+    │ Shelf 2     │   2    │                   │   [P9] Stiffener     │
+    │             │        │     [P5]          │    Lip (under P7)    │
+    │ [P10]       │[P10]   │   Right Side      │                      │
+    │             │        │   22.5"x23.25"    │   [P10]              │
+    │ [P8c]       │Shelf 3 │                   │                      │
+    │ Shelf 3     │        │                   │   [P10]              │
+    │             │        │                   │                      │
+    │ [P10]       │[P10]   │                   │                      │
+    │             │        │                   │                      │
+    └─────────────────────────────────────────────────────────────────┘
+           [P2] Bottom Panel: 92" x 23.25"
+           │                │                │
+          [P11]           [P11]            [P11]  ← 3x Base Skids
+          Left            Center            Right
+
+                    [P3] Back Panel 92" x 24"
+                    (Mounts to rear face)</div>
+            </div>
+
+            <div class="warning">
+                <strong>Assembly Order Important:</strong> Build the vertical frame (P4, P5, P6) first, then add cleats, then shelves, THEN add top (P1), bottom (P2), and back (P3) last.
+            </div>
+        </div>
+
+        <!-- STEP BY STEP INSTRUCTIONS -->
+        <div class="section" id="steps">
+            <h2>Step-by-Step Assembly Instructions</h2>
+
+            <div class="step">
+                <div style="display: flex; align-items: center;">
+                    <span class="step-number">1</span>
+                    <div class="step-title">Prepare Long Shelf Stiffener Lip [P9]</div>
+                </div>
+
+                <div class="parts-list">
+                    <strong>Parts Used:</strong>
+                    <div class="part-item">[P7] Long Shelf (60.25" × 23.25")</div>
+                    <div class="part-item">[P9] Shelf Stiffener Lip (60.25" × 1.5")</div>
+                </div>
+
+                <h4>Instructions:</h4>
+                <ol style="margin: 15px 0 15px 20px; line-height: 1.8;">
+                    <li>Lay the <span class="part-id">P7</span> (Long Shelf) flat on your workbench with the BOTTOM side facing UP.</li>
+                    <li>Position <span class="part-id">P9</span> (the 1×2 board) along the underside of P7, with the front edge of P9 flush against the front edge of P7 (creating an inverted "L" beam).</li>
+                    <li>Apply wood glue along the ENTIRE contact joint (bottom of P7 where it meets top of P9).</li>
+                    <li>Clamp firmly in place to hold alignment.</li>
+                </ol>
+
+                <div class="glue-info">
+                    <strong>Glue Application:</strong> Apply 1/4" wide continuous bead along the contact surface. Wipe squeeze-out with damp cloth within 15 minutes.
+                </div>
+
+                <div class="fastener-info">
+                    <strong>Fastening Method:</strong>
+                    <ul style="margin: 10px 0; margin-left: 20px;">
+                        <li>Pre-drill pilot holes with 1/8" countersink bit through TOP surface of P7 (the visible side after assembly)</li>
+                        <li>Space holes every 6-8 inches along the 60.25" length (approximately 8-9 nails)</li>
+                        <li>Drive 1.25"-1.5" finish nails or wood screws VERTICALLY DOWN through P7 into P9</li>
+                        <li>Ensure nails are driven fully flush (countersink screws 1/16" below surface)</li>
+                    </ul>
+                </div>
+
+                <p style="margin-top: 15px; color: #666;"><em>Wait 30 minutes before moving assembly.</em></p>
+
+                <div class="image-container">
+                    <img src="stiffer_bar_clears_base_skids.png" alt="Stiffener lip attachment detail" style="max-width: 500px;">
+                    <div class="image-label">Figure A: P9 stiffener lip mounted under front edge of P7 (creates inverted L-beam)</div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div style="display: flex; align-items: center;">
+                    <span class="step-number">2</span>
+                    <div class="step-title">Attach 2×4 Base Skids [P11] to Bottom Panel [P2]</div>
+                </div>
+
+                <div class="parts-list">
+                    <strong>Parts Used:</strong>
+                    <div class="part-item">[P2] Bottom Panel (92" × 23.25")</div>
+                    <div class="part-item">[P11] Base Skids × 3 (23.25" × 3.5" each)</div>
+                </div>
+
+                <h4>Instructions:</h4>
+                <ol style="margin: 15px 0 15px 20px; line-height: 1.8;">
+                    <li>Lay <span class="part-id">P2</span> (Bottom Panel) flat on the floor with the BOTTOM side facing DOWN (the side that will be against the floor).</li>
+                    <li>Position the three <span class="part-id">P11</span> skids on top (the visible surface):
+                        <ul style="margin: 10px 0; margin-left: 20px;">
+                            <li><strong>Left Skid:</strong> Flush with the far left edge (running front-to-back)</li>
+                            <li><strong>Center Skid:</strong> Positioned exactly in the middle (at 46" from left edge)</li>
+                            <li><strong>Right Skid:</strong> Flush with the far right edge (running front-to-back)</li>
+                        </ul>
+                    </li>
+                    <li>Ensure all skids are parallel and perpendicular to the front edge of P2.</li>
+                </ol>
+
+                <div class="glue-info">
+                    <strong>Glue Application:</strong> Apply Titebond II to the TOP surface of each skid (the surface touching P2). Use continuous 1/4" bead. Allow 15 minutes of contact before fastening.
+                </div>
+
+                <div class="fastener-info">
+                    <strong>Fastening Method:</strong>
+                    <ul style="margin: 10px 0; margin-left: 20px;">
+                        <li>Use 2" #8 wood screws (4 screws per skid = 12 total)</li>
+                        <li>Pre-drill pilot holes with 1/8" countersink bit through P2 into each skid</li>
+                        <li>Screw placement: 2 screws at front end of each skid, 2 at rear end</li>
+                        <li>Drive screws VERTICALLY DOWN through P2 into P11</li>
+                        <li>Ensure screw heads are countersunk flush or slightly recessed</li>
+                    </ul>
+                </div>
+
+                <p style="margin-top: 15px; color: #666;"><em>The skids will elevate P2 approximately 1.5" off the floor, protecting against moisture and chemical spills.</em></p>
+
+                <div class="image-container">
+                    <img src="stiffer_bar_clears_base_skids.png" alt="Base skids detail showing P11 positioning" style="max-width: 600px;">
+                    <div class="image-label">Figure B: P11 base skids (3× 2×4 lumber) positioned left, center, and right under P2 panel</div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div style="display: flex; align-items: center;">
+                    <span class="step-number">3</span>
+                    <div class="step-title">Mount Support Cleats [P10] on Vertical Panels</div>
+                </div>
+
+                <div class="parts-list">
+                    <strong>Parts Used:</strong>
+                    <div class="part-item">[P4] Left Side Panel (22.5" × 23.25")</div>
+                    <div class="part-item">[P5] Right Side Panel (22.5" × 23.25")</div>
+                    <div class="part-item">[P6] Center Divider (22.5" × 23.25")</div>
+                    <div class="part-item">[P10] Cleats × 8 (20" × 1.5" each)</div>
+                </div>
+
+                <h4>Instructions - LEFT SECTION (P4 & left face of P6):</h4>
+                <ol style="margin: 15px 0 15px 20px; line-height: 1.8;">
+                    <li>Stand panels <span class="part-id">P4</span> and <span class="part-id">P6</span> vertically and facing each other.</li>
+                    <li>On the INSIDE FACE of each panel, draw horizontal guidelines at:
+                        <ul style="margin: 10px 0; margin-left: 20px;">
+                            <li>5.5" from the bottom edge</li>
+                            <li>11.0" from the bottom edge</li>
+                            <li>16.5" from the bottom edge</li>
+                        </ul>
+                    </li>
+                    <li>Position each 20" <span class="part-id">P10</span> cleat <strong>just BELOW the marked line</strong>, with the cleat's top surface touching or just below the line.</li>
+                    <li>The cleat should be flush against the REAR edge of the panel, leaving a 3.25" gap at the FRONT.</li>
+                </ol>
+
+                <h4>Instructions - RIGHT SECTION (P6 right face & P5):</h4>
+                <ol style="margin: 15px 0 15px 20px; line-height: 1.8;">
+                    <li>Stand panels <span class="part-id">P6</span> and <span class="part-id">P5</span> vertically and facing each other.</li>
+                    <li>On the INSIDE FACE of P5 (and right face of P6), draw ONE horizontal guideline at:
+                        <ul style="margin: 10px 0; margin-left: 20px;">
+                            <li>14.5" from the bottom edge</li>
+                        </ul>
+                    </li>
+                    <li>Position the single <span class="part-id">P10</span> cleat just BELOW this line.</li>
+                    <li>Flush against the REAR edge, leaving 3.25" gap at FRONT.</li>
+                </ol>
+
+                <div class="glue-info">
+                    <strong>Glue Application:</strong> Apply Titebond II to the BACK surface of each cleat (the surface touching the panel). Use thin continuous bead. Let cure 5-10 minutes before fastening.
+                </div>
+
+                <div class="fastener-info">
+                    <strong>Fastening Method:</strong>
+                    <ul style="margin: 10px 0; margin-left: 20px;">
+                        <li>Use 1.25" finish nails or 1.25" wood screws (3 per cleat)</li>
+                        <li>Pre-drill pilot holes with 1/8" bit</li>
+                        <li>Drive nails/screws HORIZONTALLY through the cleat into the panel</li>
+                        <li>Placement: Left end, center (10"), and right end of each cleat</li>
+                        <li>Ensure cleat is level and flush against panel</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div style="display: flex; align-items: center;">
+                    <span class="step-number">4</span>
+                    <div class="step-title">Position Shelves on Cleats [P7 & P8]</div>
+                </div>
+
+                <div class="parts-list">
+                    <strong>Parts Used:</strong>
+                    <div class="part-item">[P7] Long Shelf (60.25" × 23.25")</div>
+                    <div class="part-item">[P8] Small Shelves × 3 (29.5" × 23.25" each)</div>
+                    <div class="part-item">[P10] Cleats (previously mounted)</div>
+                </div>
+
+                <h4>Instructions:</h4>
+                <ol style="margin: 15px 0 15px 20px; line-height: 1.8;">
+                    <li>Carefully slide each shelf horizontally into position, resting on top of the mounting cleats.</li>
+                    <li><strong>Left Section:</strong> Position the three <span class="part-id">P8</span> small shelves at the three cleat heights (5.5", 11.0", 16.5" from bottom).</li>
+                    <li><strong>Right Section:</strong> Position the <span class="part-id">P7</span> long shelf at 14.5" from bottom.</li>
+                    <li>Verify that:
+                        <ul style="margin: 10px 0; margin-left: 20px;">
+                            <li>All shelves are level (use a level tool)</li>
+                            <li>Shelves are fully supported along their entire length</li>
+                            <li>No gaps between shelf and cleat</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <div class="glue-info">
+                    <strong>Glue Application:</strong> Apply Titebond II to the TOP surface of EACH cleat where it contacts the shelf. Use continuous thin bead. Allow 10 minutes before fastening.
+                </div>
+
+                <div class="fastener-info">
+                    <strong>Fastening Method - Vertical (Down Through Shelf):</strong>
+                    <ul style="margin: 10px 0; margin-left: 20px;">
+                        <li>Use 1.25"-1.5" finish nails or wood screws</li>
+                        <li>Pre-drill pilot holes with 1/8" countersink bit through TOP surface of shelf</li>
+                        <li>Drive nails/screws VERTICALLY DOWN through the shelf into each cleat below</li>
+                        <li>Use 3 fasteners per cleat (left end, center, right end)</li>
+                        <li>Countersink screw heads 1/16" below surface</li>
+                    </ul>
+                </div>
+
+                <div class="fastener-info">
+                    <strong>Fastening Method - Horizontal (Through Side Panels):</strong>
+                    <ul style="margin: 10px 0; margin-left: 20px;">
+                        <li>Use 1.5"-2" finish nails or 1.625" trim screws</li>
+                        <li>Pre-drill pilot holes with 1/8" bit</li>
+                        <li>Drive nails/screws HORIZONTALLY through the side panels (P4, P5) or divider (P6) into the shelf edge</li>
+                        <li>Use 2-3 fasteners per shelf side (at shelf ends and center)</li>
+                        <li>Aim for center of plywood edge to avoid splitting</li>
+                    </ul>
+                </div>
+
+                <div class="image-container">
+                    <img src="floor_shelfa.png" alt="Shelves positioned on cleats" style="max-width: 600px;">
+                    <div class="image-label">Figure D: All shelves (P7 & P8) positioned and secured on mounting cleats (P10)</div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div style="display: flex; align-items: center;">
+                    <span class="step-number">5</span>
+                    <div class="step-title">Attach Top & Bottom Panels [P1 & P2]</div>
+                </div>
+
+                <div class="parts-list">
+                    <strong>Parts Used:</strong>
+                    <div class="part-item">[P1] Top Panel (92" × 23.25")</div>
+                    <div class="part-item">[P2] Bottom Panel with Skids (92" × 23.25")</div>
+                    <div class="part-item">[P4] [P5] [P6] Vertical panels</div>
+                </div>
+
+                <h4>Instructions - Attach Top Panel [P1]:</h4>
+                <ol style="margin: 15px 0 15px 20px; line-height: 1.8;">
+                    <li>Apply Titebond II to the TOP edges of all three vertical panels (P4, P5, P6).</li>
+                    <li>Carefully place <span class="part-id">P1</span> (Top Panel) squarely on top of the frame, ensuring:
+                        <ul style="margin: 10px 0; margin-left: 20px;">
+                            <li>Front edges are aligned and flush</li>
+                            <li>Panel is level (use a level tool)</li>
+                            <li>Overhang is equal on all sides</li>
+                        </ul>
+                    </li>
+                    <li>Pre-drill pilot holes with 1/8" countersink bit through P1 into each vertical panel (3 holes per panel).</li>
+                    <li>Drive 2" #8 wood screws vertically down through P1 into the top edge of each panel.</li>
+                </ol>
+
+                <h4>Instructions - Attach Bottom Panel [P2]:</h4>
+                <ol style="margin: 15px 0 15px 20px; line-height: 1.8;">
+                    <li>Apply Titebond II to the BOTTOM edges of all three vertical panels (P4, P5, P6).</li>
+                    <li>Carefully set the frame (now with P1 attached) down onto <span class="part-id">P2</span> (which already has P11 skids attached).</li>
+                    <li>Verify:
+                        <ul style="margin: 10px 0; margin-left: 20px;">
+                            <li>Frame is centered on P2</li>
+                            <li>Skids are properly positioned</li>
+                            <li>All edges are aligned</li>
+                        </ul>
+                    </li>
+                    <li>Pre-drill pilot holes with 1/8" countersink bit from INSIDE the cabinet, through each vertical panel edge into P2.</li>
+                    <li>Drive 2" #8 wood screws through panel edges into P2 (3 screws per panel).</li>
+                </ol>
+
+                <div class="glue-info">
+                    <strong>Glue Application:</strong> Apply Titebond II continuously along the top and bottom edges of all vertical panels. Use approximately 1/4" wide bead. Wipe squeeze-out within 15 minutes.
+                </div>
+
+                <div class="image-container">
+                    <img src="floor_shelfa.png" alt="Top and bottom panels attached" style="max-width: 600px;">
+                    <div class="image-label">Figure E: P1 (top) and P2 (bottom) panels attached to vertical frame with all shelves in place</div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div style="display: flex; align-items: center;">
+                    <span class="step-number">6</span>
+                    <div class="step-title">Square the Cabinet & Attach Back Panel [P3]</div>
+                </div>
+
+                <div class="parts-list">
+                    <strong>Parts Used:</strong>
+                    <div class="part-item">[P3] Back Panel (92" × 24")</div>
+                    <div class="part-item">All previously assembled parts</div>
+                </div>
+
+                <h4>Instructions:</h4>
+                <ol style="margin: 15px 0 15px 20px; line-height: 1.8;">
+                    <li>Lay the ENTIRE cabinet assembly face-down on a flat, level surface (or carefully on sawhorses).</li>
+                    <li>Check diagonal measurements from corner to corner:
+                        <ul style="margin: 10px 0; margin-left: 20px;">
+                            <li>Measure from top-left corner to bottom-right corner</li>
+                            <li>Measure from top-right corner to bottom-left corner</li>
+                            <li>Both measurements should be exactly equal (within 1/4")</li>
+                            <li>If not equal, loosen fasteners and adjust until perfectly square</li>
+                        </ul>
+                    </li>
+                    <li>Apply Titebond II around the ENTIRE rear perimeter and center divider edge (where P3 will attach).</li>
+                    <li>Carefully position <span class="part-id">P3</span> (Back Panel) flush over the rear face of the cabinet.</li>
+                    <li>Ensure P3 is flush with all edges and perfectly aligned with the frame.</li>
+                </ol>
+
+                <div class="fastener-info">
+                    <strong>Fastening Method:</strong>
+                    <ul style="margin: 10px 0; margin-left: 20px;">
+                        <li>Use 1"-1.25" brad nails or wood screws</li>
+                        <li>Pre-drill pilot holes with 1/8" bit around the perimeter</li>
+                        <li>Drive fasteners every 6-8 inches around the entire perimeter of P3</li>
+                        <li>Also drive fasteners along the center divider (P6) on the back side</li>
+                        <li>Use approximately 20-24 fasteners total</li>
+                        <li>Ensure all fasteners are driven flush (nails) or countersunk (screws)</li>
+                    </ul>
+                </div>
+
+                <div class="warning">
+                    <strong>Critical Step:</strong> The back panel [P3] is the primary component that locks the cabinet rigid and provides structural stability. It MUST be securely fastened. Do not skip this step and do NOT mount this cabinet to walls - the P3 panel provides all needed rigidity for free-standing use.
+                </div>
+
+                <p style="margin-top: 15px; color: #666;"><em>Allow glue to cure for 2 hours before moving or flipping the cabinet.</em></p>
+
+                <div class="image-container">
+                    <img src="floor_shelfa.png" alt="Back panel P3 attached for rigidity" style="max-width: 600px;">
+                    <div class="image-label">Figure F: P3 (back panel) attached to rear - provides structural rigidity and locks cabinet square. NO wall mounting needed.</div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div style="display: flex; align-items: center;">
+                    <span class="step-number">7</span>
+                    <div class="step-title">Sand All Surfaces & Edges</div>
+                </div>
+
+                <h4>Instructions:</h4>
+                <ol style="margin: 15px 0 15px 20px; line-height: 1.8;">
+                    <li>Sand all outer corners and exposed edges with 120-grit sandpaper until completely smooth (no splinters).</li>
+                    <li>Pay special attention to:
+                        <ul style="margin: 10px 0; margin-left: 20px;">
+                            <li>All plywood edges (P1-P8)</li>
+                            <li>Top surfaces of shelves (P7, P8)</li>
+                            <li>All four outer corners of the cabinet</li>
+                            <li>Any visible screw/nail holes</li>
+                        </ul>
+                    </li>
+                    <li>Wipe away all wood dust with a damp rag. Let dry completely (15-30 minutes).</li>
+                </ol>
+
+                <div class="image-container">
+                    <img src="front_view.png" alt="Front view - ready for finishing" style="max-width: 600px;">
+                    <div class="image-label">Figure G: Cabinet fully assembled, squared, and ready for primer and paint application</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FINISHING SECTION -->
+        <div class="section" id="finishing">
+            <h2>Finishing & Lab Chemical-Proof Painting</h2>
+
+            <div class="step">
+                <div style="display: flex; align-items: center;">
+                    <span class="step-number">8</span>
+                    <div class="step-title">Prime All Surfaces</div>
+                </div>
+
+                <h4>Instructions:</h4>
+                <ol style="margin: 15px 0 15px 20px; line-height: 1.8;">
+                    <li>Apply 1 coat of Latex Interior Wood Primer to all surfaces (exterior, interior tops of shelves, all edges).</li>
+                    <li>Use foam roller or brush for smooth, even application.</li>
+                    <li>Allow 2 hours drying time before proceeding.</li>
+                    <li>Primer seals the plywood and provides base for enamel paint adhesion.</li>
+                </ol>
+            </div>
+
+            <div class="step">
+                <div style="display: flex; align-items: center;">
+                    <span class="step-number">9</span>
+                    <div class="step-title">Paint with Chemical-Resistant Enamel</div>
+                </div>
+
+                <h4>Instructions:</h4>
+                <ol style="margin: 15px 0 15px 20px; line-height: 1.8;">
+                    <li>Apply 2 coats of Semi-Gloss or Gloss Interior Enamel Paint to all exterior surfaces.</li>
+                    <li>Allow full drying time between coats (check paint can for specific time - typically 4-6 hours).</li>
+                    <li>Use foam roller or brush for smooth, professional finish.</li>
+                    <li>Paint finish resists water, chemical splashes, and cleaning agents used in chemistry labs.</li>
+                </ol>
+            </div>
+
+            <div class="step">
+                <div style="display: flex; align-items: center;">
+                    <span class="step-number">10</span>
+                    <div class="step-title">Optional: Protective Polyurethane Top Coat</div>
+                </div>
+
+                <h4>Instructions:</h4>
+                <ol style="margin: 15px 0 15px 20px; line-height: 1.8;">
+                    <li>For maximum protection on shelf tops, apply 1-2 coats of Clear Water-Based Polyurethane.</li>
+                    <li>Focus on:
+                        <ul style="margin: 10px 0; margin-left: 20px;">
+                            <li>All shelf top surfaces (P7, P8)</li>
+                            <li>Top panel (P1) working surface</li>
+                        </ul>
+                    </li>
+                    <li>This provides extra scratch and stain resistance for a chemistry lab environment.</li>
+                    <li>Allow full cure time per manufacturer instructions before loading shelves.</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- FINAL NOTES -->
+        <div class="section">
+            <h2>Final Assembly Notes & Safety</h2>
+
+            <div class="warning">
+                <strong>Weight Warning:</strong> When fully assembled with all plywood and hardware, this cabinet weighs approximately 160 lbs. Always use 3-4 people to lift, move, or flip the cabinet frame. Never attempt alone.
+            </div>
+
+            <h3>Installation Location</h3>
+            <ul style="margin: 15px 0; margin-left: 20px;">
+                <li>Assemble this shelf unit inside or immediately adjacent to the chemistry lab room where it will permanently stay.</li>
+                <li>Place on a level, flat floor.</li>
+                <li><strong>DO NOT WALL MOUNT</strong> - This shelf is engineered to be completely free-standing.</li>
+                <li>The internal cleats, back panel, and base skids provide all structural rigidity needed.</li>
+                <li>Ensure floor is clean and level before final placement.</li>
+            </ul>
+
+            <h3>Before Loading Supplies</h3>
+            <ul style="margin: 15px 0; margin-left: 20px;">
+                <li>Allow all finishes to fully cure (24-48 hours) before placing any items on shelves.</li>
+                <li>Verify all fasteners are tight and secure.</li>
+                <li>Distribute load evenly across shelves - do not overload single areas.</li>
+                <li>Keep heavier items on lower shelves.</li>
+            </ul>
+
+            <h3>Maintenance</h3>
+            <ul style="margin: 15px 0; margin-left: 20px;">
+                <li>Clean shelves regularly with damp cloth and mild soap (suitable for lab environments).</li>
+                <li>Dry immediately to prevent water damage.</li>
+                <li>Check fasteners periodically and tighten if needed.</li>
+                <li>Do not drag or slide on floor - always lift when moving.</li>
+            </ul>
+        </div>
+
+        <!-- IMAGE REFERENCE SECTION -->
+        <div class="section">
+            <h2>Reference Images</h2>
+            <p>The following images are available in the project folder for visual reference during assembly:</p>
+
+            <h3>Available Reference Images</h3>
+            <ul style="margin: 15px 0; margin-left: 20px;">
+                <li><strong>floor_shelfa.png</strong> - Full 3D view of completed shelf</li>
+                <li><strong>front_view.png</strong> - Front elevation view showing dimensions</li>
+                <li><strong>stiffer_bar_clears_base_skids.png</strong> - Detail showing P9 stiffener and P11 skids</li>
+                <li><strong>OnfloorShelf.jpg</strong> - Photo of shelf installed on floor</li>
+                <li><strong>TableTopShelf.jpg</strong> - Photo of tabletop version (reference only)</li>
+            </ul>
+
+            <p style="margin-top: 20px; color: #666;">
+                <em>Print out reference images and post near work area during assembly. Mark up with part IDs as you complete each step.</em>
+            </p>
+
+            <div class="image-container" style="margin-top: 30px;">
+                <img src="OnfloorShelf.jpg" alt="Completed shelf installed in chemistry lab" style="max-width: 700px;">
+                <div class="image-label">Completed Shelf A - Installed in Chemistry Lab (finished, painted, and fully loaded)</div>
+            </div>
+        </div>
+
+        <!-- PARTS LEGEND -->
+        <div class="section">
+            <h2>Quick Parts Reference Legend</h2>
+
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="color-box" style="background:#d4a373; border: 1px solid #999;"></div>
+                    <strong>P1-P8:</strong> 3/4" Plywood (Panels & Shelves)
+                </div>
+                <div class="legend-item">
+                    <div class="color-box" style="background:#faedcd; border: 1px solid #999;"></div>
+                    <strong>P9, P10:</strong> 1×2 Pine (Stiffener & Cleats)
+                </div>
+                <div class="legend-item">
+                    <div class="color-box" style="background:#bc6c25; border: 1px solid #999;"></div>
+                    <strong>P11:</strong> 2×4 Lumber (Base Skids/Feet)
+                </div>
+            </div>
         </div>
     </div>
 
-    <div id="legend">
-        <b>Part Material Legend:</b>
-        <div class="legend-item"><div class="color-box" style="background:#d4a373;"></div> 3/4" Plywood (P1-P8)</div>
-        <div class="legend-item"><div class="color-box" style="background:#faedcd;"></div> 1x2 Solid Pine Cleats & Lip (P9, P10)</div>
-        <div class="legend-item"><div class="color-box" style="background:#bc6c25;"></div> 2x4 Base Elevation Skids (P11)</div>
+    <div class="footer">
+        <p>Chemistry Lab Floor Storage Shelf A - Step-by-Step Assembly Guide</p>
+        <p>For questions or clarifications, refer to the Floor_ShelfA.md documentation or contact project supervisor</p>
+        <p style="font-size: 12px; margin-top: 10px;">Printed: Generated for handover to construction team</p>
     </div>
-
-    <div id="canvas-container"></div>
-
-    <script>
-        // Scene setup
-        const container = document.getElementById('canvas-container');
-        const scene = new THREE.Scene();
-        scene.background = new THREE.Color(0x1a202c);
-
-        // Camera setup
-        const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
-        camera.position.set(100, 70, 120);
-
-        // Renderer setup
-        const renderer = new THREE.WebGLRenderer({ antialias: true });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setPixelRatio(window.devicePixelRatio);
-        renderer.shadowMap.enabled = true;
-        renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-        container.appendChild(renderer.domElement);
-
-        // OrbitControls
-        const controls = new THREE.OrbitControls(camera, renderer.domElement);
-        controls.enableDamping = true;
-        controls.dampingFactor = 0.05;
-        controls.target.set(0, 12, 0);
-
-        // Lighting
-        const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
-        scene.add(ambientLight);
-
-        const dirLight = new THREE.DirectionalLight(0xffffff, 0.7);
-        dirLight.position.set(80, 120, 90);
-        dirLight.castShadow = true;
-        dirLight.shadow.mapSize.width = 2048;
-        dirLight.shadow.mapSize.height = 2048;
-        scene.add(dirLight);
-
-        const fillLight = new THREE.DirectionalLight(0xffd1b3, 0.3);
-        fillLight.position.set(-80, 40, -90);
-        scene.add(fillLight);
-
-        // Materials (Raw unsanded plywood & pine aesthetics)
-        const plywoodMat = new THREE.MeshStandardMaterial({
-            color: 0xd4a373,
-            roughness: 0.8,
-            metalness: 0.1
-        });
-
-        const pineMat = new THREE.MeshStandardMaterial({
-            color: 0xfaedcd,
-            roughness: 0.7,
-            metalness: 0.05
-        });
-
-        const skidMat = new THREE.MeshStandardMaterial({
-            color: 0xbc6c25,
-            roughness: 0.9,
-            metalness: 0.1
-        });
-
-        const edgeMat = new THREE.LineBasicMaterial({ color: 0x5c3d2e, linewidth: 1 });
-
-        function createPart(w, h, d, x, y, z, mat) {
-            const geo = new THREE.BoxGeometry(w, h, d);
-            const mesh = new THREE.Mesh(geo, mat);
-            mesh.position.set(x, y, z);
-            mesh.castShadow = true;
-            mesh.receiveShadow = true;
-
-            const edges = new THREE.EdgesGeometry(geo);
-            const line = new THREE.LineSegments(edges, edgeMat);
-            mesh.add(line);
-
-            scene.add(mesh);
-            return mesh;
-        }
-
-        // Scale & Dimensions in Inches (Centered at 0,0,0)
-        // Table overall: W=92", H=25.5", D=23.25"
-        // Center offset: Y starts at skids
-
-        // P11: Base Skids (2x4: 1.5" H x 3.5" W x 23.25" D)
-        createPart(3.5, 1.5, 23.25, -44.25, 0.75, 0, skidMat); // Left Skid
-        createPart(3.5, 1.5, 23.25, 0, 0.75, 0, skidMat);       // Center Skid
-        createPart(3.5, 1.5, 23.25, 44.25, 0.75, 0, skidMat);  // Right Skid
-
-        // P2: Bottom Panel (92" W x 0.75" H x 23.25" D)
-        createPart(92, 0.75, 23.25, 0, 1.875, 0, plywoodMat);
-
-        // P4: Left Side Panel (0.75" W x 22.5" H x 23.25" D)
-        createPart(0.75, 22.5, 23.25, -45.625, 13.5, 0, plywoodMat);
-
-        // P5: Right Side Panel (0.75" W x 22.5" H x 23.25" D)
-        createPart(0.75, 22.5, 23.25, 45.625, 13.5, 0, plywoodMat);
-
-        // P6: Center Divider (0.75" W x 22.5" H x 23.25" D)
-        // Positioned between small left section (29.5") and long right section (60.25")
-        // Left side inside: -45.25. Divider center = -45.25 + 29.5 + 0.375 = -15.375
-        const dividerX = -15.375;
-        createPart(0.75, 22.5, 23.25, dividerX, 13.5, 0, plywoodMat);
-
-        // P1: Top Panel (92" W x 0.75" H x 23.25" D)
-        createPart(92, 0.75, 23.25, 0, 25.125, 0, plywoodMat);
-
-        // P3: Back Panel (92" W x 22.5" H x 0.75" D)
-        createPart(92, 22.5, 0.75, 0, 13.5, -11.25, plywoodMat);
-
-        // P10: Cleats for Left Section (3 shelves = 6 cleats on left outer & divider left)
-        const leftCleatX1 = -45.25 + 0.375 + 0.375; // inside left panel
-        const leftCleatX2 = dividerX - 0.375 - 0.375; // left face divider
-        const cleatYOffsets = [5.5 + 1.5, 11.0 + 1.5, 16.5 + 1.5]; // From bottom panel top
-
-        cleatYOffsets.forEach(y => {
-            // Cleats are 0.75" thick, 1.5" high, 20" long. Shifted towards back
-            createPart(0.75, 1.5, 20, -45.25 + 0.375, y - 0.75, 1.625, pineMat);
-            createPart(0.75, 1.5, 20, dividerX - 0.375, y - 0.75, 1.625, pineMat);
-        });
-
-        // P8: Small Shelves (3x) (29.5" W x 0.75" H x 23.25" D)
-        const smallShelfX = (-45.25 + 0.75 + dividerX - 0.375) / 2;
-        cleatYOffsets.forEach(y => {
-            createPart(29.5, 0.75, 23.25, smallShelfX, y + 0.375, 0, plywoodMat);
-        });
-
-        // P10: Cleat for Right Section (1 long shelf at 14.5" high)
-        const longCleatY = 14.5 + 1.5;
-        createPart(0.75, 1.5, 20, dividerX + 0.375, longCleatY - 0.75, 1.625, pineMat);
-        createPart(0.75, 1.5, 20, 45.25 - 0.375, longCleatY - 0.75, 1.625, pineMat);
-
-        // P7: Long Shelf (60.25" W x 0.75" H x 23.25" D)
-        const longShelfX = (dividerX + 0.375 + 45.25 - 0.375) / 2;
-        createPart(60.25, 0.75, 23.25, longShelfX, longCleatY + 0.375, 0, plywoodMat);
-
-        // P9: Stiffener Lip under Long Shelf (60.25" W x 1.5" H x 0.75" D)
-        createPart(60.25, 1.5, 0.75, longShelfX, longCleatY - 0.375, 11.25 - 0.375, pineMat);
-
-        // Floor Grid Plane
-        const gridHelper = new THREE.GridHelper(200, 40, 0x4a5568, 0x2d3748);
-        gridHelper.position.y = 0;
-        scene.add(gridHelper);
-
-        // Animation loop
-        function animate() {
-            requestAnimationFrame(animate);
-            controls.update();
-            renderer.render(scene, camera);
-        }
-        animate();
-
-        // Responsive resize
-        window.addEventListener('resize', () => {
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-        });
-    </script>
 </body>
 </html>

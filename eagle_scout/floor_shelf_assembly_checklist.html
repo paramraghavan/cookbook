@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floor Shelf Assembly Checklist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        .header-subtitle {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .project-info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 6px;
+            font-size: 13px;
+        }
+
+        .info-item {
+            border-left: 3px solid #667eea;
+            padding-left: 12px;
+        }
+
+        .info-label {
+            font-weight: bold;
+            color: #667eea;
+            display: block;
+        }
+
+        .info-value {
+            color: #333;
+            margin-top: 3px;
+        }
+
+        .checklist-section {
+            margin-bottom: 30px;
+            page-break-inside: avoid;
+        }
+
+        .section-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 15px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .section-number {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 28px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 12px;
+            margin-bottom: 10px;
+            background: #fafafa;
+            border-radius: 4px;
+            border-left: 3px solid #ddd;
+            page-break-inside: avoid;
+        }
+
+        .checklist-item.checked {
+            background: #e8f5e9;
+            border-left-color: #4caf50;
+        }
+
+        .checkbox {
+            width: 24px;
+            height: 24px;
+            min-width: 24px;
+            margin-right: 12px;
+            cursor: pointer;
+            margin-top: 2px;
+        }
+
+        .item-content {
+            flex-grow: 1;
+        }
+
+        .item-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 3px;
+        }
+
+        .item-parts {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 4px;
+        }
+
+        .part-id {
+            display: inline-block;
+            background: #e3e8ff;
+            padding: 2px 6px;
+            border-radius: 3px;
+            margin-right: 4px;
+            font-family: monospace;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .item-notes {
+            font-size: 12px;
+            color: #999;
+            font-style: italic;
+            margin-top: 4px;
+            padding-top: 4px;
+            border-top: 1px solid #eee;
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 12px;
+            margin: 15px 0;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        .warning-box strong {
+            color: #856404;
+        }
+
+        .time-estimate {
+            display: inline-block;
+            background: #e3f2fd;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 11px;
+            color: #1976d2;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+
+        .materials-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 13px;
+        }
+
+        .materials-table th {
+            background: #667eea;
+            color: white;
+            padding: 10px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .materials-table td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .materials-table tr:hover {
+            background: #f9f9f9;
+        }
+
+        .materials-table .checkbox-col {
+            width: 40px;
+        }
+
+        .prep-section {
+            background: #f0f4ff;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border: 1px solid #dde4ff;
+        }
+
+        .prep-section h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .finish-section {
+            background: #f0fff4;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            border: 1px solid #c6f6d5;
+        }
+
+        .finish-section h3 {
+            color: #22863a;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .summary-box {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border: 2px solid #667eea;
+        }
+
+        .summary-title {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .summary-content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            font-size: 13px;
+        }
+
+        .summary-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .summary-icon {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        .print-instructions {
+            background: #f0f0f0;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-size: 12px;
+            text-align: center;
+            color: #666;
+        }
+
+        .footer {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            font-size: 11px;
+            color: #999;
+        }
+
+        .step-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #ddd, transparent);
+            margin: 20px 0;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+                padding: 20px;
+            }
+
+            .print-instructions {
+                display: none;
+            }
+
+            .checklist-item {
+                page-break-inside: avoid;
+            }
+
+            .checklist-section {
+                page-break-inside: avoid;
+            }
+
+            .checkbox {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+
+        .toggle-all {
+            margin: 15px 0;
+            text-align: right;
+        }
+
+        .toggle-all button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 0 5px;
+        }
+
+        .toggle-all button:hover {
+            background: #764ba2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <header>
+            <h1>Floor Shelf Assembly Checklist</h1>
+            <p class="header-subtitle">Chemistry Lab Storage Shelf A - Step-by-Step Build Checklist</p>
+        </header>
+
+        <div class="print-instructions">
+            📋 Print this checklist and bring to assembly site. Check off items as completed. Use browser's print function (Ctrl+P / Cmd+P) for best results.
+        </div>
+
+        <!-- PROJECT INFO -->
+        <div class="project-info">
+            <div class="info-item">
+                <span class="info-label">Dimensions</span>
+                <span class="info-value">92"W × 23.25"D × 25.5"H</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Total Weight</span>
+                <span class="info-value">~160 lbs (requires 3-4 people)</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Assembly Time</span>
+                <span class="info-value">6-8 hours with prep</span>
+            </div>
+        </div>
+
+        <!-- PRE-ASSEMBLY PREPARATION -->
+        <div class="prep-section">
+            <h3>✓ PRE-ASSEMBLY PREPARATION</h3>
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">All materials & tools gathered at assembly location</div>
+                    <div class="item-notes">Lumber, plywood, fasteners, glue, tools ready on work surface</div>
+                </div>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">All plywood & lumber cuts completed</div>
+                    <div class="item-notes">Verify all cuts are accurate before starting assembly</div>
+                </div>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Work surface is level and flat</div>
+                    <div class="item-notes">Use sawhorses or work table for assembly reference</div>
+                </div>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">All tools tested and working (drill, saw, level, clamps)</div>
+                    <div class="item-notes">Have backup batteries for cordless tools</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MATERIALS CHECKLIST -->
+        <div class="checklist-section">
+            <div class="section-header">Materials & Fasteners Verification</div>
+
+            <table class="materials-table">
+                <thead>
+                    <tr>
+                        <th class="checkbox-col">✓</th>
+                        <th>Item</th>
+                        <th>Qty</th>
+                        <th>Use</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="checkbox-col"><input type="checkbox" onchange="toggleRow(this)"></td>
+                        <td>3/4" × 4' × 8' Sanded Plywood</td>
+                        <td>3 sheets</td>
+                        <td>P1, P2, P3, P4, P5, P6, P7, P8</td>
+                    </tr>
+                    <tr>
+                        <td class="checkbox-col"><input type="checkbox" onchange="toggleRow(this)"></td>
+                        <td>1" × 2" × 8' Select Pine</td>
+                        <td>2 boards</td>
+                        <td>P9 (Stiffener), P10 (Cleats)</td>
+                    </tr>
+                    <tr>
+                        <td class="checkbox-col"><input type="checkbox" onchange="toggleRow(this)"></td>
+                        <td>2" × 4" × 8' Pine</td>
+                        <td>1 board</td>
+                        <td>P11 (Base Skids)</td>
+                    </tr>
+                    <tr>
+                        <td class="checkbox-col"><input type="checkbox" onchange="toggleRow(this)"></td>
+                        <td>Titebond II Wood Glue</td>
+                        <td>1 bottle (16 oz)</td>
+                        <td>All wood-to-wood joints</td>
+                    </tr>
+                    <tr>
+                        <td class="checkbox-col"><input type="checkbox" onchange="toggleRow(this)"></td>
+                        <td>2" #8 Star-Drive Wood Screws</td>
+                        <td>1 box</td>
+                        <td>P11→P2, P1→walls, P2→walls</td>
+                    </tr>
+                    <tr>
+                        <td class="checkbox-col"><input type="checkbox" onchange="toggleRow(this)"></td>
+                        <td>1.25"-1.5" Finish Nails or Screws</td>
+                        <td>1 pack</td>
+                        <td>P10 cleats, P9→P7, shelves→cleats</td>
+                    </tr>
+                    <tr>
+                        <td class="checkbox-col"><input type="checkbox" onchange="toggleRow(this)"></td>
+                        <td>1.5"-2" Finish Nails or Trim Screws</td>
+                        <td>1 pack</td>
+                        <td>Horizontal fastening through walls</td>
+                    </tr>
+                    <tr>
+                        <td class="checkbox-col"><input type="checkbox" onchange="toggleRow(this)"></td>
+                        <td>1"-1.25" Brad Nails or Screws</td>
+                        <td>1 pack</td>
+                        <td>P3 (Back Panel) perimeter mounting</td>
+                    </tr>
+                    <tr>
+                        <td class="checkbox-col"><input type="checkbox" onchange="toggleRow(this)"></td>
+                        <td>1/8" Countersink Drill Bit</td>
+                        <td>1 bit</td>
+                        <td>Pre-drilling all fasteners</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="step-divider"></div>
+
+        <!-- STEP 1 -->
+        <div class="checklist-section">
+            <div class="section-header">
+                <span class="section-number">1</span>
+                Prepare Long Shelf Stiffener Lip [P9]
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Lay P7 flat (BOTTOM side facing UP)</div>
+                    <div class="item-parts">Part: <span class="part-id">P7</span></div>
+                    <div class="item-notes">Use clean, flat workbench surface</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Position P9 under front edge of P7</div>
+                    <div class="item-parts">Parts: <span class="part-id">P7</span> + <span class="part-id">P9</span></div>
+                    <div class="item-notes">P9 sits vertically, flush with front edge, creates inverted "L" beam</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Apply wood glue along entire contact joint</div>
+                    <div class="item-parts">Glue: <span class="part-id">Titebond II</span></div>
+                    <div class="item-notes">1/4" continuous bead along bottom of P7. Wipe squeeze-out in 15 min</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Clamp P9 to P7 - verify alignment</div>
+                    <div class="item-notes">P9 flush with front edge, parallel to length</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Pre-drill pilot holes (1/8" countersink bit)</div>
+                    <div class="item-parts">Fastener: <span class="part-id">1.25"-1.5" Finish Nails</span></div>
+                    <div class="item-notes">Space every 6-8 inches, 8-9 holes total</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Drive nails/screws VERTICALLY DOWN through P7 into P9</div>
+                    <div class="item-notes">Nails driven from TOP surface, sunk flush. Allow 30 min cure</div>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <strong>⏱️ Wait 30 minutes</strong> before moving assembly - glue needs initial set
+            </div>
+        </div>
+
+        <div class="step-divider"></div>
+
+        <!-- STEP 2 -->
+        <div class="checklist-section">
+            <div class="section-header">
+                <span class="section-number">2</span>
+                Attach 2×4 Base Skids [P11] to Bottom Panel [P2]
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Lay P2 flat (BOTTOM side facing DOWN - will be floor side)</div>
+                    <div class="item-parts">Part: <span class="part-id">P2</span></div>
+                    <div class="item-notes">Position on saw horses or work table</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Position LEFT SKID flush with far left edge</div>
+                    <div class="item-parts">Part: <span class="part-id">P11</span> (Left)</div>
+                    <div class="item-notes">Running front-to-back, parallel to P2 edges</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Position CENTER SKID at exact middle (46" from left edge)</div>
+                    <div class="item-parts">Part: <span class="part-id">P11</span> (Center)</div>
+                    <div class="item-notes">Align with center divider line</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Position RIGHT SKID flush with far right edge</div>
+                    <div class="item-parts">Part: <span class="part-id">P11</span> (Right)</div>
+                    <div class="item-notes">Running front-to-back, perpendicular to P2</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Verify all 3 skids are parallel & level</div>
+                    <div class="item-notes">Use level or straight edge across all three</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Apply glue to TOP surface of each skid</div>
+                    <div class="item-parts">Glue: <span class="part-id">Titebond II</span></div>
+                    <div class="item-notes">1/4" continuous bead on all three skids</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Pre-drill pilot holes (1/8" countersink)</div>
+                    <div class="item-notes">4 holes per skid: 2 front end, 2 rear end (12 total)</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Drive 2" #8 screws VERTICALLY DOWN through P2 into P11</div>
+                    <div class="item-parts">Fastener: <span class="part-id">2" #8 Star-Drive Screws</span></div>
+                    <div class="item-notes">4 screws per skid. Countersink heads flush. Total: 12 screws</div>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <strong>✓ Skids elevate P2 ~1.5" off floor</strong> - protects against moisture & chemical spills
+            </div>
+        </div>
+
+        <div class="step-divider"></div>
+
+        <!-- STEP 3 -->
+        <div class="checklist-section">
+            <div class="section-header">
+                <span class="section-number">3</span>
+                Mount Support Cleats [P10] on Vertical Panels
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Stand P4 (Left Side) vertically</div>
+                    <div class="item-parts">Part: <span class="part-id">P4</span></div>
+                    <div class="item-notes">INSIDE FACE facing you</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Draw horizontal lines on P4 INSIDE FACE at: 5.5", 11.0", 16.5"</div>
+                    <div class="item-notes">Measure from bottom edge. Use pencil & level</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Stand P6 (Center Divider) - draw SAME lines on LEFT FACE</div>
+                    <div class="item-parts">Part: <span class="part-id">P6</span></div>
+                    <div class="item-notes">Left face of divider. Same heights: 5.5", 11.0", 16.5"</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Position 1st P10 cleat JUST BELOW 5.5" line on P4</div>
+                    <div class="item-parts">Part: <span class="part-id">P10</span> Cleat #1</div>
+                    <div class="item-notes">Cleat top at ~5.5". Flush against REAR edge. 3.25" gap at FRONT</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Position 2nd P10 cleat JUST BELOW 11.0" line on P4</div>
+                    <div class="item-parts">Part: <span class="part-id">P10</span> Cleat #2</div>
+                    <div class="item-notes">Cleat top at ~11.0". Flush against REAR edge</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Position 3rd P10 cleat JUST BELOW 16.5" line on P4</div>
+                    <div class="item-parts">Part: <span class="part-id">P10</span> Cleat #3</div>
+                    <div class="item-notes">Cleat top at ~16.5". Flush against REAR edge</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Repeat for P6 LEFT FACE: Position 3 cleats at same heights</div>
+                    <div class="item-parts">Part: <span class="part-id">P6</span> + <span class="part-id">P10</span> (3 more cleats)</div>
+                    <div class="item-notes">Cleats #4, #5, #6. Same heights: 5.5", 11.0", 16.5"</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Draw ONE line at 14.5" on P6 RIGHT FACE</div>
+                    <div class="item-parts">Part: <span class="part-id">P6</span> (Right side)</div>
+                    <div class="item-notes">Right section (long shelf section) uses only 1 shelf height</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Position P10 cleat JUST BELOW 14.5" on P6 RIGHT FACE</div>
+                    <div class="item-parts">Part: <span class="part-id">P10</span> Cleat #7</div>
+                    <div class="item-notes">Flush against REAR edge. 3.25" gap at FRONT</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Draw ONE line at 14.5" on P5 RIGHT SIDE PANEL</div>
+                    <div class="item-parts">Part: <span class="part-id">P5</span> (Right panel)</div>
+                    <div class="item-notes">INSIDE FACE facing inward</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Position P10 cleat JUST BELOW 14.5" on P5</div>
+                    <div class="item-parts">Part: <span class="part-id">P10</span> Cleat #8</div>
+                    <div class="item-notes">Flush against REAR edge. 3.25" gap at FRONT</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Apply glue to BACK face of ALL 8 cleats</div>
+                    <div class="item-parts">Glue: <span class="part-id">Titebond II</span></div>
+                    <div class="item-notes">Thin continuous bead on back surface only</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Pre-drill pilot holes (1/8" bit) - 3 holes per cleat</div>
+                    <div class="item-notes">Left end, center (10"), right end. Total: 24 pilot holes</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Drive 1.25" nails/screws HORIZONTALLY through each cleat</div>
+                    <div class="item-parts">Fastener: <span class="part-id">1.25" Finish Nails/Screws</span></div>
+                    <div class="item-notes">3 fasteners per cleat (24 total). Through cleat into panel</div>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <strong>✓ Verify all 8 cleats are level</strong> before proceeding. Use level tool
+            </div>
+        </div>
+
+        <div class="step-divider"></div>
+
+        <!-- STEP 4 -->
+        <div class="checklist-section">
+            <div class="section-header">
+                <span class="section-number">4</span>
+                Position Shelves on Cleats [P7 & P8]
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Slide P8a (Small Shelf 1) onto LEFT cleats at 5.5" height</div>
+                    <div class="item-parts">Part: <span class="part-id">P8a</span> (29.5" × 23.25")</div>
+                    <div class="item-notes">Rests on lower left cleats. Verify level</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Slide P8b (Small Shelf 2) onto LEFT cleats at 11.0" height</div>
+                    <div class="item-parts">Part: <span class="part-id">P8b</span> (29.5" × 23.25")</div>
+                    <div class="item-notes">Middle left shelf. Verify level & fully supported</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Slide P8c (Small Shelf 3) onto LEFT cleats at 16.5" height</div>
+                    <div class="item-parts">Part: <span class="part-id">P8c</span> (29.5" × 23.25")</div>
+                    <div class="item-notes">Top left shelf. Verify level & no gaps under shelf</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Slide P7 (Long Shelf with P9 stiffener attached) at 14.5" height</div>
+                    <div class="item-parts">Part: <span class="part-id">P7</span> + <span class="part-id">P9</span> (60.25" × 23.25")</div>
+                    <div class="item-notes">Right section. P9 lip faces down/out. Verify level</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Verify ALL shelves level (use level tool)</div>
+                    <div class="item-notes">No rocking. Shelves fully supported end-to-end</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Apply glue to TOP of ALL 8 cleats where shelves sit</div>
+                    <div class="item-parts">Glue: <span class="part-id">Titebond II</span></div>
+                    <div class="item-notes">Thin continuous bead on each cleat top</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Pre-drill pilot holes (1/8" countersink) through shelf tops</div>
+                    <div class="item-notes">3 holes per cleat (left, center, right). Vertical fastening</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Drive 1.25"-1.5" nails VERTICALLY DOWN through shelves into cleats</div>
+                    <div class="item-parts">Fastener: <span class="part-id">1.25"-1.5" Finish Nails/Screws</span></div>
+                    <div class="item-notes">3 per cleat (24 total for all cleats). Countersink flush</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Pre-drill pilot holes through P4 & P6 into P8 shelf edges</div>
+                    <div class="item-notes">Horizontal fastening. 2-3 holes per shelf side</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Drive 1.5"-2" nails HORIZONTALLY through side panels into shelves</div>
+                    <div class="item-parts">Fastener: <span class="part-id">1.5"-2" Finish Nails/Trim Screws</span></div>
+                    <div class="item-notes">Through P4, P5, P6 into P8 & P7 edge cores. 2-3 per side</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Pre-drill pilot holes through P6 & P5 into P7 shelf edges</div>
+                    <div class="item-notes">Right side shelf attachment. Same as P8</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Drive 1.5"-2" nails through P6 & P5 into P7 edges</div>
+                    <div class="item-parts">Fastener: <span class="part-id">1.5"-2" Finish Nails/Trim Screws</span></div>
+                    <div class="item-notes">Long shelf attachment. 2-3 fasteners per side</div>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <strong>✓ Double-check all shelves are level and stable</strong> before top/bottom attachment
+            </div>
+        </div>
+
+        <div class="step-divider"></div>
+
+        <!-- STEP 5 -->
+        <div class="checklist-section">
+            <div class="section-header">
+                <span class="section-number">5</span>
+                Attach Top & Bottom Panels [P1 & P2]
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Apply glue to TOP edges of P4, P5, P6</div>
+                    <div class="item-parts">Glue: <span class="part-id">Titebond II</span></div>
+                    <div class="item-notes">Continuous 1/4" bead on top edge of all three vertical panels</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Place P1 (Top Panel) squarely on top of frame</div>
+                    <div class="item-parts">Part: <span class="part-id">P1</span> (92" × 23.25")</div>
+                    <div class="item-notes">Front edges aligned & flush. Level. Equal overhang all sides</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Pre-drill pilot holes (1/8" countersink) through P1 into panels</div>
+                    <div class="item-notes">3 holes per panel (9 total). Vertical through P1 into edges</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Drive 2" #8 screws VERTICALLY DOWN through P1 into panel edges</div>
+                    <div class="item-parts">Fastener: <span class="part-id">2" #8 Star-Drive Screws</span></div>
+                    <div class="item-notes">3 per panel (9 total). Countersink flush. From top surface</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Apply glue to BOTTOM edges of P4, P5, P6</div>
+                    <div class="item-parts">Glue: <span class="part-id">Titebond II</span></div>
+                    <div class="item-notes">Continuous 1/4" bead on bottom edge of all three vertical panels</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Carefully set frame (with P1) down onto P2 with P11 skids</div>
+                    <div class="item-parts">Part: <span class="part-id">P2</span> (already has P11)</div>
+                    <div class="item-notes">Center frame on P2. Verify all edges aligned & skids positioned</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Pre-drill pilot holes (1/8" countersink) from INSIDE through panel edges into P2</div>
+                    <div class="item-notes">3 holes per panel (9 total). From inside cabinet</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Drive 2" #8 screws through panel edges INTO P2 (from inside)</div>
+                    <div class="item-parts">Fastener: <span class="part-id">2" #8 Star-Drive Screws</span></div>
+                    <div class="item-notes">3 per panel (9 total). Interior fastening. Countersink flush</div>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <strong>⏱️ Allow 1 hour</strong> for glue to set before moving cabinet
+            </div>
+        </div>
+
+        <div class="step-divider"></div>
+
+        <!-- STEP 6 -->
+        <div class="checklist-section">
+            <div class="section-header">
+                <span class="section-number">6</span>
+                Square the Cabinet & Attach Back Panel [P3]
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Lay ENTIRE assembled cabinet FACE-DOWN on flat surface</div>
+                    <div class="item-notes">Use sawhorses or work tables. Back panel side will face up</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Measure diagonal corner-to-corner (top-left to bottom-right)</div>
+                    <div class="item-notes">Record measurement. Should be equal to other diagonal</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Measure diagonal corner-to-corner (top-right to bottom-left)</div>
+                    <div class="item-notes">Record measurement. Must match previous diagonal (within 1/4")</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">If diagonals don't match: loosen fasteners & adjust frame to square</div>
+                    <div class="item-notes">Gently tap panels to align. Re-measure until perfectly square</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Apply glue around ENTIRE rear perimeter edge</div>
+                    <div class="item-parts">Glue: <span class="part-id">Titebond II</span></div>
+                    <div class="item-notes">Continuous 1/4" bead along all back edges of P1, P2, P4, P5, P6</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Apply glue along CENTER DIVIDER back edge</div>
+                    <div class="item-parts">Glue: <span class="part-id">Titebond II</span></div>
+                    <div class="item-notes">Where P6 back face will contact P3</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Position P3 (Back Panel) flush over rear face of cabinet</div>
+                    <div class="item-parts">Part: <span class="part-id">P3</span> (92" × 24")</div>
+                    <div class="item-notes">Perfectly aligned with all edges. Back panel faces up/out</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Pre-drill pilot holes (1/8" bit) around entire perimeter every 6-8"</div>
+                    <div class="item-notes">Starting at top-left, around perimeter. ~20-24 holes total</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Pre-drill pilot holes along center divider (P6) back edge</div>
+                    <div class="item-notes">Every 6-8 inches, both left & right faces of divider</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Drive 1"-1.25" brad nails/screws around entire perimeter</div>
+                    <div class="item-parts">Fastener: <span class="part-id">1"-1.25" Brad Nails/Screws</span></div>
+                    <div class="item-notes">Every 6-8 inches (24-28 fasteners total). Nails driven from front</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Drive 1"-1.25" brad nails along center divider (P6)</div>
+                    <div class="item-parts">Fastener: <span class="part-id">1"-1.25" Brad Nails/Screws</span></div>
+                    <div class="item-notes">Every 6-8 inches. Both left & right faces of divider</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Verify all nails/screws are flush or countersunk</div>
+                    <div class="item-notes">P3 should sit perfectly flat & flush with frame edges</div>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <strong>🔒 CRITICAL:</strong> P3 (Back Panel) is the PRIMARY structural component. It locks the cabinet rigid & provides stability for free-standing use. Ensure ALL fasteners are secure. DO NOT mount to walls.
+            </div>
+
+            <div class="warning-box">
+                <strong>⏱️ Allow 2 hours</strong> for glue to cure before moving or flipping cabinet
+            </div>
+        </div>
+
+        <div class="step-divider"></div>
+
+        <!-- STEP 7 -->
+        <div class="checklist-section">
+            <div class="section-header">
+                <span class="section-number">7</span>
+                Sand All Surfaces & Edges
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Sand ALL outer corners with 120-grit sandpaper</div>
+                    <div class="item-notes">Smooth all edges - no splinters. Top, bottom, sides</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Sand ALL exposed plywood edges (P1-P8)</div>
+                    <div class="item-notes">Front, back, side edges. Special attention to visible areas</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Sand TOP surfaces of all shelves (P7 & P8)</div>
+                    <div class="item-notes">These are work surfaces - smooth & splinter-free</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Sand all visible screw/nail holes</div>
+                    <div class="item-notes">Smooth out any raised areas. Prepare for painting</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Wipe all surfaces with damp rag to remove wood dust</div>
+                    <div class="item-notes">Let dry completely (15-30 minutes). No dust before priming</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="step-divider"></div>
+
+        <!-- FINISHING SECTION -->
+        <div class="finish-section">
+            <h3>✓ FINISHING & PAINTING (INDOOR OR PROTECTED AREA)</h3>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Apply 1 coat of Latex Interior Wood PRIMER</div>
+                    <div class="item-parts">Material: <span class="part-id">Latex Wood Primer</span></div>
+                    <div class="item-notes">All exterior surfaces + shelf tops. Use foam roller. Let dry 2 hours</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Apply 1st coat of Semi-Gloss ENAMEL PAINT</div>
+                    <div class="item-parts">Material: <span class="part-id">Semi-Gloss Interior Enamel</span></div>
+                    <div class="item-notes">All exterior surfaces. Smooth even coverage. Follow drying time on can</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Apply 2nd coat of ENAMEL PAINT</div>
+                    <div class="item-parts">Material: <span class="part-id">Semi-Gloss Interior Enamel</span></div>
+                    <div class="item-notes">After full drying time from 1st coat (4-6 hours). Full coverage</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Optional: Apply Clear POLYURETHANE top coat</div>
+                    <div class="item-parts">Material: <span class="part-id">Water-Based Polyurethane</span></div>
+                    <div class="item-notes">On shelf tops (P7, P8) & top panel (P1) for extra protection</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Allow all finishes to FULLY CURE before loading</div>
+                    <div class="item-notes">24-48 hours minimum. Follow paint manufacturer instructions</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="step-divider"></div>
+
+        <!-- FINAL ASSEMBLY & INSTALLATION -->
+        <div class="checklist-section">
+            <div class="section-header">
+                <span class="section-number">✓</span>
+                Final Assembly & Installation
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Verify all fasteners are tight and secure</div>
+                    <div class="item-notes">Check all screw heads, nail heads. Tighten any loose screws</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Assemble 3-4 people for final transport</div>
+                    <div class="item-notes">Cabinet weighs ~160 lbs. Never move alone</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Transport to final location (chemistry lab)</div>
+                    <div class="item-notes">Do not slide or drag. Lift and carry. Place on level floor</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Verify cabinet is on level, flat floor</div>
+                    <div class="item-notes">Use level tool. Adjust placement if needed</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Measure diagonals one final time to verify square</div>
+                    <div class="item-notes">Both diagonals should be equal (within 1/4")</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">DO NOT MOUNT TO WALLS</div>
+                    <div class="item-notes">Unit is engineered for free-standing use only. Back panel provides rigidity</div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" class="checkbox" onchange="toggleItem(this)">
+                <div class="item-content">
+                    <div class="item-title">Allow 24-48 hours before loading with supplies</div>
+                    <div class="item-notes">Finishes must fully cure. All glue must set completely</div>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <strong>✓ Cabinet is now ready for use!</strong> Distribute load evenly. Keep heavier items on lower shelves.
+            </div>
+        </div>
+
+        <!-- SUMMARY BOX -->
+        <div class="summary-box">
+            <div class="summary-title">Assembly Summary</div>
+            <div class="summary-content">
+                <div class="summary-item">
+                    <div class="summary-icon">📦</div>
+                    <div><strong>Total Parts:</strong> 11 part types (P1-P11)</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-icon">🔨</div>
+                    <div><strong>Fasteners Used:</strong> ~80+ screws/nails total</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-icon">⏱️</div>
+                    <div><strong>Build Time:</strong> 6-8 hours + drying/curing</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-icon">⚖️</div>
+                    <div><strong>Final Weight:</strong> Approximately 160 lbs</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <p><strong>Chemistry Lab Floor Storage Shelf A - Assembly Checklist</strong></p>
+            <p>Print this checklist and bring to assembly site. Check off items as you complete each step.</p>
+            <p style="margin-top: 15px; font-size: 11px;">For detailed instructions, reference the floor_shelf.html step-by-step guide.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleItem(checkbox) {
+            const item = checkbox.closest('.checklist-item');
+            item.classList.toggle('checked', checkbox.checked);
+        }
+
+        function toggleRow(checkbox) {
+            const row = checkbox.closest('tr');
+            row.style.opacity = checkbox.checked ? '0.6' : '1';
+        }
+
+        // Add keyboard support for checking boxes
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && e.target.type === 'checkbox') {
+                e.target.click();
+            }
+        });
+    </script>
+</body>
+</html>
