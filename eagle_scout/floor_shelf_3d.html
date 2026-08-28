@@ -417,8 +417,8 @@
                     <td><span class="part-id">P9</span></td>
                     <td>Stiffener Lip</td>
                     <td>1</td>
-                    <td><span class="material-type">1×2 Pine</span><br>60.25" × 1.5"</td>
-                    <td>Under P7 front edge</td>
+                    <td><span class="material-type">1×2 Pine</span><br>56" × 1.5" (2" clearance each end)</td>
+                    <td>Under P7 front edge, centered</td>
                 </tr>
                 <tr>
                     <td><span class="part-id">P10</span></td>
@@ -633,8 +633,8 @@
         const longShelfX = (dividerX + 0.375 + 45.25 - 0.375) / 2;
         createPart(60.25, 0.75, 23.25, longShelfX, longCleatY + 0.375, 0, plywoodMat, 'P7', 'Long Shelf');
 
-        // P9: Stiffener Lip
-        createPart(60.25, 1.5, 0.75, longShelfX, longCleatY - 0.375, 11.25 - 0.375, pineMat, 'P9', 'Stiffener Lip');
+        // P9: Stiffener Lip (56" long, centered under P7 with 2" clearance on each end)
+        createPart(56, 1.5, 0.75, longShelfX, longCleatY - 0.375, 11.25 - 0.375, pineMat, 'P9', 'Stiffener Lip');
 
         // Floor Grid
         const gridHelper = new THREE.GridHelper(200, 40, 0x4a5568, 0x2d3748);
@@ -799,7 +799,7 @@
             { id: 'P6', name: 'Center Divider', qty: 1, material: '3/4" Plywood', dims: '22.5" × 23.25"' },
             { id: 'P7', name: 'Long Shelf', qty: 1, material: '3/4" Plywood', dims: '60.25" × 23.25"' },
             { id: 'P8', name: 'Small Shelves', qty: 3, material: '3/4" Plywood', dims: '29.5" × 23.25"' },
-            { id: 'P9', name: 'Stiffener Lip', qty: 1, material: '1×2 Pine', dims: '60.25" × 1.5"' },
+            { id: 'P9', name: 'Stiffener Lip', qty: 1, material: '1×2 Pine', dims: '56" × 1.5" (centered)' },
             { id: 'P10', name: 'Shelf Cleats', qty: 8, material: '1×2 Pine', dims: '20" × 1.5"' },
             { id: 'P11', name: 'Base Skids', qty: 3, material: '2×4 Lumber', dims: '23.25" × 3.5"' }
         ];
