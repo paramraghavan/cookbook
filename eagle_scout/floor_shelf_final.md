@@ -8,3 +8,4 @@
 - [Parts Diagram P1-P11](cheatsheet/Parts_Diagram_P1-P11.pdf)
 - [Master Cut List](cheatsheet/Master_Cut_List.pdf)
 - [Complete Parts List](cheatsheet/Complete_Parts_List.pdf)
+- [Picture The Cut](cheatsheet/Cutting_Diagram_P1-P11.pdf)
