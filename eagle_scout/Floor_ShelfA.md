@@ -40,7 +40,7 @@
 | Qty          | Item                                                  | Use                                                                     |
 |--------------|-------------------------------------------------------|-------------------------------------------------------------------------|
 | **3 Sheets** | 3/4" × 4' × 8' Sanded Plywood (BCX or Sandeply Birch) | Outer frame (P1, P2, P4, P5, P6), back panel (P3), and shelves (P7, P8) |
-| **2 Boards** | 1" × 2" × 8' Select Pine Board                        | Long shelf stiffener lip (P9) and side support cleats (P10)             |
+| **3 Boards** | 1" × 2" × 8' Select Pine Board                        | Long shelf stiffener lip (P9) and side support cleats (P10)             |
 | **1 Board**  | 2" × 4" × 8' Construction Pine Board                  | Base skids / feet underneath unit (P11)                                 |
 
 > **Pro Scout Tip:** Ask the store associate at the Home Depot or Lowe's lumber panel saw to rip your 4' × 8' sheets
@@ -53,8 +53,8 @@
 |--------------|-------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | **1 Bottle** | Titebond II Wood Glue (16 oz)                         | Primary structural bonding across all wood-to-wood joints (80%+ total strength)                               |
 | **1 Box**    | 2" #8 Star-Drive Wood/Cabinet Screws                  | Main assembly fasteners for attaching base skids (P11), top panel (P1), bottom panel (P2), and outer frame    |
-| **1 Pack**   | 1-1/4" to 1-1/2" Finish Nails (or 1-1/4" Wood Screws) | Attaching support cleats (P10), stiffener bar (P9), and securing shelves (P7, P8) vertically down into cleats |
-| **1 Pack**   | 1-1/2" to 2" Finish Nails (or 1-5/8" Trim Screws)     | Horizontal fastening through exterior side panels (P4, P5) and divider (P6) directly into shelf end cores     |
+| **1 Pack**   |1 1/2" #6 Star-Drive Wood/Cabinet Screws   | Attaching support cleats (P10), stiffener bar (P9), and securing shelves (P7, P8) vertically down into cleats |
+
 | **1 Pack**   | 1" to 1-1/4" Brad Nails or Wood Screws                | Mounting the 3/4" rear back panel (P3) around perimeter and center divider                                    |
 | **1 Bit**    | 1/8" Countersink Drill Bit Combination                | Pre-drilling pilot holes and recessing screw heads flush without splitting plywood                            |
 
@@ -64,7 +64,6 @@
 |--------------|------------------------------------------------|---------------------------------------------------------------------------------------|-----------|
 | **1 Quart**  | Latex Wood Primer                              | Seals raw plywood edges and surfaces prior to paint application                       | Mandatory |
 | **1 Gallon** | Semi-Gloss or Gloss Interior Enamel Paint      | Smooth, washable body finish resisting water and chemical splashes                    | Mandatory |
-| **1 Quart**  | Water-Based Polyurethane (Clear)               | Tough clear coat over top working surface and shelf tops for scratch/stain protection | Optional  |
 | **1 Pack**   | 120-Grit Sandpaper + 4" Foam Rollers & Brushes | Surface sanding and smooth paint/sealer application                                   | Mandatory |
 
 ---
@@ -791,132 +790,6 @@ CRITICAL: Back panel LOCKS cabinet rigid!
   ✓ Back panel prevents any twisting
   ✓ Frame is permanently locked square
 ```
-
-#### Step 6: Sanding & Lab Chemical-Proof Finishing
-
-1. Sand all outer corners, exposed edges, and screw locations with 120-grit sandpaper until completely smooth to prevent splinters.
-2. Wipe away all wood dust thoroughly with a damp rag.
-3. Apply **1 coat of Latex Interior Wood Primer** to all surfaces and let dry for 2 hours.
-4. Apply **2 coats of Semi-Gloss or Gloss Interior Enamel Paint** (or Oil-Based/Epoxy Enamel), allowing full dry time between coats.
-5. Apply **1 to 2 coats of Clear Water-Based Polyurethane** over the top surface and shelf tops to lock out water, chemical splashes, and scratches.
-
-**VISUAL: Step 6 - How It Looks (Finishing Process)**
-
-```text
-STEP 6a: SANDING PHASE
-
-  Before Sanding: Edges are rough
-  ┌─────────────────────────────────────┐
-  │ Rough corners          Rough edge   │
-  │ ╭────────────────╮    │            │
-  │ │ SHARP & ROUGH  │    ↓            │
-  │ ╰────────────────╯    Splinters!   │
-  │                                     │
-  │ Screw holes needing sanding         │
-  │ ● ● ●                              │
-  └─────────────────────────────────────┘
-
-  After Sanding with 120-grit:
-  ┌─────────────────────────────────────┐
-  │ Smooth corners          Smooth edge │
-  │ ╭────────────────╮    │            │
-  │ │ SMOOTH & SAFE  │    ↓            │
-  │ ╰────────────────╯    No splinters │
-  │                                     │
-  │ Screw holes smoothed                │
-  │ ○ ○ ○ (flush)                      │
-  └─────────────────────────────────────┘
-
-STEP 6b: FINISHING SEQUENCE
-
-  Timeline & Drying:
-
-  DAY 1 - MORNING:
-  ┌──────────────────────────────────────────┐
-  │ 1. Sand all surfaces (120-grit)          │
-  │    Time: 30-60 min                       │
-  │                                          │
-  │ 2. Wipe down with damp rag              │
-  │    Time: 15-20 min                       │
-  │    Dry time needed: 30 min               │
-  └──────────────────────────────────────────┘
-           ↓
-  DAY 1 - LATE MORNING:
-  ┌──────────────────────────────────────────┐
-  │ 3. Apply PRIMER (1 coat)                 │
-  │    • Use foam roller for smooth finish   │
-  │    • Cover all exterior surfaces         │
-  │    • Paint interior shelf tops           │
-  │    Time: 45 min                          │
-  │    Dry time needed: 2 hours              │
-  └──────────────────────────────────────────┘
-           ↓
-  DAY 1 - EARLY AFTERNOON:
-  ┌──────────────────────────────────────────┐
-  │ 4. Apply PAINT COAT #1 (1st of 2)       │
-  │    • Semi-Gloss or Gloss Enamel         │
-  │    • Even coverage, smooth finish        │
-  │    • All exterior surfaces               │
-  │    Time: 45 min                          │
-  │    Dry time needed: 4-6 hours            │
-  └──────────────────────────────────────────┘
-           ↓
-  DAY 1 - EVENING (after 4-6 hrs):
-  ┌──────────────────────────────────────────┐
-  │ 5. Apply PAINT COAT #2 (2nd of 2)       │
-  │    • Sand lightly between coats          │
-  │    • Second coat for durability          │
-  │    • Full coverage                       │
-  │    Time: 45 min                          │
-  │    Dry time needed: 4-6 hours            │
-  └──────────────────────────────────────────┘
-           ↓
-  DAY 2 - AFTERNOON:
-  ┌──────────────────────────────────────────┐
-  │ 6. Apply POLYURETHANE (1-2 coats)       │
-  │    • Optional but recommended            │
-  │    • Shelf tops & working surfaces only  │
-  │    • Water & chemical resistant          │
-  │    Time: 30 min per coat                 │
-  │    Dry time: 2-3 hours between coats    │
-  └──────────────────────────────────────────┘
-           ↓
-  DAY 2/3 - FULL CURE:
-  ┌──────────────────────────────────────────┐
-  │ 7. READY TO USE!                        │
-  │    • Full paint cure: 24-48 hours       │
-  │    • Full polyurethane cure: 24 hours   │
-  │    • DO NOT LOAD SHELVES until fully     │
-  │      cured!                             │
-  └──────────────────────────────────────────┘
-
-
-FINISH LAYERS & PROTECTION:
-
-  ┌─────────────────────────────────────┐
-  │ Top layer: Polyurethane (Clear)    │ ← Extra protection
-  ├─────────────────────────────────────┤
-  │ Middle: Enamel Paint #2 (Color)    │
-  ├─────────────────────────────────────┤
-  │ Coat 1: Enamel Paint #1 (Color)    │
-  ├─────────────────────────────────────┤
-  │ Base: Primer (White/Gray)          │ ← Seals plywood
-  └─────────────────────────────────────┘
-  ├─────────────────────────────────────┤
-  │ Plywood (raw wood)                 │
-  └─────────────────────────────────────┘
-
-RESULT: Chemical-resistant, water-proof finish
-
-  ✓ Plywood sealed (primer)
-  ✓ Professional appearance (paint 2 coats)
-  ✓ Lab-safe (enamel resistant to chemicals)
-  ✓ Protective coating (polyurethane)
-  ✓ Easy to clean (glossy, smooth finish)
-  ✓ Long-lasting (UV & moisture resistant)
-```
-
----
 
 > **NOTE** When fully assembled, three sheets of 3/4" plywood weigh approximately 160 lbs!
 > Assemble this shelf unit inside or right next to the chemistry lab room where it will stay. Always have 3 to 4 Scouts
