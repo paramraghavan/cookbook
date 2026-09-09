@@ -145,3 +145,20 @@ internal heat/inflammation, and gut dysbiosis.
 * **Best US Pill/Supplement Version:** **Organic India Guduchi / Giloy** or **Banyan Botanicals Guduchi**.
 
 You can addedd health goal—such as gut repair, hormone balance, or stress management—with a customized regimen using these supplements.
+
+| Herb | Standard Dosage | Best High-Potency US Pill/Softgel | Primary Effect & Optimal Use |
+| --- | --- | --- | --- |
+| **Sea Buckthorn** (*Hippophae rhamnoides*) | 500–1,000 mg daily | **SeabuckWonders Omega-7 Complete Softgels** (Berry & Seed Oil Blend) | Restores mucous membranes (gut lining, dry eyes, dry skin), supplies rare Omega-7, and provides deep cellular hydration. |
+| **Ashwagandha** (*Withania somnifera*) | 300–600 mg daily | **Youtheory Ashwagandha** or **Organic India Ashwagandha** (KSM-66 Root Extract) | Suppresses high cortisol, reduces stress-induced visceral fat, and supports deep non-REM sleep. |
+| **Brahmi** (*Bacopa monnieri*) | 300–500 mg daily | **Himalaya Organic Bacopa** (Standardized Bacoside Extract) | Nootropic support; enhances synaptic transmission, memory retention, and clears cognitive fatigue/brain fog. |
+| **Punarnava** (*Boerhavia diffusa*) | 500–1,000 mg daily | **Banyan Botanicals Punarnava** | Natural diuretic; clears fluid retention/edema, supports kidney filtration, and flushes lymphatic stagnation. |
+| **Jamun Seed Extract** (*Syzygium cumini*) | 500–1,000 mg daily | **Planetary Herbals Jamun Seed Extract** | Inhibits alpha-amylase enzymes to prevent post-meal blood sugar spikes and supports pancreatic beta-cell recovery. |
+| **Kokum** (*Garcinia indica*) | 500–1,000 mg daily | **Pure Indian Foods Organic Kokum / Garcinia Capsules** | Instantly cools excess stomach acid (*Pitta*), reduces heartburn, and suppresses HCA-driven lipid synthesis. |
+| **Ashok Chaal** (*Saraca asoca*) | 500–1,000 mg daily | **Vadik Herbs Wildcrafted Ashoka Bark Capsules** | Tones uterine musculature, eases dysmenorrhea (cramping), and regulates abnormally heavy menstrual flow. |
+| **Shatavari** (*Asparagus racemosus*) | 500–1,000 mg daily | **Organic India Shatavari Capsules** | Primary adaptogen for female endocrine balance; eases PMS, perimenopause, hot flashes, and supports reproductive vitality. |
+| **Black Rice Extract** (*Oryza sativa*) | 250–500 mg daily | **Vital Nutrients Anthocyanin / Black Rice Extract** | High-density anthocyanin antioxidant payload; clears deep cellular oxidative stress and protects gut mucosal barriers. |
+| **Full-Spectrum Turmeric** (*Curcuma longa*) | 500–750 mg daily | **Terry Naturally CuraMed 750 mg** (BCM-95 Curcumin + Turmerone Essential Oils) | Provides up to 500x bioavailability over standard curcumin; target for joint inflammation, systemic heat, and leaky gut repair. |
+| **Giloy / Guduchi** (*Tinospora cordifolia*) | 500–1,000 mg daily | **Organic India Guduchi / Giloy Capsules** | *Tridoshic* immunomodulator; purifies the blood (*Rakta Shodhana*), enhances liver detoxification, and clears low-grade inflammation. |
+
+**Reference**
+> https://youtu.be/DUz3cvWDseY?si=DJnQG_lfGhRwNC6r
