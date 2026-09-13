@@ -1,4 +1,4 @@
-# Boondi Laddu 
+# Boondi Laddu
 
 ## Ingredients
 
@@ -38,20 +38,49 @@ Total water will usually be about **175–180 ml**.
 
 ---
 
-# 2. Fry the Boondi
+## Fry the Boondi
 
-1. Heat oil over medium to medium-high heat.
+1. Heat oil over **medium to medium-high heat**.
 2. Hold the jhara about **3–4 inches above the oil**.
-3. Pour batter onto the jhara and gently tap it through.
-4. Fry only until the boondi is cooked.
-5. Remove before it becomes crisp or dark.
-6. Drain and repeat.
+3. Pour the batter onto the jhara and gently tap so small drops fall into the oil.
+4. Fry briefly. Once the oil is at the right temperature, boondi cooks **very quickly**.
+5. Remove the boondi as soon as it is cooked:
+
+    * It should be **soft and slightly squishy**, not crisp.
+    * When touched, there should be **no wet batter** on your fingers.
+    * Do not wait for it to become dark or crunchy.
+6. Drain and repeat with the remaining batter.
+
+> **Important:** For ladoo, the boondi should stay soft. If fried too long, it becomes hard and will not absorb the
+> sugar syrup well.
+
 
 **Important:** The boondi should stay **soft**, so it can absorb the syrup.
+
+#### Notes - Make boondis
+
+<details>
+* Add the 1.25 cup besan to a mixing bowl. Pour in (approximately 1.25 cups of) water and mix to form a lump free batter.
+* Let the batter sit idle for 15-20 mins. After that, add in more water to adjust the consistency for a flowing consistency batter.
+* Flowing consistency batter, meaning the batter in not too thick that, otherwise, it will not flow through the jhara, it has to be free flowing
+* Heat up ghee/oil in high flame, once hot take the boondi jhara and keep it about 4 inches above the ghee and pour in some batter to the jhara.
+* Once sufficient boondis have dropped to the ghee, **let them cook for a minute or until boondis stop creating bubbles.**
+* Take down to a bowl/sieve/kitchen towel lined plate.
+* **Don't make the boondi's too crispy**, if you do so the sugar syrup will have hard time penetrating the boondis
+* **Batter Consistency** – Test the consistency of batter by pouring some batter in the jhara and see how boondi forms. It
+  should fall down drop by drop, if it flows fast, you’d get oddly shaped boondi/lumps of boondi, if it flows slowly
+  you’d get hard/tailed boondi.
+* **Ghee/Oil Level in Pan** – If the ghee is less in pan, then you’d get flat boondi or many times it turns into a mass/lump in the center.
+* **Ghee Temperature** – If the temperature is low, then boondis can stick to bottom of the pan/can be oddly shaped and can
+  form into a lump in the center. When the ghee temperature and batter consistency is correct, the boondis fall in the
+  ghee then cooks from out instantly to capture the shape and comes to the sides of the pan to cook inwards.
+</details>
 
 ---
 
 # 3. Make the Sugar Syrup
+
+> [candy_thermometer_test.md](candy_thermometer_test.md)
 
 Add to a wide pan:
 
@@ -81,6 +110,17 @@ Add cardamom.
 
 **Do not add extra water.**
 
+#### Notes - Sugar Syrup
+
+<details>
+* Use a Heavy Bottom Pan, aluminium preferred. Try to avoid Black/NonStick/Hard Anodised/Stainless Steel Pans.
+* In a pan, add in the sugar and water and heat in medium flame. Once it gets boiling, crush and add the cloves.
+* Boil the sugar syrup in medium flame until the small bubbles surfacing in the syrup turns into large bubbles and when
+  a drop of syrup added to a bowl full of water settles. Turn off the flame, add in 1 – 1 ½ tbsp of water and mix well.
+* Sugar Syrup Consistency & trick behind it – Make sure consistency of syrup is correct, if the syrup is thick, then
+  boondis will get sugar coated and dry like candy, if it is too thin, then they will absorb the syrup but it won’t set
+  from outside and hence it won’t form into ladoos and will remain sticky.
+</details>
 ---
 
 # 4. Mix Boondi Into the Hot Syrup
