@@ -8,37 +8,41 @@
 * 1 bell pepper, cut into pieces
 * ⅓–½ cup roasted peanuts
 * 3–5 dried red chilies, broken into pieces
+* ½–1 tsp Sichuan peppercorns, lightly crushed — optional but recommended
 * 2 cloves garlic, finely chopped
-* 1–2 green onions, sliced — optional
+* 1 tsp finely chopped ginger
+* 1–2 green onions, sliced, whites and greens separated
 
-## Sauce
+# 1. Prepare the Sauce
 
 Mix together:
-
-* 2 tbsp soy sauce
-* **2 tsp white vinegar**
-* 1 tbsp sugar or brown sugar
-* 1 tsp sesame oil — optional
-* **¼ cup water**
+* 1½ tbsp soy sauce
+* 1 tbsp Chinkiang vinegar, or 2 tsp white/rice vinegar
+* 1 tbsp sugar
+* 1 tbsp Shaoxing wine or water
+* 3 tbsp water
 * 1 tsp cornstarch
+* ½ tsp toasted sesame oil — optional
+
+> Chinkiang vinegar gives the sauce a deeper, more restaurant-style tang. Start with the amounts above; after the sauce thickens, adjust with a few drops of vinegar, a pinch of sugar, or a small splash of soy sauce if needed.
 
 ---
 
-# 1. Prepare the Tofu
+# 2. Prepare the Tofu
 
 Drain and pat the tofu **very dry**.
-
 Cut into about ¾-inch cubes.
 
-Toss gently with:
+If you have time, press the tofu under a plate or small cutting board for **15–20 minutes** before cutting. Drier tofu browns better and holds its texture in the sauce.
 
+Toss gently with:
 * 1 tbsp cornstarch
 * 1–2 tsp oil
 * Small pinch of salt
 
 ---
 
-# 2. Crisp the Tofu — Choose One Method
+# 3. Crisp the Tofu — Choose One Method
 
 ## Option A — Oven
 
@@ -64,23 +68,21 @@ Toss gently with:
 
 ---
 
-# 3. Cook the Vegetables
+# 4. Cook the Vegetables
 
 Heat a large skillet over medium-high heat.
-
 Add a little oil if the pan is dry.
 
 Add:
-
-1. Bell pepper → cook **1–2 minutes**
-2. Dried red chilies → cook **15–20 seconds**
-3. Garlic → cook **20–30 seconds**
+1. Dried red chilies and Sichuan peppercorns → cook **10–15 seconds**
+2. Bell pepper → cook **1–2 minutes**
+3. Garlic, ginger, and green onion whites → cook **20–30 seconds**
 
 Do not let the garlic or chilies burn.
 
 ---
 
-# 4. Add the Sauce
+# 5. Add the Sauce
 
 Stir the sauce again because the cornstarch settles.
 
@@ -90,13 +92,12 @@ Cook for **30–60 seconds**, stirring, until it becomes slightly thick and glos
 
 ---
 
-# 5. Finish
+# 6. Finish
 
 Add:
-
 * Crispy tofu
 * Peanuts
-* Green onion
+* Green onion greens
 
 Toss gently for about **30–60 seconds**, just until everything is coated.
 
@@ -113,7 +114,7 @@ Kung Pao should taste:
 Adjust if needed:
 
 * More soy sauce → saltier
-* A few drops white vinegar → tangier
+* A few drops Chinkiang or white vinegar → tangier
 * A little sugar → sweeter
 * More dried chili or chili flakes → spicier
 
@@ -128,9 +129,7 @@ Serve immediately with steamed rice.
 * Add tofu to the sauce only at the very end.
 * Don't simmer the tofu in the sauce for several minutes or it will soften.
 * Add peanuts near the end so they stay crunchy.
-
-## Optional
-
-For a more traditional Kung Pao flavor, add **½–1 tsp crushed Sichuan peppercorns** with the dried chilies.
-> use the **oven method** if you want easier cleanup and consistently crisp tofu; 
+* Use the oven method if you want easier cleanup and consistently crisp tofu.
+* Use the skillet when you want it done faster and slightly richer.
+> use the **oven method** if you want easier cleanup and consistently crisp tofu;
 > use the skillet when you want it done faster.
