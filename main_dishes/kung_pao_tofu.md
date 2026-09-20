@@ -13,33 +13,38 @@
 * 1 tsp finely chopped ginger
 * 1–2 green onions, sliced, whites and greens separated
 
-# 1. Prepare the Sauce
+##  Sauce Ingredients 
 
-Mix together:
-* 1½ tbsp soy sauce
-* 1 tbsp Chinkiang vinegar, or 2 tsp white/rice vinegar
-* 1 tbsp sugar
-* 1 tbsp Shaoxing wine or water
-* 3 tbsp water
-* 1 tsp cornstarch
-* ½ tsp toasted sesame oil — optional
-
+- 1½ tbsp soy sauce, or 2 tbsp if using low-sodium soy sauce
+- 1 tbsp Chinkiang vinegar, or 2 tsp white/rice vinegar
+- 1 tbsp white sugar or brown sugar
+- ¼ cup water
+- 1 tsp cornstarch
+- ½–1 tsp toasted sesame oil — optional
 > Chinkiang vinegar gives the sauce a deeper, more restaurant-style tang. Start with the amounts above; after the sauce thickens, adjust with a few drops of vinegar, a pinch of sugar, or a small splash of soy sauce if needed.
+
+# 1. Prepare the Sauce
+- Add soy sauce, vinegar, sugar, and water to a small bowl and mix
+- Stir until the sugar mostly dissolves.
+- Add cornstarch and stir well.
+- Stir in sesame oil last(if using it)
+- **Stir again right before using.**
 
 ---
 
 # 2. Prepare the Tofu
 
 Drain and pat the tofu **very dry**.
-Cut into about ¾-inch cubes.
+Cut into about  ½–¾-inch cubes, i used  ½ inch(more crispier).
 
 If you have time, press the tofu under a plate or small cutting board for **15–20 minutes** before cutting. Drier tofu browns better and holds its texture in the sauce.
 
 Toss gently with:
-* 1 tbsp cornstarch
-* 1–2 tsp oil
-* Small pinch of salt
+- 1 tbsp cornstarch
+- 1–2 tsp oil
+- Optional tiny pinch of salt
 
+> Use the tiny pinch only if you’re using 1½ tbsp soy sauce and like the tofu itself lightly seasoned. If using 2 tbsp soy sauce, no salt needed.
 ---
 
 # 3. Crisp the Tofu — Choose One Method
@@ -131,5 +136,3 @@ Serve immediately with steamed rice.
 * Add peanuts near the end so they stay crunchy.
 * Use the oven method if you want easier cleanup and consistently crisp tofu.
 * Use the skillet when you want it done faster and slightly richer.
-> use the **oven method** if you want easier cleanup and consistently crisp tofu;
-> use the skillet when you want it done faster.
