@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.10" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>breast_cancer_oncology_summary_no_sources</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<h1 id="breast-cancer-oncology-record-summary">Breast Cancer Oncology
+Record Summary</h1>
+<p>Prepared from Kaiser Permanente IHE/XDM XML records exported
+2026-09-17. This is a record abstraction for oncology review, not a
+treatment recommendation.</p>
+<h2 id="patient-context">Patient Context</h2>
+<ul>
+<li>Female, born 1940-04-21.</li>
+<li>Major comorbidities in chart: type 2 diabetes with hyperlipidemia,
+uncontrolled hypertension, fall risk/frailty, chemotherapy-induced
+peripheral neuropathy.</li>
+<li>Functional status noted in oncology visits as ECOG 2 in 2024 and
+ECOG 3 by late 2025/2026.</li>
+<li>Allergy/intolerance: metformin listed as diarrhea.</li>
+</ul>
+<h2 id="cancer-diagnosis-and-staging">Cancer Diagnosis and Staging</h2>
+<ul>
+<li>Primary diagnosis: right central breast invasive carcinoma with
+micropapillary features, grade 3, ER positive, PR positive, HER2
+positive.</li>
+<li>Initial imaging, 2023-04-28: diagnostic mammogram/ultrasound showed
+a diffusely infiltrating right breast mass measuring 8.3 x 6.3 cm with
+skin thickening/lymphedema and shrunken right breast; enlarged right
+axillary tail lymph node 1.9 x 1.3 x 0.8 cm. Left breast had an
+indeterminate 4:00 mass measuring 2.0 x 0.9 x 1.3 cm, biopsy
+recommended.</li>
+<li>Left breast biopsy, 2023-05-18: left breast 4:00, 5 cm from nipple,
+sclerotic fibroadenoma; no malignancy.</li>
+<li>Biopsy, 2023-05-18:
+<ul>
+<li>Right breast retroareolar 9:00: invasive carcinoma with
+micropapillary features, grade 3, Nottingham 8, maximum tumor dimension
+in sampled material 1.4 cm.</li>
+<li>Right axillary tail: extensive invasive carcinoma with
+micropapillary features, grade 3; comment said this may represent a
+lymph node with extensive metastatic carcinoma.</li>
+<li>Receptors:
+<ul>
+<li>Breast site: ER 100% strong, PR 40%, HER2 IHC 3+, Ki-67 30%.</li>
+<li>Axillary site: ER 100% strong, PR 50%, HER2 IHC 3+, Ki-67 40%.</li>
+</ul></li>
+</ul></li>
+<li>Initial multidisciplinary clinic, 2023-05-31: assessed as
+HER2-positive breast cancer with dermal involvement, T4N1, clinical
+stage IIIB. Plan was PET to rule out distant disease, port, baseline
+echo, and neoadjuvant chemotherapy.</li>
+<li>Oncology visit, 2023-06-19: PET described as suggestive of
+metastatic disease with mediastinal and contralateral axillary lymph
+nodes. Metastatic disease was not biopsy-confirmed in the note.
+Treatment changed from TCH to TCHP, with low threshold to drop
+carboplatin if poorly tolerated.</li>
+<li>Left axillary lymph node biopsy, 2023-07-31: benign lymph node,
+negative for malignancy.</li>
+<li>Oncology staging entry, 2023-09-27: clinical Stage IV, cM1.</li>
+<li>Germline genetics, 2023-06-21: Invitae Breast and Gyn Cancers Panel,
+21 genes, no pathogenic mutations, gross deletions/duplications, or
+variants of uncertain significance identified.</li>
+<li>Family history recorded in breast clinic intake: sister with breast
+cancer diagnosed around age 50, deceased in her 50s; no Ashkenazi Jewish
+heritage reported.</li>
+</ul>
+<h2 id="treatment-timeline">Treatment Timeline</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Date/period</th>
+<th>Treatment or decision</th>
+<th>Details from records</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2023-05-31</td>
+<td>Initial treatment plan</td>
+<td>TCH q21 days x 6 cycles planned; goal documented as
+curative/neoadjuvant before PET clarification.</td>
+</tr>
+<tr>
+<td>2023-06-15</td>
+<td>Port placement</td>
+<td>Left internal jugular Bard PowerPort placed. Meds included Ancef 1 g
+IV, Versed 2 mg IV, fentanyl 100 mcg IV.</td>
+</tr>
+<tr>
+<td>2023-06-21</td>
+<td>Cycle 1 TCHP</td>
+<td>Carboplatin 289.6 mg IV, target AUC 4; docetaxel 102.6 mg IV, 60
+mg/m2; pertuzumab 840 mg IV loading dose; trastuzumab-anns 526.47 mg IV,
+8 mg/kg loading dose. Premeds included ondansetron 16 mg PO and
+olanzapine 5 mg PO. Home meds included dexamethasone 8 mg BID for 5
+doses around docetaxel, filgrastim-aafi 300 mcg SC daily days 3-7,
+ondansetron/prochlorperazine/loperamide PRN.</td>
+</tr>
+<tr>
+<td>2023-06-24 to 2023-06-29</td>
+<td>Post-cycle-1 acute care/hospitalization</td>
+<td>Seen for nausea/vomiting after chemotherapy, then admitted
+2023-06-28 to 2023-06-29 for intractable nausea/vomiting, hypertensive
+urgency, and presumed inflammatory vs infectious colitis. Managed with
+IV fluids, scheduled ondansetron, PRN prochlorperazine, BP medications,
+antibiotics; oncology was informed.</td>
+</tr>
+<tr>
+<td>2023-07-12</td>
+<td>Cycle 2 TCHP</td>
+<td>Docetaxel 102.6 mg IV, 60 mg/m2; pertuzumab 420 mg IV;
+trastuzumab-anns 394.8 mg IV, 6 mg/kg. Carboplatin is not shown in the
+extracted administered-medication block for this visit.</td>
+</tr>
+<tr>
+<td>2023-08-02</td>
+<td>Cycle 3 THP</td>
+<td>Doses adjusted for 10.6% weight loss. Docetaxel reduced to 79.5 mg
+IV, 50 mg/m2; pertuzumab 420 mg IV; trastuzumab-anns 352.8 mg IV, 6
+mg/kg. Hypertension during infusion required clonidine 0.1 mg PO.</td>
+</tr>
+<tr>
+<td>2023-08-23</td>
+<td>Cycle 4 HP only</td>
+<td>Docetaxel was held due to increased neuropathy and bilateral
+lower-extremity edema; continued pertuzumab 420 mg IV and
+trastuzumab-anns 352.8 mg IV. Short course furosemide 20 mg daily x 3
+days ordered.</td>
+</tr>
+<tr>
+<td>2023-09-13</td>
+<td>Cycle 5 THP</td>
+<td>Docetaxel 79.5 mg IV, 50 mg/m2; pertuzumab 420 mg IV;
+trastuzumab-anns 352.8 mg IV, 6 mg/kg. Carboplatin not shown in the
+extracted administered-medication snippet.</td>
+</tr>
+<tr>
+<td>2023-09-27</td>
+<td>Response and treatment change</td>
+<td>Oncologist documented “good response to treatment.” Because cancer
+was stage IV, surgery/radiation were not expected to benefit;
+recommendation was palliative systemic therapy with
+trastuzumab/pertuzumab without chemotherapy, start anastrozole daily
+2023-10-04, PET again in 4-5 months, bone density scan, calcium/vitamin
+D.</td>
+</tr>
+<tr>
+<td>2023-10-04 through 2024-10-25</td>
+<td>HER2 maintenance</td>
+<td>Pertuzumab 420 mg IV q3 weeks plus trastuzumab-anns 352.8 mg IV, 6
+mg/kg, generally over 30 minutes.</td>
+</tr>
+<tr>
+<td>2024-11-14</td>
+<td>HER2 regimen de-escalation</td>
+<td>Due to side effects, pertuzumab was dropped; plan was to continue
+trastuzumab and anastrozole.</td>
+</tr>
+<tr>
+<td>2024-11-16 through 2025-02-15</td>
+<td>Trastuzumab alone</td>
+<td>Trastuzumab-anns 352.8 mg IV q3 weeks documented.</td>
+</tr>
+<tr>
+<td>2025-03-10</td>
+<td>Enhertu started</td>
+<td>Fam-trastuzumab deruxtecan-nxki 341.2 mg IV, 5.4 mg/kg, over 90
+minutes. Premeds: dexamethasone 12 mg PO, ondansetron 16 mg PO,
+olanzapine 5 mg PO. Treatment goal in oncology history: palliative after
+first line.</td>
+</tr>
+<tr>
+<td>2025-05-16 to 2025-08-09</td>
+<td>Enhertu dose reduced</td>
+<td>Enhertu 278 mg IV, 4.4 mg/kg, over 30 minutes. Same premed
+pattern.</td>
+</tr>
+<tr>
+<td>2025-08-29</td>
+<td>Further dose reduction planned</td>
+<td>Oncologist: continue Enhertu, reduce dose slightly again; PET as
+scheduled. Noted that other options exist but have toxicity; anastrozole
+alone could be tried with progression or if Enhertu not tolerated.</td>
+</tr>
+<tr>
+<td>2025-10-03, 2025-10-24, 2025-12-11</td>
+<td>Further reduced Enhertu</td>
+<td>Enhertu 200 mg IV, 3.2 mg/kg, over 30 minutes. Same premed pattern.
+Last documented Enhertu dose in records: 2025-12-11.</td>
+</tr>
+<tr>
+<td>2026-01-20</td>
+<td>Patient considering stopping IV therapy</td>
+<td>Son reported patient did not want next chemo because of fatigue
+lasting most of the cycle despite dose reduction. Oncologist advised she
+could resume anastrozole and keep March appointment; infusion
+appointments were canceled.</td>
+</tr>
+<tr>
+<td>2026-03-04</td>
+<td>Current accepted therapy at that time</td>
+<td>Oncology note: patient decided to suspend IV therapy/therapy causing
+significant side effects. She was on anastrozole and accepting only
+that. Continue anastrozole if tolerating; PET again in early June; labs
+then follow-up.</td>
+</tr>
+<tr>
+<td>2026-06-08 PET</td>
+<td>Disease status</td>
+<td>PET/CT impression: slight interval increase in size and metabolic
+activity of right breast lesions; no signs of distant metastasis.</td>
+</tr>
+<tr>
+<td>2026-09-10</td>
+<td>Most recent oncology plan</td>
+<td>Oncologist documented right breast progression, not unexpected
+without therapy. Plan: repeat PET. If disease only in breast, refer to
+radiation oncology for local control; if visible outside breast, plan to
+resume Enhertu. Follow-up in 3 months.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="current-recent-medications-relevant-to-oncology">Current /
+Recent Medications Relevant to Oncology</h2>
+<ul>
+<li>Anastrozole (Arimidex) 1 mg PO daily: active on medication list as
+of 2026-09-17, last filled/start shown 2026-08-24 to 2027-08-24.</li>
+<li>Chart discrepancy: 2026-03-04 oncology note says she was taking
+anastrozole as the only accepted therapy. The 2026-09-10 oncology note
+states she “was on anastrozole but stopped this as well due to
+ineffective therapy,” while the medication list still shows anastrozole
+active. This should be reconciled directly with patient/family and
+pharmacy fill history.</li>
+<li>Pregabalin 50 mg PO twice daily for neuropathy.</li>
+<li>Famotidine 40 mg PO bedtime for reflux.</li>
+<li>Other active chronic meds include telmisartan, bisoprolol,
+glipizide, metformin XR, atorvastatin, acetaminophen PRN, topical
+agents.</li>
+</ul>
+<h2 id="imaging-response-highlights">Imaging / Response Highlights</h2>
+<ul>
+<li>2023-06 PET: described in oncology note as concerning for metastatic
+disease involving mediastinal and contralateral axillary lymph nodes;
+biopsy confirmation was not documented in the note.</li>
+<li>2023-09 oncology note: documented good response to treatment and
+decision to avoid surgery/radiation because of stage IV disease,
+continuing palliative systemic HER2-directed therapy.</li>
+<li>2026-06-08 PET/CT: slight interval increase in size/metabolic
+activity of right breast lesions; no distant metastasis.</li>
+<li>2026-09-10: clinical concern for progression in right breast. Repeat
+PET scheduled for 2026-09-24 per future appointments in chart.</li>
+</ul>
+<h2 id="toxicities-treatment-limiting-issues">Toxicities /
+Treatment-Limiting Issues</h2>
+<ul>
+<li>Peripheral neuropathy in hands/feet after chemotherapy; treated with
+pregabalin. Neuropathy persisted but was variably described as improving
+or residual.</li>
+<li>Early TCHP toxicity included nausea/vomiting requiring acute care
+and short hospitalization after cycle 1; later docetaxel was held once
+for worsening neuropathy and edema.</li>
+<li>Fatigue was a major limiting toxicity on Enhertu; by 2026-01
+patient/family reported she remained in bed after infusion and did not
+recover until near next cycle despite dose reductions.</li>
+<li>Hypertension often elevated in visits.</li>
+<li>Frailty/fall risk and mobility limitations; uses walker/wheelchair
+at some visits.</li>
+<li>Diabetes control suboptimal in multiple labs/notes.</li>
+</ul>
+<h2 id="key-questions-for-next-oncologist">Key Questions for Next
+Oncologist</h2>
+<ol type="1">
+<li>Reconcile current therapy: is she actually taking anastrozole 1 mg
+daily, or was it stopped despite being active in the medication
+list?</li>
+<li>Review 2026-09-24 PET results when available: is disease confined to
+right breast/local-regional sites, or is distant disease again
+visible?</li>
+<li>If PET shows only local progression, discuss goals and expected
+benefit/risks of breast/chest wall radiation for local control,
+including skin breakdown prevention, pain/bleeding prevention, and
+toxicity.</li>
+<li>If distant progression is present, discuss whether resuming Enhertu
+is acceptable given prior severe fatigue, and whether alternative
+lower-toxicity HER2+/ER+ metastatic options fit her goals and
+frailty.</li>
+<li>Clarify whether prior stage IV status was biopsy-confirmed or based
+on PET only; this may matter if current PET remains local-only.</li>
+<li>Revisit goals of care: patient has repeatedly expressed concern
+about side effects and willingness to avoid IV therapy; treatment
+decisions should explicitly balance disease control, local symptoms,
+independence, fatigue, neuropathy, and quality of life.</li>
+</ol>
+</body>
+</html>
