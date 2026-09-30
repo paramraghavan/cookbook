@@ -1,6 +1,6 @@
 # 7-Day Knee Pain Program
 
-[Open Knee Exercise Web App](https://paramraghavan.github.io/cookbook/health/knee_exercise.html)
+- [Open Knee Exercise App](http://htmlpreview.github.io/?https://github.com/paramraghavan/cookbook/blob/master/health/knee_exercise.html)
 
 ## Day 1: Movement & Quad Activation
 - [Heel Slides](https://www.youtube.com/watch?v=AdVjP0H3iK0&t=95)
