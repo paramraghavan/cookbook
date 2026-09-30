@@ -1,6 +1,10 @@
 # 7-Day Knee Pain Program
 
-- [Open Knee Exercise App](http://htmlpreview.github.io/?https://github.com/paramraghavan/cookbook/blob/master/health/knee_exercise.html)
+- [Open Knee Exercise HTML Page](https://htmlpreview.github.io/?https://raw.githubusercontent.com/paramraghavan/cookbook/main/health/exercise/knee_exercise.html)
+<!--
+To make the cleaner GitHub Pages URL work, enable Pages:
+cookbook repo → Settings → Pages → Source: Deploy from a branch → Branch: main → Folder: /root → Save.
+-->
 
 ## Day 1: Movement & Quad Activation
 - [Heel Slides](https://www.youtube.com/watch?v=AdVjP0H3iK0&t=95)
