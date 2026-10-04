@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Knee Range of Motion Rehabilitation Guide</title>
+  <style>
+    :root {
+      --bg-primary: #0f172a;
+      --bg-card: #1e293b;
+      --bg-card-hover: #334155;
+      --accent: #0d9488;
+      --accent-bright: #14b8a6;
+      --accent-glow: rgba(13, 148, 136, 0.3);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border-color: #334155;
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Header & Navigation Bar */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15, 23, 42, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      padding: 12px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .title-group h1 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .title-group p {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .view-toggle {
+      display: flex;
+      background: #0f172a;
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 3px;
+    }
+
+    .view-toggle button {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      padding: 6px 14px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border-radius: 16px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .view-toggle button.active {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    /* Overall Routine Progress */
+    .progress-bar-container {
+      width: 100%;
+      height: 6px;
+      background: #334155;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--accent), var(--accent-bright));
+      transition: width 0.3s ease;
+    }
+
+    /* Main Container Views */
+    main {
+      flex: 1;
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 12px;
+    }
+
+    /* VIEW 1: GRID OVERVIEW */
+    .grid-view {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      padding-bottom: 24px;
+    }
+
+    @media (min-width: 480px) {
+      .grid-view {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .exercise-card-summary {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .exercise-card-summary:active {
+      transform: scale(0.98);
+      border-color: var(--accent);
+    }
+
+    .summary-svg-thumb {
+      width: 64px;
+      height: 64px;
+      background: #0f172a;
+      border-radius: 12px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
+    }
+
+    .summary-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .summary-info .num {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--accent-bright);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .summary-info h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin: 2px 0 4px 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .summary-info .meta {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* VIEW 2: CAROUSEL / SWIPE VIEW */
+    .carousel-view {
+      display: none;
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-container {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      touch-action: pan-y;
+    }
+
+    .swiper-wrapper {
+      display: flex;
+      transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+      width: 100%;
+    }
+
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+      padding: 0 4px;
+    }
+
+    .card-detail {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .card-badge {
+      background: rgba(13, 148, 136, 0.15);
+      color: var(--accent-bright);
+      border: 1px solid rgba(13, 148, 136, 0.3);
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-top: 4px;
+    }
+
+    /* SVG Posture Stage */
+    .posture-stage {
+      background: #0f172a;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      width: 100%;
+      height: 170px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .posture-stage svg {
+      width: 100%;
+      height: 100%;
+      max-height: 160px;
+    }
+
+    /* Video Player Embed & Link */
+    .video-section {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .video-embed-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #000;
+      border: 1px solid var(--border-color);
+    }
+
+    .video-embed-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .yt-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #ef4444;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .yt-btn:active {
+      background: #dc2626;
+    }
+
+    /* Target Reps / Sets Grid */
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      background: rgba(15, 23, 42, 0.6);
+      padding: 10px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .spec-item {
+      text-align: center;
+    }
+
+    .spec-label {
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .spec-value {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    /* Set Completion Tracker */
+    .set-tracker {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #0f172a;
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+    }
+
+    .set-tracker span {
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .check-bubbles {
+      display: flex;
+      gap: 10px;
+    }
+
+    .bubble {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 2px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .bubble.completed {
+      background: var(--accent);
+      border-color: var(--accent-bright);
+      color: #fff;
+      box-shadow: 0 0 8px var(--accent-glow);
+    }
+
+    /* Coaching Cues */
+    .cues-box {
+      font-size: 0.85rem;
+      line-height: 1.4;
+      color: #cbd5e1;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 10px 12px;
+      border-left: 3px solid var(--accent);
+      border-radius: 4px;
+    }
+
+    /* Controls Bar Footer */
+    .controls-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 12px;
+      padding: 0 4px;
+    }
+
+    .nav-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 10px 18px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-btn:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+
+    .dots-indicator {
+      display: flex;
+      gap: 6px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--border-color);
+      transition: all 0.3s ease;
+    }
+
+    .dot.active {
+      background: var(--accent-bright);
+      width: 18px;
+      border-radius: 4px;
+    }
+
+    .swipe-hint {
+      text-align: center;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Top Header -->
+  <header>
+    <div class="top-bar">
+      <div class="title-group">
+        <h1>Knee ROM Rehab</h1>
+        <p>Full Range & Mobility Routine</p>
+      </div>
+      <div class="view-toggle">
+        <button id="btn-grid" class="active" onclick="switchView('grid')">All</button>
+        <button id="btn-swipe" onclick="switchView('swipe')">Swipe</button>
+      </div>
+    </div>
+    <!-- Routine Completion Progress Bar -->
+    <div class="progress-bar-container">
+      <div id="progress-fill" class="progress-bar-fill"></div>
+    </div>
+  </header>
+
+  <main>
+    <!-- VIEW 1: GRID VIEW (OVERVIEW) -->
+    <div id="grid-view" class="grid-view">
+      <!-- Generated via JavaScript dynamically for seamless consistency -->
+    </div>
+
+    <!-- VIEW 2: SWIPE CAROUSEL VIEW -->
+    <div id="carousel-view" class="carousel-view">
+      <div class="swiper-container" id="swiper-container">
+        <div class="swiper-wrapper" id="swiper-wrapper">
+          <!-- Slide cards injected here -->
+        </div>
+      </div>
+
+      <!-- Controls & Dots -->
+      <div class="controls-footer">
+        <button id="btn-prev" class="nav-btn" onclick="prevSlide()">&#8592; Prev</button>
+        <div class="dots-indicator" id="dots-container"></div>
+        <button id="btn-next" class="nav-btn" onclick="nextSlide()">Next &#8594;</button>
+      </div>
+      <div class="swipe-hint">Swipe left/right or use buttons to navigate</div>
+    </div>
+  </main>
+
+  <script>
+    // MASTER DATASET: 8 Knee Range-of-Motion Exercises
+    const exercises = [
+      {
+        id: 1,
+        title: "Terminal Knee Extension / Quad Sets",
+        timestamp: "01:10",
+        seconds: 70,
+        sets: 3,
+        reps: "12 - 15",
+        hold: "3-5 sec",
+        cues: "Place a small bolster or rolled towel under your knee. Squeeze your quad to press the back of the knee down flat and raise the heel slightly off the floor.",
+        svg: `<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+          <!-- Floor -->
+          <line x1="10" y1="95" x2="190" y2="95" stroke="#334155" stroke-width="2" stroke-dasharray="4"/>
+          <!-- Bolster Roll -->
+          <circle cx="95" cy="85" r="10" fill="#334155" stroke="#14b8a6" stroke-width="2"/>
+          <!-- Leg (Thigh, Knee over bolster, Calf) -->
+          <path d="M 20 65 L 95 75 L 170 72" fill="none" stroke="#f8fafc" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Foot -->
+          <path d="M 170 72 L 180 55" fill="none" stroke="#f8fafc" stroke-width="6" stroke-linecap="round"/>
+          <!-- Force/Extension Arrow -->
+          <path d="M 95 55 L 95 68" stroke="#14b8a6" stroke-width="3" marker-end="url(#arrow)" fill="none"/>
+          <path d="M 170 85 L 170 76" stroke="#10b981" stroke-width="2" fill="none"/>
+          <text x="95" y="45" fill="#14b8a6" font-size="10" font-weight="bold" text-anchor="middle">Press Down</text>
+        </svg>`
+      },
+      {
+        id: 2,
+        title: "Assisted Knee Flexion (Heel Pull)",
+        timestamp: "02:04",
+        seconds: 124,
+        sets: 3,
+        reps: "10 - 12",
+        hold: "5 sec",
+        cues: "Seated or supine, loop a towel/strap around your ankle. Pull gently to bend your knee into max comfortable flexion, holding at end-range.",
+        svg: `<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+          <!-- Surface -->
+          <line x1="10" y1="100" x2="190" y2="100" stroke="#334155" stroke-width="2"/>
+          <!-- Thigh & Knee Bent Acute -->
+          <path d="M 30 50 L 100 92 L 60 40" fill="none" stroke="#f8fafc" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Strap / Towel -->
+          <path d="M 60 40 L 30 65" fill="none" stroke="#14b8a6" stroke-width="3" stroke-dasharray="3,3"/>
+          <!-- Pull Vector Arrow -->
+          <path d="M 65 48 L 45 60" stroke="#14b8a6" stroke-width="3" fill="none"/>
+          <text x="50" y="30" fill="#14b8a6" font-size="10" font-weight="bold" text-anchor="middle">Pull Heel to Hip</text>
+        </svg>`
+      },
+      {
+        id: 3,
+        title: "Self-Myofascial Release (Adhesions)",
+        timestamp: "02:54",
+        seconds: 174,
+        sets: 2,
+        reps: "60-90 sec",
+        hold: "Continuous",
+        cues: "Use a massage roller or ball around the quad tendon and tissue above/around patella to relieve restrictive tissue adhesions before deep flexion.",
+        svg: `<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+          <!-- Floor -->
+          <line x1="10" y1="95" x2="190" y2="95" stroke="#334155" stroke-width="2"/>
+          <!-- Foam Roller / Ball -->
+          <circle cx="100" cy="80" r="14" fill="#0d9488" stroke="#14b8a6" stroke-width="2"/>
+          <!-- Thigh lying on roller -->
+          <path d="M 30 65 L 100 66 L 170 85" fill="none" stroke="#f8fafc" stroke-width="9" stroke-linecap="round"/>
+          <!-- Roll Motion Arrow -->
+          <path d="M 80 45 L 120 45" stroke="#14b8a6" stroke-width="3" fill="none"/>
+          <text x="100" y="35" fill="#14b8a6" font-size="10" font-weight="bold" text-anchor="middle">&#8594; Roll & Release &#8592;</text>
+        </svg>`
+      },
+      {
+        id: 4,
+        title: "Assisted Chair Squat (Depth Progress)",
+        timestamp: "04:47",
+        seconds: 287,
+        sets: 3,
+        reps: "10 - 12",
+        hold: "1-2 sec",
+        cues: "Hold onto a sturdy frame or door handle. Sit back into a chair or box, maintaining balanced knee alignment over toes through full depth.",
+        svg: `<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+          <!-- Chair Silhouette -->
+          <path d="M 130 60 L 130 95 M 130 75 L 160 75 L 160 95" stroke="#334155" stroke-width="3" fill="none"/>
+          <!-- Person Squatting -->
+          <!-- Torso --> <line x1="85" y1="30" x2="95" y2="60" stroke="#f8fafc" stroke-width="7" stroke-linecap="round"/>
+          <!-- Thigh --> <line x1="95" y1="60" x2="125" y2="65" stroke="#f8fafc" stroke-width="7" stroke-linecap="round"/>
+          <!-- Lower Leg --> <line x1="125" y1="65" x2="115" y2="95" stroke="#f8fafc" stroke-width="7" stroke-linecap="round"/>
+          <!-- Support Rail --> <line x1="50" y1="35" x2="50" y2="95" stroke="#0d9488" stroke-width="4"/>
+          <!-- Arms holding support --> <line x1="85" y1="35" x2="50" y2="45" stroke="#f8fafc" stroke-width="4"/>
+          <text x="95" y="20" fill="#14b8a6" font-size="10" font-weight="bold" text-anchor="middle">Assisted Sit Depth</text>
+        </svg>`
+      },
+      {
+        id: 5,
+        title: "Hamstring Bridge Sliders",
+        timestamp: "05:24",
+        seconds: 324,
+        sets: 3,
+        reps: "8 - 10",
+        hold: "2 sec",
+        cues: "Lying on your back with hips elevated in a bridge, slide heels out smoothly and pull back using hamstrings without sagging hips.",
+        svg: `<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+          <line x1="10" y1="95" x2="190" y2="95" stroke="#334155" stroke-width="2"/>
+          <!-- Back flat/bridged -->
+          <path d="M 30 90 L 60 65 L 110 65 L 150 90" fill="none" stroke="#f8fafc" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Foot Slider Disc -->
+          <ellipse cx="150" cy="93" rx="12" ry="3" fill="#14b8a6"/>
+          <!-- Slide Arrows -->
+          <path d="M 125 105 L 165 105" stroke="#14b8a6" stroke-width="2"/>
+          <text x="100" y="45" fill="#14b8a6" font-size="10" font-weight="bold" text-anchor="middle">Bridge & Curl Heels</text>
+        </svg>`
+      },
+      {
+        id: 6,
+        title: "Step-Downs / Peterson Step",
+        timestamp: "05:52",
+        seconds: 352,
+        sets: 3,
+        reps: "10 - 12",
+        hold: "Controlled",
+        cues: "Stand on a low step. Slowly lower non-working heel to tap floor while keeping target knee tracking straight over 2nd toe.",
+        svg: `<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+          <!-- Step Block -->
+          <rect x="50" y="70" width="50" height="30" fill="#334155" stroke="#475569" stroke-width="2"/>
+          <!-- Standing Leg (Working) -->
+          <path d="M 75 25 L 75 50 L 75 70" stroke="#14b8a6" stroke-width="7" fill="none" stroke-linecap="round"/>
+          <!-- Lowering Leg (Floating down) -->
+          <path d="M 75 25 L 115 55 L 115 95" stroke="#f8fafc" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <!-- Floor line -->
+          <line x1="10" y1="100" x2="190" y2="100" stroke="#334155" stroke-width="2"/>
+          <text x="125" y="40" fill="#14b8a6" font-size="10" font-weight="bold">Heel Touch Down</text>
+        </svg>`
+      },
+      {
+        id: 7,
+        title: "Split Squat / Full Knee Flexion",
+        timestamp: "06:33",
+        seconds: 393,
+        sets: 3,
+        reps: "8 - 10",
+        hold: "2 sec",
+        cues: "Lower into a deep split squat allowing front knee to travel forward over toe until hamstrings compress calf, building strength in full flexion.",
+        svg: `<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+          <line x1="10" y1="100" x2="190" y2="100" stroke="#334155" stroke-width="2"/>
+          <!-- Back Extended Leg -->
+          <path d="M 90 55 L 150 75 L 175 98" fill="none" stroke="#f8fafc" stroke-width="6" stroke-linecap="round"/>
+          <!-- Torso Upright -->
+          <path d="M 90 20 L 90 55" stroke="#f8fafc" stroke-width="7" stroke-linecap="round"/>
+          <!-- Front Deep Flexed Leg -->
+          <path d="M 90 55 L 60 70 L 65 98" fill="none" stroke="#14b8a6" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="60" y="30" fill="#14b8a6" font-size="10" font-weight="bold" text-anchor="middle">Max Flexion Knee Drive</text>
+        </svg>`
+      },
+      {
+        id: 8,
+        title: "Tibialis Anterior & Calf Work",
+        timestamp: "07:11",
+        seconds: 431,
+        sets: 3,
+        reps: "15 - 20",
+        hold: "1 sec",
+        cues: "Perform wall shin raises (dorsiflexion) to build front shin strength, followed by standing calf raises to stabilize ankle & knee joint.",
+        svg: `<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+          <!-- Wall -->
+          <line x1="60" y1="10" x2="60" y2="100" stroke="#334155" stroke-width="4"/>
+          <!-- Floor -->
+          <line x1="10" y1="100" x2="190" y2="100" stroke="#334155" stroke-width="2"/>
+          <!-- Leaning Back Tibialis Raise -->
+          <path d="M 62 25 L 90 60 L 100 98" stroke="#f8fafc" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <!-- Flexed Foot Up -->
+          <path d="M 100 98 L 115 85" stroke="#14b8a6" stroke-width="5" stroke-linecap="round"/>
+          <!-- Arrow Toe Up -->
+          <path d="M 120 80 L 120 70" stroke="#14b8a6" stroke-width="2" fill="none"/>
+          <text x="120" y="45" fill="#14b8a6" font-size="10" font-weight="bold">Flex Toes Up (Shin)</text>
+        </svg>`
+      }
+    ];
+
+    // State Management
+    let currentSlide = 0;
+    let completedSets = {}; // Format: { exerciseId: numberCompleted }
+
+    const youtubeBase = "https://www.youtube.com/watch?v=3QXxCLiFiPM";
+    const embedBase = "https://www.youtube.com/embed/3QXxCLiFiPM";
+
+    // Initialize Application
+    document.addEventListener("DOMContentLoaded", () => {
+      renderGrid();
+      renderCarousel();
+      updateProgress();
+      setupTouchSwipe();
+    });
+
+    // Switch between 'grid' and 'swipe' views
+    function switchView(viewMode) {
+      const gridView = document.getElementById("grid-view");
+      const carouselView = document.getElementById("carousel-view");
+      const btnGrid = document.getElementById("btn-grid");
+      const btnSwipe = document.getElementById("btn-swipe");
+
+      if (viewMode === 'grid') {
+        gridView.style.display = "grid";
+        carouselView.style.display = "none";
+        btnGrid.classList.add("active");
+        btnSwipe.classList.remove("active");
+      } else {
+        gridView.style.display = "none";
+        carouselView.style.display = "block";
+        btnSwipe.classList.add("active");
+        btnGrid.classList.remove("active");
+        goToSlide(currentSlide);
+      }
+    }
+
+    // Render Grid View Cards
+    function renderGrid() {
+      const gridContainer = document.getElementById("grid-view");
+      gridContainer.innerHTML = exercises.map((ex, idx) => `
+        <div class="exercise-card-summary" onclick="openExerciseIndex(${idx})">
+          <div class="summary-svg-thumb">
+            ${ex.svg}
+          </div>
+          <div class="summary-info">
+            <div class="num">Exercise 0${ex.id} • ${ex.timestamp}</div>
+            <h3>${ex.title}</h3>
+            <div class="meta">${ex.sets} Sets × ${ex.reps}</div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Render Carousel Slides
+    function renderCarousel() {
+      const wrapper = document.getElementById("swiper-wrapper");
+      const dotsContainer = document.getElementById("dots-container");
+
+      wrapper.innerHTML = exercises.map((ex) => `
+        <div class="slide">
+          <div class="card-detail">
+            <div class="card-header">
+              <div>
+                <span class="card-badge">Step ${ex.id} of 8</span>
+                <h2 class="card-title">${ex.title}</h2>
+              </div>
+            </div>
+
+            <!-- SVG Diagram -->
+            <div class="posture-stage">
+              ${ex.svg}
+            </div>
+
+            <!-- Set & Rep Specifications -->
+            <div class="specs-grid">
+              <div class="spec-item">
+                <div class="spec-label">Sets</div>
+                <div class="spec-value">${ex.sets}</div>
+              </div>
+              <div class="spec-item">
+                <div class="spec-label">Reps</div>
+                <div class="spec-value">${ex.reps}</div>
+              </div>
+              <div class="spec-item">
+                <div class="spec-label">Hold</div>
+                <div class="spec-value">${ex.hold}</div>
+              </div>
+            </div>
+
+            <!-- Embedded Player & YouTube Link -->
+            <div class="video-section">
+              <div class="video-embed-wrapper">
+                <iframe src="${embedBase}?start=${ex.seconds}&autoplay=0" title="${ex.title}" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <a href="${youtubeBase}&t=${ex.seconds}s" target="_blank" class="yt-btn">
+                <span>&#9654; Open Video at ${ex.timestamp} in YouTube App</span>
+              </a>
+            </div>
+
+            <!-- Interactive Set Completion Tracker -->
+            <div class="set-tracker">
+              <span>Track Sets:</span>
+              <div class="check-bubbles" id="bubbles-ex-${ex.id}">
+                ${Array.from({length: ex.sets}).map((_, i) => `
+                  <div class="bubble" onclick="toggleSet(${ex.id}, ${i + 1})">${i + 1}</div>
+                `).join('')}
+              </div>
+            </div>
+
+            <!-- Technique Coaching Cues -->
+            <div class="cues-box">
+              <strong>Form Cues:</strong> ${ex.cues}
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      // Dots Indicator
+      dotsContainer.innerHTML = exercises.map((_, idx) => `
+        <div class="dot ${idx === 0 ? 'active' : ''}" onclick="goToSlide(${idx})"></div>
+      `).join('');
+    }
+
+    // Direct Navigation to specific Exercise from Grid View
+    function openExerciseIndex(index) {
+      currentSlide = index;
+      switchView('swipe');
+    }
+
+    // Carousel Navigation Logic
+    function updateCarouselPosition() {
+      const wrapper = document.getElementById("swiper-wrapper");
+      wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+      // Update Dots
+      const dots = document.querySelectorAll(".dot");
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle("active", idx === currentSlide);
+      });
+
+      // Update Nav Buttons
+      document.getElementById("btn-prev").disabled = currentSlide === 0;
+      document.getElementById("btn-next").disabled = currentSlide === exercises.length - 1;
+    }
+
+    function goToSlide(index) {
+      currentSlide = index;
+      updateCarouselPosition();
+    }
+
+    function prevSlide() {
+      if (currentSlide > 0) {
+        currentSlide--;
+        updateCarouselPosition();
+      }
+    }
+
+    function nextSlide() {
+      if (currentSlide < exercises.length - 1) {
+        currentSlide++;
+        updateCarouselPosition();
+      }
+    }
+
+    // Touch Swipe Handler Implementation
+    function setupTouchSwipe() {
+      const container = document.getElementById("swiper-container");
+      let startX = 0;
+      let startY = 0;
+      let deltaX = 0;
+      let deltaY = 0;
+
+      container.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        deltaX = 0;
+        deltaY = 0;
+      }, { passive: true });
+
+      container.addEventListener("touchmove", (e) => {
+        deltaX = e.touches[0].clientX - startX;
+        deltaY = e.touches[0].clientY - startY;
+      }, { passive: true });
+
+      container.addEventListener("touchend", () => {
+        // Ensure horizontal swipe intent over vertical scrolling
+        if (Math.abs(deltaX) > 40 && Math.abs(deltaX) > Math.abs(deltaY)) {
+          if (deltaX < 0) {
+            nextSlide();
+          } else {
+            prevSlide();
+          }
+        }
+      });
+    }
+
+    // Set Tracking Logic
+    function toggleSet(exId, setNum) {
+      if (!completedSets[exId]) completedSets[exId] = 0;
+
+      if (completedSets[exId] >= setNum) {
+        completedSets[exId] = setNum - 1;
+      } else {
+        completedSets[exId] = setNum;
+      }
+
+      // Update UI Bubbles
+      const bubbleContainer = document.getElementById(`bubbles-ex-${exId}`);
+      const bubbles = bubbleContainer.querySelectorAll(".bubble");
+      bubbles.forEach((b, idx) => {
+        if (idx < completedSets[exId]) {
+          b.classList.add("completed");
+        } else {
+          b.classList.remove("completed");
+        }
+      });
+
+      updateProgress();
+    }
+
+    // Overall Routine Progress Bar Calculation
+    function updateProgress() {
+      let totalSets = exercises.reduce((sum, ex) => sum + ex.sets, 0);
+      let doneSets = Object.values(completedSets).reduce((sum, val) => sum + val, 0);
+      let percentage = Math.round((doneSets / totalSets) * 100);
+
+      document.getElementById("progress-fill").style.width = `${percentage}%`;
+    }
+  </script>
+</body>
+</html>
