@@ -1,51 +1,99 @@
-### **Ingredients**
+# Secret Dal Tadka
 
-#### **For the Dal:**
+A hearty mixed dal cooked with vegetables, finished with a fragrant ghee tadka, coriander, and roasted flaxseed powder.
 
-* **Dal Mix:**
-* ½ cup Moong Dal & Arhar (Toor) Dal
-* 2 tbsp Chilke wali Urad Dal (split black gram with skin)
+## Ingredients
 
+### Dal
 
-* **Vegetables & Aromatics:**
-* 1 Onion (scored/cut)
-* 1 Tomato (scored/cut)
-* Green chilies
-* Finely chopped healthy vegetables (carrots, beans, bottle gourd / *lauki*)
+- 1/2 cup mixed moong dal and arhar/toor dal
+- 2 tablespoons chilke wali urad dal, split black gram with skin
+- Water, for rinsing and soaking
 
+### Vegetables and Aromatics
 
-* **Spices & Cooking:**
-* Turmeric powder
-* Red chili powder
-* Salt (to taste)
-* Whole spices (*khada masala*)
-* Water (approx. 3 times the dal volume)
+- 1 onion, scored or cut
+- 1 tomato, scored or cut
+- Green chilies, to taste
+- Finely chopped vegetables, such as carrots, beans, bottle gourd/lauki
 
+> scored means onion is cut with shallow slits
 
-#### **For the Tempering (Tadka):**
+### No Onion/No Garlic Alternative
 
-* Ghee
-* Cumin seeds (*jeera*)
-* Generous amount of chopped garlic
-* Asafoetida (*hing*)
-* Kasuri methi (dried fenugreek leaves)
-* Dry red chilies
+For guests who do not eat onion or garlic:
 
-#### **Garnish & Secret Health Booster:**
+- Skip the onion in the pressure cooker.
+- Replace onion with 1/4 cup extra bottle gourd/lauki, carrots, or pumpkin for body and sweetness.
+- Add 1/2 inch ginger, grated or finely chopped, to the dal or tadka.
+- Use a pinch of asafoetida/hing in the dal and another small pinch in the tadka. Use pure hing or a gluten-free hing if
+  needed.
+- Optional: add 1 small celery stalk or 1/4 cup finely chopped fennel bulb if acceptable to the guests.
 
-* Fresh coriander leaves
-* Roasted flaxseed powder (*alsi* powder)
+### Spices and Seasoning
 
----
+- Turmeric powder
+- Red chili powder
+- Salt, to taste
+- Whole spices/khada masala, to taste
+- Water, about 3 times the dal volume
 
-### **Cooking Instructions**
+### Tadka
 
-1. **Prep the Dal:** Wash the moong dal, arhar dal, and chilke wali urad dal thoroughly by rubbing them under water to remove any impurities. Soak the dal in water for about 30 minutes [[00:16](https://www.google.com/search?q=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DRmL3STUP_2U%26t%3D16)].
-2. **Roast for Flavor:** Lightly dry-roast the soaked dal directly inside the pressure cooker to develop a rich, smoky depth of flavor [[00:26](https://www.google.com/search?q=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DRmL3STUP_2U%26t%3D26)].
-3. **Add Veggies & Pressure Cook:** Place the scored onion, whole tomato, green chilies, and finely chopped carrots, beans, and bottle gourd into the cooker [[00:32](https://www.google.com/search?q=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DRmL3STUP_2U%26t%3D32)]. Season with turmeric powder, red chili powder, salt, whole spices, and add 3 times the amount of water. Seal the lid and cook for about 2 whistles [[00:44](https://www.google.com/search?q=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DRmL3STUP_2U%26t%3D44)].
-4. **Peel the Tomato:** Once the pressure releases, remove the cooker lid and discard the loosened skin from the tomato [[00:44](https://www.google.com/search?q=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DRmL3STUP_2U%26t%3D44)].
-5. **Make the Tadka:** Heat ghee in a small pan. Add cumin seeds, garlic, asafoetida (*hing*), kasuri methi, and dry red chilies until fragrant [[00:54](https://www.google.com/search?q=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DRmL3STUP_2U%26t%3D54)]. Pour the sizzling tempering into the dal and immediately cover the pot with a lid to trap the aromatic smoke [[00:54](https://www.google.com/search?q=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DRmL3STUP_2U%26t%3D54)].
-6. **Garnish & Serve:** Uncover and mix in freshly chopped coriander leaves [[00:59](https://www.google.com/search?q=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DRmL3STUP_2U%26t%3D59)]. Just before serving, sprinkle roasted flaxseed powder over the dal for a nutty flavor and a boost of Omega-3 fatty acids [[01:10](https://www.google.com/search?q=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DRmL3STUP_2U%26t%3D70)].
+- Ghee
+- Cumin seeds/jeera
+- Generous amount of chopped garlic
+- Asafoetida/hing
+- Kasuri methi, dried fenugreek leaves
+- Dry red chilies
 
-reference: 
-https://youtube.com/shorts/RmL3STUP_2U?si=WChLsr3yYyqt44li
+For no onion/no garlic tadka, skip the garlic and use:
+
+- Ghee
+- Cumin seeds/jeera
+- Asafoetida/hing
+- Grated ginger
+- Kasuri methi
+- Dry red chilies
+- Optional: a few curry leaves or 1/2 teaspoon crushed coriander seeds
+
+### Garnish
+
+- Fresh coriander leaves
+- Roasted flaxseed powder/alsi powder
+
+## Method
+
+1. Rinse the moong dal, arhar/toor dal, and chilke wali urad dal well, rubbing the dal between your fingers until the
+   water runs mostly clear. Soak for about 30 minutes.
+
+2. Drain the dal. Add it to a pressure cooker and lightly dry-roast it for a few minutes to build a deeper, smoky
+   flavor.
+
+3. Add the onion, tomato, green chilies, and chopped vegetables. For a no onion/no garlic version, skip the onion and
+   add the alternative vegetables and ginger instead.
+
+4. Add turmeric powder, red chili powder, salt, whole spices, and water. Use about 3 times as much water as dal by
+   volume.
+
+5. Pressure cook for about 3 whistles, then let the pressure release naturally.
+
+6. Open the cooker and remove the loosened tomato skin. Mash or stir the dal to your preferred consistency. Add a splash
+   of hot water if it is too thick.
+
+7. Make the tadka. Heat ghee in a small pan. Add cumin seeds and let them sizzle. Add garlic, hing, kasuri methi, and
+   dry red chilies; cook just until fragrant. For the no onion/no garlic version, use ginger, hing, kasuri methi, dry
+   red chilies, and any optional tadka ingredients instead of garlic.
+
+8. Pour the hot tadka over the dal and immediately cover the pot for a minute to trap the aroma.
+
+9. Stir in fresh coriander leaves. Just before serving, sprinkle roasted flaxseed powder on top.
+
+## Notes
+
+- Add flaxseed powder at the end so its nutty flavor stays fresh.
+- If the dal tastes flat, adjust salt first, then add a small squeeze of lemon if desired.
+
+## Reference
+
+- YouTube Short: https://youtube.com/shorts/RmL3STUP_2U?si=WChLsr3yYyqt44li
