@@ -1,38 +1,33 @@
-## Anjeer-Nut Burfi for Diabetics
+# Anjeer-Nut Burfi for Diabetics
 
-**Ingredients**
+## Ingredients
 
 - 6 dried anjeer
 - ½ cup almonds
-- ½ cup walnuts
-- ¼ cup pistachios
+- ¼ cup walnuts
+- ¼ cup pistachios or cashew
 - 2 tbsp unsweetened coconut
-- 1 tbsp sesame seeds
-- 1 tbsp chia seeds or ground flaxseed
+- 2–3 tbsp milk
+- 3 tbsp unsweetened milk powder
 - 1 tbsp ghee
-- ½ tsp cardamom powder
-- ¼ tsp dry ginger powder
-- Pinch of nutmeg, optional
+- ½ tsp cardamom
+- ⅛ tsp dry ginger powder
+- 1 tbsp chopped pistachios for topping
+- Optional: tiny pinch of saffron soaked in 1 tbsp warm milk
 
-**Method**
+### Easy method
 
-1. Soak the anjeer in warm water for **10–15 minutes**. Drain very well.
-2. Dry-roast almonds, walnuts, pistachios, sesame seeds, and coconut for **2–3 minutes**.
-3. Cool slightly and pulse into a coarse mixture.
-4. Grind the softened anjeer into a thick paste. Avoid adding water unless absolutely necessary.
-5. Heat **1 tbsp ghee** in a pan.
-6. Add the anjeer paste and cook on low heat for about **2 minutes**.
-7. Add the nut mixture, chia/flax, cardamom, and nutmeg.
-8. Mix continuously for **3–4 minutes** until it forms one mass and starts leaving the sides of the pan.
-9. Press firmly into a small greased or parchment-lined tray.
-10. Refrigerate for **30–45 minutes** and cut into **16 small squares**.
+1. Soak anjeer in warm water for **10 minutes**, drain well, and blend into a thick paste.
+2. Pulse the nuts until **fine but not powdery**.
+3. Heat ghee, add anjeer paste, and cook **2 minutes**.
+4. Add milk and optional saffron milk. Cook until most moisture disappears.
+5. Add milk powder, ground nuts, coconut, cardamom, and ginger powder.
+6. Stir on low heat for **3–5 minutes** until it becomes a soft dough and leaves the pan.
+7. Press into a small greased tray.
+8. Sprinkle chopped pistachios on top and press them in gently.
+9. Cool, refrigerate **30 minutes**, and cut into small diamond or square pieces.
 
-### Best ratio for diabetes
-
-Make this mostly a **nut burfi with just enough anjeer to bind it**. Avoid dates, raisins, jaggery, honey, sugar, and
-condensed milk.
-
-One small square at a time is a better portion. Even without added sugar, anjeer still contains natural sugar, so
-portion size matters.
-
-For an even lower-sugar version, use **only 4 anjeer** and add **1–2 tablespoons almond butter** to help bind the burfi.
+> The best substitutes for milk powder in this burfi are khoya/mawa, ricotta, evaporated milk, or simply reduced regular
+> milk. Since you already have cashews, the easiest option is probably cashew powder + a little milk.
+> For your batch, I’d use ¼ cup finely ground cashews + 2–3 tbsp milk. Cook the milk down with the anjeer first, then add
+> the cashew powder. That gives you a richer, more “real burfi” texture without milk powder.
