@@ -1,174 +1,69 @@
 # Peanut Jaggery Ladoo
 
-Simple peanut ladoos that hold together reliably.
+Crunchy peanut-and-jaggery balls (kadalai urundai), made with whole peanuts. No crushing or grinding needed.
 
 ## Ingredients
 
-* **2 cups unsalted roasted peanuts**
-* **200 g jaggery**
-* **¼ cup water**
-* **½ tsp cardamom powder** – optional
-* **½ tsp dry ginger powder** – optional
-* **1–2 tsp ghee** – for greasing hands
+* **280 g unsalted roasted, skinned peanuts** — roughly 2 cups; use the weight for consistency
+* **200 g jaggery**, chopped or grated
+* **60 ml water (¼ cup)** — to dissolve the jaggery; excess water must cook off
+* **½ tsp cardamom powder**, optional
+* **¼–½ tsp dry ginger powder**, optional
+* **1–2 tsp ghee**, for lightly greasing hands and a plate
 
----
+**Start with a half batch:** 140 g peanuts, 100 g jaggery and 30 ml water; halve the spices. A smaller batch gives you less mixture to shape before it sets. Begin testing the syrup early.
 
-## 1. Prepare the Peanuts
+## 1. Prepare everything before cooking the syrup
 
-1. Roast the peanuts if needed.
-2. Remove as much skin as practical.
-3. Keep most peanuts whole or split in half.
-4. **Coarsely crush about ¼–⅓ cup of the peanuts.**
+1. If needed, roast the peanuts until crisp and aromatic. Cool enough to rub off the skins.
+2. **Keep the peanuts whole.** Natural halves from removing the skins are fine; there is no need to crush or grind them.
+3. Warm the whole peanuts gently in a dry pan and keep them ready nearby. They should be dry and warm, not sizzling.
+4. Have a heavy-bottomed pan, sturdy spoon, lightly greased plate, ghee and a bowl of cold water ready.
 
-> **Why crush some?**
-> The small peanut pieces fill the gaps between the whole peanuts and help the jaggery hold everything together.
+## 2. Dissolve the jaggery
 
-Keep the peanuts **slightly warm** while preparing the syrup.
+1. Heat jaggery and water over medium-low heat until dissolved.
+2. If gritty, strain through a heat-safe strainer into another vessel, then return the syrup to the pan.
+3. Add the optional spices. Continue simmering, reducing the heat as the syrup thickens.
 
----
+## 3. Test the syrup before adding peanuts
 
-## 2. Make the Jaggery Syrup
+**For this crunchy style, aim for the first hard-ball stage, before the syrup becomes brittle.** Bubble size and cooking time alone are unreliable.
 
-Add to a heavy-bottomed pan:
+Drop a little syrup into cold water. Let it cool completely before touching it, then gather it into a ball:
 
-* **200 g jaggery**
-* **¼ cup water**
+* **Not ready:** it disperses, smears, or makes a very soft ball that flattens easily.
+* **Ready:** it forms a firm, compact ball that stays round outside the water and makes a distinct tap when dropped onto a steel plate.
+* **Too far:** the cooled sample forms brittle threads or shards rather than a gatherable ball.
 
-Heat on **medium-low** until the jaggery completely dissolves.
+Near the endpoint, test frequently, about every 10–15 seconds. Take the pan off the heat while checking so it does not keep racing ahead. **Stop cooking as soon as the ready test passes.**
 
-If the jaggery has impurities, strain it and return the syrup to the pan.
+## 4. Mix and shape
 
-Add cardamom and ginger powder, if using.
+1. With the pan off the heat, immediately stir in the warm peanuts. Scrape syrup from the sides and bottom so the coating is distributed throughout.
+2. Let a teaspoon-sized portion cool until comfortable to touch. **Hot jaggery sticks to skin and can burn; ghee does not protect against heat.**
+3. Lightly grease your palms. Take a small spoonful of mixture, cup your palm around the peanuts and press them together into a compact cluster. Turn the cluster and press gently from several sides to round it; avoid trying to roll loose peanuts on a flat palm. **Compress first, roll second.**
+4. Test one ball before portioning the rest. If it holds, continue promptly, leaving the remaining mixture together in the pan so it retains warmth.
+5. If the remaining mixture stiffens, warm it gently over the lowest heat, stirring only until workable. Remove from heat and resume shaping when safe to touch.
+6. Cool completely on the greased plate before storing in an airtight container. For best texture, use within about a week.
 
-Continue cooking on **medium-low heat**.
+## If a ball will not hold
 
-Keep a small bowl of **cold water** next to the stove for testing.
 
----
+| What you observe                                                | Likely cause               | What to do                                                                                                                                              |
+| --------------------------------------------------------------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Mixture is fluid or very sticky; a cooled test ball slumps      | Syrup may be undercooked   | Return to low heat briefly, stirring continuously, then remove and test a cooled small portion again. Do not assume a fixed 15–30 seconds will fix it. |
+| First balls worked, but the remainder is stiff and breaks apart | Mixture has cooled and set | Gently rewarm until workable; do not keep cooking it once softened.                                                                                     |
+| Loose peanuts sit beside separate syrup clumps                  | Uneven coating             | Gently warm and fold thoroughly so syrup coats and connects the whole peanuts, then press a small portion together again.                               |
+| Coating is glassy and shatters even after careful warming       | Syrup may be overcooked    | Stop trying to roll it. Press into a lightly greased tin using a greased spoon while workable, then cool and break into pieces.                         |
 
-## 3. Test the Jaggery – Most Important Step
+**Do not automatically cook longer whenever peanuts fall apart.** Check whether the coating is wet and sticky or already dry and hard first. Extra cooking can make a set mixture harder.
 
-As the syrup cooks:
+Avoid splashing water into hot candy. Adding water changes the syrup concentration and would require cooking it back to the correct stage; it is not a simple shaping fix.
 
-* Small bubbles will become larger.
-* The syrup will become thicker.
-* Start testing early.
+## References
 
-### Cold-Water Test
+* [Sharmis Passions: crunchy kadalai urundai](https://www.sharmispassions.com/kadala-urundai-kadalai-mittai-karthigai-deepam-recipes/) — syrup endpoint, quick shaping and gentle reheating.
+* [Masterchefmom: peanut jaggery balls](https://masterchefmom.blogspot.com/2016/10/kadalai-urundai-peanut-ladoo-how-to.html) — cooled syrup-ball test.
 
-1. Drop about **¼ teaspoon syrup** into cold water.
-2. Wait a few seconds.
-3. Gather it with your fingers.
-4. Roll it into a ball.
-
-### Ready
-
-The jaggery should form a **firm, pliable ball** that:
-
-* Holds its shape
-* Does not dissolve in the water
-* Does not spread when removed
-* Can still be pressed between your fingers
-
-If it dissolves or stays very soft:
-
-**Cook another 20–30 seconds and test again.**
-
-If it becomes very hard or brittle:
-
-**It has cooked too far.**
-
-> For peanut ladoo, slightly firmer than a very soft-ball stage gives much more reliable binding.
-
-**Turn off the heat immediately when the correct stage is reached.**
-
-### Important
-
-**Do NOT add water after reaching the correct syrup stage.**
-
-Adding water at this point can make the ladoos difficult to bind.
-
----
-
-## 4. Mix the Peanuts
-
-Immediately add the **warm peanuts** to the hot jaggery syrup.
-
-Mix quickly until:
-
-* Every peanut is coated
-* Jaggery is distributed evenly
-* The mixture begins sticking together
-
-Let it cool only until it is **safe enough to handle**.
-
-Do not wait until completely cool.
-
----
-
-## 5. Shape the Ladoos
-
-1. Lightly grease your palms with **ghee**.
-2. Take a small portion of the **warm** peanut mixture.
-3. First **press it firmly together** between your palms.
-4. Then roll it into a ball.
-
-> **Press first, roll second.**
-> Trying to gently roll loose peanuts usually causes the ladoo to fall apart.
-
-Repeat while the mixture is still warm.
-
----
-
-# If the Ladoos Won't Hold Together
-
-### Mixture is warm but peanuts keep falling apart
-
-The jaggery syrup was probably **slightly undercooked**.
-
-Put the mixture back on **very low heat for 15–30 seconds**, stirring gently.
-
-Try shaping again.
-
----
-
-### Mixture held initially but became loose
-
-The syrup may have been too thin.
-
-Next time, cook the jaggery slightly longer and make sure it forms a **firm ball in cold water**.
-
----
-
-### Mixture became too hard before you finished
-
-The jaggery has cooled too much.
-
-Return the pan to **very low heat for 10–20 seconds** just until the mixture becomes pliable again.
-
-Then continue shaping.
-
-**Do not add water unless absolutely necessary.**
-
----
-
-### Mixture is extremely hard and brittle
-
-The jaggery was overcooked.
-
-Add **1–2 teaspoons hot water**, heat very gently and mix until it loosens.
-
-Do this only as a rescue method.
-
----
-
-# 5 Rules for Success
-
-1. **Crush ¼–⅓ cup of the peanuts** for better binding.
-2. Use **warm peanuts**, not cold peanuts.
-3. Cook jaggery until it forms a **firm, pliable ball in cold water**.
-4. **Do not add water after the syrup is ready.**
-5. **Press and shape while warm**, using a little ghee on your hands.
-
-> **Most common reason ladoos fall apart:**
-> The jaggery syrup was stopped a little too early or the mixture became too cool before shaping.
+For the next batch, note whether a failed ball was **sticky/slumping** or **dry/brittle**, and whether the **first ball held**. Those observations will help refine the method much more than “wouldn't bind” alone.
