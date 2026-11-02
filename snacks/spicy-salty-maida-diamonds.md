@@ -1,52 +1,61 @@
-# Spicy or Salty Maida Diamonds
+# Spicy or Salty Maida Diamonds — Lighter Air-Fryer Version
 
-Crisp savory maida diamonds with salt and spices mixed directly into the dough.
+Savory diamonds with salt and spices mixed directly into the dough. This version replaces half the maida with whole-wheat atta and uses air-frying instead of deep-frying.
+
+**Salt is reduced from ⅓ tsp to ¼ tsp — 25% less added salt per batch.** Liquid oil replaces ghee in the dough. Expect a crisp, biscuit-like texture rather than the flakiness of deep-fried diamonds.
+
+These are suggested adaptations, not a kitchen-tested formula.
 
 ## Ingredients
 
-- 1 cup maida (all-purpose flour), spooned into the cup and levelled
-- 1 tbsp melted ghee
-- ⅓ tsp fine salt, or to taste
-- ½–1 tsp red chilli powder, according to heat preference
+- ½ cup maida (all-purpose flour)
+- ½ cup atta (whole-wheat flour)
+- 1 tbsp neutral liquid oil, such as canola or groundnut oil
+- **¼ tsp fine salt**
+- ½ tsp red chilli powder; increase to 1 tsp for more heat
 - ½ tsp ajwain or cumin seeds
 - ½ tsp sesame seeds, optional
 - A pinch of turmeric, optional
-- Water as needed, added gradually
-- Oil for deep-frying
+- ¼ tsp crushed black pepper, optional
+- Water as needed; start with 3 tbsp and add by the teaspoon
+- Up to 1 tsp additional oil, measured out for brushing all batches
 
-**For plain salty diamonds:** omit the chilli powder and turmeric. Keep the salt and ajwain or cumin; sesame seeds remain optional.
+**Plain salty version:** leave out chilli and turmeric. Keep ajwain or cumin for flavor; black pepper and sesame remain optional.
 
 ## Steps
 
-### 1. Make the dough
+### 1. Prepare the dough
 
-1. Combine maida, salt, chilli powder, ajwain or cumin, and the optional sesame and turmeric.
-2. Rub in the ghee until evenly distributed.
-3. Add water a little at a time. Knead into a firm, pliable, nonsticky dough.
-4. Cover and rest for 15 minutes.
+1. Mix both flours, salt, spices and optional seeds.
+2. Rub in the tablespoon of oil thoroughly.
+3. Add water gradually and knead into a firm, pliable, nonsticky dough.
+4. Cover and rest **20 minutes**. If rolling causes deep cracks, knead in a teaspoon of water and reassess.
 
 ### 2. Roll and cut
 
-1. Divide the dough into two portions.
-2. Lightly flour the work surface and roll each portion evenly, about 2 mm thick.
-3. Cut parallel strips, then cut diagonally across them to form diamonds.
-4. Separate gently. For flatter diamonds, prick the rolled dough with a fork before cutting.
+1. Divide into two portions. Dust the work surface lightly.
+2. Roll evenly to **2–3 mm thick**.
+3. Cut parallel strips and then diagonal lines across them to make diamonds.
+4. Prick lightly with a fork for flatter pieces and separate gently.
 
-### 3. Fry
+### 3. Air-fry
 
-1. Heat oil over medium heat. Test with a small dough scrap: it should rise with steady bubbles without browning immediately.
-2. Fry in small batches over medium-low heat, turning occasionally.
-3. Remove when golden and the bubbling has substantially reduced. Chilli powder will make the color darker.
-4. Drain. Cool a test piece and check that the center is crisp before finishing the remaining batches.
-5. Cool completely before storing in an airtight container.
+1. Preheat according to your model's instructions to **180°C / 355°F**.
+2. Arrange in a single layer with space between pieces. Lightly brush both sides using the measured teaspoon of oil across all batches.
+3. Test a small batch first. **Check from 6 minutes; allow roughly 8–12 minutes**, turning halfway. These times are starting estimates for this thinner dough.
+4. Remove when lightly golden; chilli makes the color darker. Cool a test piece and check that its center is crisp, without a soft doughy layer.
+5. If needed, cook another 1–2 minutes at a time. Cool completely before storing airtight.
 
 ## Tips
 
-- Avoid a soft, sticky dough; add water gradually.
-- Keep the thickness even and do not crowd the frying pan.
-- If the outside browns quickly while the center stays soft, lower the heat and fry the next batch longer.
-- No sugar syrup or coating is needed.
+- Use ajwain, cumin, pepper and chilli for flavor before increasing salt.
+- Skip extra salt or chaat masala after cooking to retain the salt reduction.
+- Avoid a wet dough, uneven thickness or an overcrowded basket.
+- If the outside browns before the middle dries, lower the next batch's temperature by about 10°C and allow more time.
+- Keep the tablespoon of oil in the dough; omitting it can make the diamonds tough.
+- Serve a small portion in a bowl rather than eating directly from the storage jar.
 
-## Reference
+## References and Adaptation Notes
 
-Adapted from [Sharmis Passions' spicy diamond cuts](https://www.sharmispassions.com/savory-diamond-cuts-recipe-spicy-maida-biscuits/), with suggested salt quantity and adjustable chilli.
+- [Piping Pot Curry — namak para](https://pipingpotcurry.com/namak-para/): supports combining atta and maida and using an air fryer. This recipe adapts the oil and salt quantities, rolls thinner and uses a lower starting temperature.
+- [Sharmis Passions — spicy diamonds](https://www.sharmispassions.com/savory-diamond-cuts-recipe-spicy-maida-biscuits/): seasoning ideas.
