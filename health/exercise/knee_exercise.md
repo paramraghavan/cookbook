@@ -3,6 +3,7 @@
 - [Open Knee Exercise HTML Page](https://htmlpreview.github.io/?https://raw.githubusercontent.com/paramraghavan/cookbook/main/health/exercise/knee_exercise.html)
 - [Knee Rehab_Exercise HTML Page](https://htmlpreview.github.io/?https://raw.githubusercontent.com/paramraghavan/cookbook/main/health/exercise/knee-rehab.html)
 - https://youtube.com/shorts/8Izas4cGAGA?si=sPqfwuLW6H6lKO-I
+- https://youtu.be/36TUkEykQMo?si=X-pwi7emki9lCbYN
 <!--
 To make the cleaner GitHub Pages URL work, enable Pages:
 cookbook repo → Settings → Pages → Source: Deploy from a branch → Branch: main → Folder: /root → Save.
