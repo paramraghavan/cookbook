@@ -12,10 +12,9 @@
 ### Sugar Syrup
 
 * **1¼ cups sugar** — about 260 g
-* **⅔ cup water** — about 150 ml
+* **⅔ cup water** — ~~about 150 ml~~, enough water to dissolve the sugar, help towards making sugar syrup
 * 3–4 cloves
 * ½ tsp cardamom powder — optional
->> enough water to dissolve the sugar, help towards making sugar syrup
 
 ### For Shaping
 
