@@ -15,6 +15,8 @@ Crispy South Indian ribbon pakoda made with besan and rice flour.
 * **Oil**, for deep frying
 
 > **Optional:** A small pinch of baking powder. It is not necessary; rice flour, butter/ghee, and proper frying temperature provide the crispness.
+>> >> Use coarse basin, like Meera brand basin , it is coarse.
+
 
 ## Equipment
 

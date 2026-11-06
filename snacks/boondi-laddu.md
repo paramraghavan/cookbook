@@ -7,6 +7,7 @@
 * **1¼ cups fine besan** — about 160 g
 * **¾ cup water** — about 175–180 ml, added gradually
 * Oil or ghee for frying
+>> Use fine basin. Laxmi brand basin packet i have is fine. Meera brand basin is coarse, so not preferable. May be ladoo basin is fine. you may want to check it out
 
 ### Sugar Syrup
 
@@ -14,6 +15,7 @@
 * **⅔ cup water** — about 150 ml
 * 3–4 cloves
 * ½ tsp cardamom powder — optional
+>> enough water to dissolve the sugar, help towards making sugar syrup
 
 ### For Shaping
 
