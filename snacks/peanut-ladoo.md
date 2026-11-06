@@ -6,7 +6,7 @@ Crunchy peanut-and-jaggery balls (kadalai urundai), made with whole peanuts. No 
 
 * **280 g unsalted roasted, skinned peanuts** — roughly 2 cups; use the weight for consistency
 * **200 g jaggery**, chopped or grated
-* **60 ml water (¼ cup)** — or let me say just enought water to dissolve the jaggery; excess water must cook off
+* ~~**60 ml water (¼ cup)**~~ — or let me say just enought water to dissolve the jaggery; excess water must cook off
 * **½ tsp cardamom powder**, optional
 * **¼–½ tsp dry ginger powder**, optional
 * **1–2 tsp ghee**, for lightly greasing hands and a plate
