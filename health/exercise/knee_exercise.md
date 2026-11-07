@@ -3,6 +3,7 @@
 - [Open Knee Exercise HTML Page](https://htmlpreview.github.io/?https://raw.githubusercontent.com/paramraghavan/cookbook/main/health/exercise/knee_exercise.html)
 - [Knee Rehab_Exercise HTML Page](https://htmlpreview.github.io/?https://raw.githubusercontent.com/paramraghavan/cookbook/main/health/exercise/knee-rehab.html)
 - https://youtube.com/shorts/8Izas4cGAGA?si=sPqfwuLW6H6lKO-I
+- https://youtu.be/qiWPDDCgo3s?si=YZRg5bYFWj4BXGRg
 - https://youtu.be/36TUkEykQMo?si=X-pwi7emki9lCbYN
 - https://www.youtube.com/watch?v=C7xo0oiWP3o
 <!--
