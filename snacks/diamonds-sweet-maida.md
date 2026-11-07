@@ -1,10 +1,10 @@
-# Sweet Maida Diamonds — Lighter Air-Fryer Version
+# Sweet Maida Diamonds — Air-Fried or Oil-Fried
 
 Crisp diamonds made with maida and milk, then coated in sugar syrup. Sugar stays out of the dough, as in your preferred method.
 
-Compared with the earlier recipe, this uses maida and milk for the dough, air-frying instead of deep-frying, and **¼ cup sugar instead of ⅓ cup — 25% less added sugar per batch**. The coating will be lighter and may not cover every piece completely.
+Compared with the earlier recipe, this uses maida and milk for the dough, a choice of air-frying or frying in oil, and **¼ cup sugar instead of ⅓ cup — 25% less added sugar per batch**. The coating will be lighter and may not cover every piece completely.
 
-These are suggested adaptations, not a kitchen-tested formula. Expect a more biscuit-like crunch and less flaky texture than deep-fried diamonds.
+These are suggested adaptations, not a kitchen-tested formula. Air-frying gives a more biscuit-like crunch; frying in oil gives a more traditional fried texture.
 
 ## Ingredients
 
@@ -12,6 +12,7 @@ These are suggested adaptations, not a kitchen-tested formula. Expect a more bis
 
 - 1 cup maida/all-purpose flour
 - 1 tbsp neutral liquid oil, such as canola or groundnut oil
+- Pinch of baking powder
 - A tiny pinch of salt, optional
 - Milk as needed; start with 3 tbsp and add by the teaspoon
 
@@ -22,6 +23,11 @@ These are suggested adaptations, not a kitchen-tested formula. Expect a more bis
 - ¼ tsp cardamom powder, optional
 
 Use level measuring cups. Add milk gradually; dough texture matters more than a fixed milk quantity.
+
+### Oil for cooking — choose one method
+
+- **Air-frying:** optionally use up to 1 tsp additional neutral oil total for brushing all batches.
+- **Frying in oil:** enough neutral oil for a depth of about 4–5 cm in a deep, heavy pan; keep the pan no more than half full.
 
 ## Steps
 
@@ -39,13 +45,23 @@ Use level measuring cups. Add milk gradually; dough texture matters more than a 
 3. Cut parallel strips, then cut diagonally across them into diamonds.
 4. Prick lightly with a fork if you prefer flatter pieces. Separate gently.
 
-### 3. Air-fry
+### 3. Cook — choose air-frying or frying in oil
+
+#### Option A: Air-fry
 
 1. Preheat according to your model's instructions to **180°C / 355°F**.
 2. Brush off loose flour and arrange in a single layer with gaps. **Optional:** lightly brush both sides with up to 1 tsp additional oil total across all batches for more even browning.
 3. Cook a small test batch first. **Check from 6 minutes; allow roughly 8–12 minutes**, turning halfway. This is a starting estimate for these thinner pieces, not a guaranteed cooking time.
 4. Remove when lightly golden. Cool one piece and break it open: the center should be dry and crisp, without a doughy layer. Continue in 1–2 minute intervals if needed.
 5. Finish all batches and cool before making the syrup.
+
+#### Option B: Fry in oil
+
+1. Heat the frying oil over medium-low heat to about **160–170°C / 320–340°F**. A small dough scrap should rise with steady bubbles without browning immediately.
+2. Brush off loose flour. Carefully add a small batch of diamonds without crowding the pan; no oil brushing is needed for this method.
+3. Fry over medium-low heat, stirring and turning gently, until evenly light golden and crisp. Test a small batch first; thickness and oil temperature affect the time.
+4. Lift out with a slotted spoon and drain on kitchen paper or a wire rack. Let one piece cool and check that the center is dry and crisp; if it is doughy, lower the heat slightly and fry the next batch longer.
+5. Fry and drain all batches, then let the diamonds cool before making the sugar syrup. Continue with step 4 below.
 
 ### 4. Coat in sugar syrup
 
@@ -59,7 +75,7 @@ Use level measuring cups. Add milk gradually; dough texture matters more than a 
 
 - Do not add extra water to stretch the coating; thin syrup can soften the diamonds.
 - Do not remove all the oil from the dough; the texture may become tough.
-- If the outside darkens before the center dries, lower the next batch's temperature by about 10°C and allow more time.
+- For air-frying, if the outside darkens before the center dries, lower the next batch's temperature by about 10°C and allow more time.
 - Divide the finished batch into small portions. Less sugar does not make the snack unlimited.
 
 ## References and Adaptation Notes
