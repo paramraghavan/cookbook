@@ -18,9 +18,11 @@ These are suggested adaptations, not a kitchen-tested formula. Air-frying gives 
 
 ### Sugar-syrup coating
 
-- **¼ cup granulated white sugar**
+- **¼ to ½ cup granulated white sugar**
 - 2 tbsp water
 - ¼ tsp cardamom powder, optional
+  > ¼ just enough sugar to coat diamonds, growing up we used to have more sugar, the diamonds was suagr coated white, will try with ½ cup next time
+  >
 
 Use level measuring cups. Add milk gradually; dough texture matters more than a fixed milk quantity.
 
