@@ -6,6 +6,7 @@
 - https://youtu.be/qiWPDDCgo3s?si=YZRg5bYFWj4BXGRg
 - https://youtu.be/36TUkEykQMo?si=X-pwi7emki9lCbYN
 - https://www.youtube.com/watch?v=C7xo0oiWP3o
+- https://youtu.be/BjMvBy2CmhY?si=3Mmf_RIDpgCxoMcn
 <!--
 To make the cleaner GitHub Pages URL work, enable Pages:
 cookbook repo → Settings → Pages → Source: Deploy from a branch → Branch: main → Folder: /root → Save.
