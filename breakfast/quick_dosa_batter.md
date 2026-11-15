@@ -4,15 +4,20 @@ An easy dosa batter made by soaking rice, dals, and fenugreek seeds together and
 
 ## Ingredients
 
-| Ingredient | Quantity |
-|---|---:|
-| Idli rice (or dosa rice) | 3 cups |
-| Urad dal (split, skinned) | 1 cup |
-| Chana dal | 2 tablespoons |
-| Toor dal | 2 tablespoons |
-| Methi (fenugreek) seeds | 1 teaspoon |
-| Water | As needed for soaking and grinding |
-| Salt | To taste |
+| Ingredient                            |                           Quantity |
+|---------------------------------------|-----------------------------------:|
+| Idli rice (or dosa rice)              |                             3 cups |  
+| *Or Idli rice (or dosa rice),Millets* |        *2 cups Rice, 1 cup Millet* |
+| Urad dal (split, skinned)             |                              1 cup |
+| Chana dal                             |                      2 tablespoons |
+| Toor dal                              |                      2 tablespoons |
+| Methi (fenugreek) seeds               |                         1 teaspoon |
+| Water                                 | As needed for soaking and grinding |
+| Salt                                  |                           To taste |
+
+> use 3 cups rice or 2 cups rice and 1 cup millet( i will be testing this soon)
+
+> I have made it this way few times, but i di dno thave Chana dal or Toor Dal. Instead I used moong dal, came out fine  
 
 ## Steps
 
@@ -31,4 +36,4 @@ An easy dosa batter made by soaking rice, dals, and fenugreek seeds together and
 - **Storage:** Refrigerate fermented batter in a covered container and use within **3–4 days** for best quality. Stir gently before using.
 - **Timing:** Soaking and fermentation take time, but the hands-on steps are simple.
 
-> Note: This is a practical version based on the ingredient quantities provided, not a verified transcription of the Facebook video.
+> Reference: https://www.facebook.com/reel/1111540471878917/?referral_source=external_link&surface_type=tab&in_reels_tab_context=TRUE
