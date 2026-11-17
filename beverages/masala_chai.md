@@ -1,4 +1,4 @@
-Wagh Bakri Ginger–Cardamom Masala Chai
+Masala Chai Ginger–Cardamom 
 
 A rich, aromatic Indian milk chai with fresh ginger, green cardamom, and warming spices.
 
@@ -7,19 +7,19 @@ Time: About 12 minutes
 
 Ingredients
 
-|Ingredient                          |Quantity         |
-|------------------------------------|----------------:|
-|Wagh Bakri CTC tea                  |2½ tsp           |
-|Whole milk                          |1½ cups          |
-|Water                               |1 cup            |
-|Fresh ginger, crushed               |1-inch piece     |
-|Green cardamom pods, lightly crushed|3                |
-|Cinnamon stick                      |½-inch piece     |
-|Clove                               |1                |
-|Black peppercorns (optional)        |2                |
-|Sugar                               |2–3 tsp, to taste|
+| Ingredient                                       |Quantity         |
+|--------------------------------------------------|----------------:|
+| Wagh Bakri CTC tea (or any other CTC tea leaves) |2½ tsp           |
+| Whole milk                                       |1½ cups          |
+| Water                                            |1 cup            |
+| Fresh ginger, crushed                            |1-inch piece     |
+| Green cardamom pods, lightly crushed             |3                |
+| Cinnamon stick                                   |½-inch piece     |
+| Clove                                            |1                |
+| Black peppercorns (optional)                     |2                |
+| Sugar                                            |2–3 tsp, to taste|
 
-> Use regular Wagh Bakri Premium Leaf Tea (CTC), rather than a premixed masala chai. The starting liquid quantity is 2½ cups; some evaporates during cooking.
+> Use regular Tea (CTC), rather than a premixed masala chai. The starting liquid quantity is 2½ cups; some evaporates during cooking.
 
 Instructions
 
@@ -35,7 +35,7 @@ Secrets for Better Chai
 • Use cardamom generously but cloves sparingly: one clove is enough for two cups.
 • Whole milk gives a rich, creamy mouthfeel.
 • Do not boil CTC tea in water for too long or it can become bitter.
-• Try ⅛ teaspoon fennel seeds for a delicate sweet aroma.
+• Try ⅛ teaspoon fennel seeds for a delicate sweet aroma. Some folks like it, i did not like it much.
 
 Adjustments
 
@@ -47,10 +47,6 @@ Adjustments
 
 Sugar options for two cups: none (0 tsp), lightly sweet (1 tsp), or traditional sweetness (about 2½ tsp). Adjust to taste.
 
-Optional South Indian-Inspired Variation
-
-Add ¼ teaspoon lightly crushed fennel seeds and a tiny pinch of dried ginger powder (sukku) to the simmering water for a rounder, fragrant chai.
-
-Scaling
+**Scaling**
 
 For one cup, halve the ingredients. For four cups, double them. Keep an eye on the saucepan because milk rises quickly as it boils.

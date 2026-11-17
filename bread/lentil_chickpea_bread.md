@@ -34,16 +34,28 @@ Weigh the lentils and chickpeas while dry. If using ready-ground flaxseed meal, 
 | Air fryer | 340°F (170°C) | About 60 minutes. Check at 40 minutes, then continue for about 20 minutes. |
 | Conventional oven | 350°F (about 175–180°C), preheated | 50–60 minutes on a parchment-lined baking sheet. |
 
-## Four variations
+## Twelve flavor variations
 
 Choose one variation per loaf. Stir seasonings and mix-ins in before the dough rests. Add toppings after shaping.
 
-| Variation | What to change |
-| --- | --- |
-| **Cumin, coriander & chili** | Omit the rosemary. Add ½ teaspoon ground cumin, ½ teaspoon ground coriander, and ⅛ teaspoon Kashmiri chili powder. |
-| **Garlic & rosemary** | Keep the ¼ teaspoon dried rosemary and add ½ teaspoon garlic powder. Sprinkle 1 teaspoon sesame seeds on top. |
-| **Pumpkin & sunflower seed** | Fold in 1 tablespoon unsalted pumpkin seeds and 1 tablespoon unsalted sunflower seeds. Press an extra teaspoon of mixed seeds onto the top. |
-| **Olive & oregano** | Replace the rosemary with ½ teaspoon dried oregano. Fold in ¼ cup chopped, well-drained pitted olives. Halve or omit the added salt if the olives are particularly salty. |
+| Variation | What to change                                                                                                                                                                                                                         |
+| --- |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Cumin, coriander & chili** | Omit the rosemary. Add ½ teaspoon ground cumin, ½ teaspoon ground coriander, and ⅛ teaspoon Kashmiri chili powder or couple of greem chillies.                                                                                         |
+| **Garlic & rosemary** | Keep the ¼ teaspoon dried rosemary and add ½ teaspoon garlic powder. Sprinkle 1 teaspoon sesame seeds on top.                                                                                                                          |
+| **Pumpkin & sunflower seed** | Fold in 1 tablespoon unsalted pumpkin seeds and 1 tablespoon unsalted sunflower seeds. Press an extra teaspoon of mixed seeds onto the top.                                                                                            |
+| **Olive & oregano** | Replace the rosemary with ½ teaspoon dried oregano. Fold in ¼ cup chopped, well-drained pitted olives. Halve or omit the added salt if the olives are particularly salty.                                                              |
+| **Carrot, ginger & cumin** | Omit the rosemary. Add ¼ cup finely grated carrot, squeezed dry, ½ teaspoon finely grated ginger, and ½ teaspoon ground cumin.                                                                                                         |
+| **Methi & ajwain** | Omit the rosemary. Crush 1 teaspoon kasuri methi (dried fenugreek leaves) between your palms and add it with ¼ teaspoon lightly crushed ajwain.                                                                                        |
+| **Curry leaf, mustard seed & coconut** | Omit the rosemary. Warm 1 teaspoon neutral oil, add ½ teaspoon black mustard seeds, and let them pop. Add 6 finely sliced curry leaves for a few seconds. Cool, then stir into the dough with 1 tablespoon unsweetened grated coconut. |
+| **Sun-dried tomato & basil** | Replace the rosemary with ½ teaspoon dried basil. Fold in 2 tablespoons finely chopped sun-dried tomatoes. If oil-packed, drain and blot first.                                                                                        |
+| **Spinach, garlic & sesame** | Omit the rosemary. Fold in ¼ cup cooked spinach, measured after squeezing dry and chopping, and ½ teaspoon garlic powder. Sprinkle with 1 teaspoon sesame seeds.                                                                       |
+| **Lemon, dill & black pepper** | Replace the rosemary with 1 teaspoon finely grated lemon zest, 1 tablespoon chopped fresh dill, and ¼ teaspoon freshly ground black pepper.                                                                                            |
+| **Cinnamon, raisin & walnut** | Omit the rosemary. Add ¾ teaspoon ground cinnamon, 2 tablespoons chopped raisins, and 2 tablespoons chopped unsalted walnuts. Chop the raisins finely to spread the sweetness through the loaf.                                        |
+| **Cardamom, date & almond** | Omit the rosemary. Add ½ teaspoon ground cardamom, 2 tablespoons finely chopped pitted dates, and 2 tablespoons chopped unsalted almonds.                                                                                              |
+
+**Dough texture.** For carrot, spinach, or tomato, drain and blot or squeeze well. Start with the lower end of the blending water range. After resting, the dough should hold a low oval, and you can give it the full 40 minutes if it is still soft. Check vegetable loaves for wet batter in the center before taking them out.
+
+The raisin and date loaves get their sweetness from dried fruit. Try them toasted with almond butter. The savory loaves pair well with the avocado spread below.
 
 ## Garlic-dill avocado spread
 
