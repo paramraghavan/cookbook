@@ -23,8 +23,8 @@ A soft, moist, mildly sweet loaf with dates, walnuts, almonds, and cardamom. Mad
 | Chopped almonds | ¼ cup |
 | Raisins (optional) | 2 tbsp |
 | Neutral oil or melted butter | 2 tbsp |
-| Baking powder | 1½ tsp |
-| Baking soda | ½ tsp |
+| Baking powder | ½ tsp |
+| Baking soda | ¼ tsp |
 | Ground cardamom | ½ tsp |
 | Ground cinnamon | ¼ tsp |
 | Vanilla extract | ½ tsp |

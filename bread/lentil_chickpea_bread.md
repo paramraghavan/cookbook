@@ -14,7 +14,7 @@ Adapted from [BREADOR’s air-fryer lentil and chickpea bread video](https://you
 | Dried chickpeas (kabuli chana) | 150 g (about ¾ cup) |
 | Water for blending | 6–8 tablespoons total, plus separate water for soaking |
 | Whole flaxseeds, ground into a fine meal | 80 g (about ½ cup whole), plus a pinch of whole seeds for topping |
-| Baking powder | 1 teaspoon |
+| Baking powder | ½ teaspoon |
 | Fine salt | ¼ teaspoon |
 | Dried rosemary | ¼ teaspoon, optional |
 
@@ -24,6 +24,7 @@ Weigh the lentils and chickpeas while dry. If using ready-ground flaxseed meal, 
 
 1. **Soak overnight.** Put the lentils and chickpeas in separate bowls and cover them generously with water. Refrigerate overnight, then rinse and drain each well.
 2. **Blend separately.** Blend the drained lentils with 3 tablespoons of fresh water until smooth. Blend the drained chickpeas separately with another 3 tablespoons until they form a thick paste. Add up to 1 more tablespoon per batch if needed to keep the blender moving.
+2.1 Mix enough water to ground flaxseed, leave it for 15 minutes until thick and gel-like.
 3. **Mix and rest.** Combine both pastes, the ground flaxseed, baking powder, salt, and rosemary if using. Cover and rest for 20–40 minutes. The flaxseed will absorb water and the mixture should become thick enough to shape.
 4. **Shape.** Wet your hands and form a low oval loaf on parchment paper. Score the top with a knife, lightly mist or brush with water, and sprinkle with whole flaxseeds. In an air fryer, trim the paper to fit and keep it weighed down under the loaf.
 5. **Bake using either method below.** The loaf should be firm and golden, and a skewer inserted in the center should come out without wet batter. If the center is still wet, continue in 5-minute increments.
