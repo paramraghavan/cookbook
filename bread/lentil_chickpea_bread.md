@@ -5,7 +5,7 @@ This egg-free, yeast-free loaf gets its structure from soaked red lentils, chick
 **Makes 1 small loaf** · **Soak overnight** · **Rest 20–40 minutes** · **Bake 50–60 minutes**
 
 Adapted from [BREADOR’s air-fryer lentil and chickpea bread video](https://youtu.be/CHY7w4YmgNI).
-
+> comes out good, but not that tasty, parupau or ulundu vada or pakdo's taste way better
 ## Ingredients
 
 | Ingredient | Amount |
