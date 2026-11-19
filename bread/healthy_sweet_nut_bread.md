@@ -5,30 +5,30 @@ A soft, moist, mildly sweet loaf with dates, walnuts, almonds, and cardamom. Mad
 - **Yield:** 1 loaf (8–10 slices)
 - **Pan:** 8 × 4-inch loaf pan
 - **Prep:** 15–20 minutes (plus 10–15 minutes to soak dates)
-- **Bake:** 40–50 minutes
+- **Bake:** About 40–50 minutes, with the first check at 35 minutes
 - **Oven:** 350°F (175°C)
 
 ## Ingredients
 
-| Ingredient | Quantity |
-|---|---:|
-| Whole wheat flour (atta) | 1½ cups |
-| Milk | ¾ cup, divided |
-| Plain yogurt (curd) | ½ cup |
-| **Ground flaxseed (optional flax egg)** | **1 tbsp** |
-| **Warm water for flax egg** | **3 tbsp** |
-| Soft pitted dates | ½ cup |
-| Sweetener (optional, choose one) | 1–2 tbsp honey or maple syrup for a mild loaf, or ⅓ cup packed light brown sugar for a sweeter loaf |
-| Chopped walnuts | ¼ cup |
-| Chopped almonds | ¼ cup |
-| Raisins (optional) | 2 tbsp |
-| Neutral oil or melted butter | 2 tbsp |
-| Baking powder | ½ tsp |
-| Baking soda | ¼ tsp |
-| Ground cardamom | ½ tsp |
-| Ground cinnamon | ¼ tsp |
-| Vanilla extract | ½ tsp |
-| Salt | ¼ tsp |
+| Ingredient                                      | Quantity |
+|-------------------------------------------------|---:|
+| Whole wheat flour (atta)                        | 1½ cups (about 180 g), spooned into the cup and leveled |
+| Whole Milk                                      | ½ cup for the date paste, plus up to ¼ cup as needed |
+| Plain whole-milk yogurt (curd) or Greek Yoghurt | ½ cup |
+| **Ground flaxseed (optional flax egg)**         | **1 tbsp** |
+| **Warm water for flax egg**                     | **3 tbsp** |
+| Soft pitted dates                               | ½ cup |
+| Sweetener (optional, choose one)                | 1–2 tbsp honey or maple syrup for a mild loaf, or ½ cup packed light brown sugar for a sweeter loaf |
+| Chopped walnuts                                 | ¼ cup |
+| Chopped almonds                                 | ¼ cup |
+| Raisins (optional)                              | 2 tbsp |
+| Neutral oil, preferably melted butter           | 3 tbsp (use oil for a softer crumb after cooling) |
+| Baking powder                                   | 1 tsp |
+| Baking soda                                     | ¼ tsp |
+| Ground cardamom - optional                      | ½ tsp |
+| Ground cinnamon  - optional                     | ¼ tsp |
+| Vanilla extract                                 | ½ tsp |
+| Salt                                            | ¼ tsp |
 
 ## Optional Adjustments
 
@@ -43,16 +43,16 @@ A soft, moist, mildly sweet loaf with dates, walnuts, almonds, and cardamom. Mad
 4. **Toast the nuts.** Lightly toast walnuts and almonds in a dry skillet over low heat for **2–3 minutes**. Let cool.
 5. **Combine dry ingredients.** Whisk together whole wheat flour, baking powder, baking soda, cardamom, cinnamon, and salt.
 6. **Combine wet ingredients.** Stir together the date paste, yogurt, oil or melted butter, vanilla, your chosen sweetener (if using), and prepared flax egg (if using).
-7. **Make the batter.** Fold dry ingredients into wet ingredients just until combined. Gradually add the remaining **¼ cup milk**, as needed, for a **thick, spoonable batter**. Do not overmix.
+7. **Make the batter.** Gently fold the dry ingredients into the wet ingredients. If the batter is stiff or holds sharp peaks, fold in the reserved milk **1 tbsp at a time**. Stop when the batter drops easily from a spatula in thick dollops and spreads with a light touch. Fold just until no dry flour remains. If you use honey, maple syrup, or the flax egg, you may need less reserved milk.
 8. **Add nuts and raisins.** Fold in the cooled nuts and optional raisins. Reserve a little for the topping if desired.
-9. **Bake.** Spread batter evenly in the pan. Bake for **40–50 minutes**, checking from 40 minutes. A toothpick inserted in the center should come out clean or with a few moist crumbs, not wet batter. If the top browns too quickly, tent loosely with foil.
-10. **Cool.** Leave in the pan for **15 minutes**, then move to a rack and cool before slicing.
+9. **Bake.** Spread the batter evenly in the pan. Start checking at **35 minutes** and remove the loaf as soon as the center is set and a skewer comes out with a few moist crumbs or clean. If you see wet batter, recheck in **3–5 minutes**. An instant-read thermometer should read **200–205°F (93–96°C)** at the center. If the top browns quickly, especially with brown sugar, tent loosely with foil once the top is set.
+10. **Cool.** Leave in the pan for **15 minutes**, then move to a rack. Cool completely before slicing or wrapping airtight.
 
 ## Variations
 
 ### 1. Date & Walnut (Naturally Sweet)
 - Use **½ cup walnuts** and omit almonds.
-- Skip the honey if the dates are sweet enough.
+- Skip the optional sweetener if the dates are sweet enough.
 - Add a pinch of nutmeg.
 
 ### 2. Almond & Pistachio
@@ -61,7 +61,7 @@ A soft, moist, mildly sweet loaf with dates, walnuts, almonds, and cardamom. Mad
 
 ### 3. Banana & Walnut
 - Add **1 small mashed ripe banana**.
-- Start with less milk and add only enough for a thick batter; the loaf may need a few extra minutes to bake.
+- Hold back the reserved milk and add it only if needed in step 7. The loaf may need a few extra minutes to bake.
 
 ### 4. Cinnamon & Raisin
 - Increase cinnamon to **¾ tsp**.
@@ -70,8 +70,7 @@ A soft, moist, mildly sweet loaf with dates, walnuts, almonds, and cardamom. Mad
 ## Healthier Options
 
 - **Less added sugar:** Skip the optional sweetener and let the dates sweeten the loaf.
-- **More fiber and binding:** Use the optional **flax egg** above. Since the flax egg adds water, start with less of the remaining **¼ cup milk**, adding only enough to make a thick, spoonable batter.
-- **Texture note:** A flax egg can improve moisture retention and cohesion but may make this already eggless yogurt-based loaf a little denser; it is not guaranteed to make it fluffier.
+- **Optional flax egg:** Leave it out for a lighter crumb. Use it if the loaf tends to crumble when sliced, and add only as much reserved milk as the batter needs.
 - **Different flour blend:** Replace **½ cup atta** with oat flour for a softer variation; adjust milk as needed.
 - **Extra nutty flavor:** Toast nuts before adding them.
 

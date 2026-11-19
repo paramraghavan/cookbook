@@ -2,66 +2,51 @@
 
 This egg-free, yeast-free loaf gets its structure from soaked red lentils, chickpeas, and ground flaxseed. It has a hearty crumb and slices best once completely cool.
 
-**Makes 1 small loaf** · **Soak overnight** · **Rest 20–40 minutes** · **Bake 50–60 minutes**
+**Makes 1 small loaf** · **Soak lentils overnight** · **Rest 10 minutes** · **Oven bake about 45–60 minutes**
 
 Adapted from [BREADOR’s air-fryer lentil and chickpea bread video](https://youtu.be/CHY7w4YmgNI).
-> comes out good, but not that tasty, parupau or ulundu vada or pakdo's taste way better
+
 ## Ingredients
 
 | Ingredient | Amount |
 | --- | --- |
 | Dried red lentils (split masoor dal) | 150 g (about ¾ cup) |
-| Dried chickpeas (kabuli chana) | 150 g (about ¾ cup) |
-| Water for blending | 6–8 tablespoons total, plus separate water for soaking |
-| Whole flaxseeds, ground into a fine meal | 80 g (about ½ cup whole), plus a pinch of whole seeds for topping |
-| Baking powder | ½ teaspoon |
+| Cooked chickpeas (kabuli chana), drained | 300 g (about 1¾ cups), canned or cooked from dry |
+| Fresh water for blending and adjusting the batter | Start with 6 tablespoons, plus more as needed |
+| Ground flaxseed meal | 40 g, plus a pinch of whole flaxseeds for topping if desired |
+| Olive oil or neutral oil | 2 tablespoons |
+| Baking powder | 1½ teaspoons |
 | Fine salt | ¼ teaspoon |
 | Dried rosemary | ¼ teaspoon, optional |
 
-Weigh the lentils and chickpeas while dry. If using ready-ground flaxseed meal, weigh out 80 g.
+Weigh the lentils before soaking and the chickpeas after cooking and draining. For dried chickpeas, soak them separately, drain, and cook in fresh water until they crush easily between your fingers. Let them cool before blending. Canned chickpeas only need rinsing and draining.
 
 ## Method
 
-1. **Soak overnight.** Put the lentils and chickpeas in separate bowls and cover them generously with water. Refrigerate overnight, then rinse and drain each well.
-2. **Blend separately.** Blend the drained lentils with 3 tablespoons of fresh water until smooth. Blend the drained chickpeas separately with another 3 tablespoons until they form a thick paste. Add up to 1 more tablespoon per batch if needed to keep the blender moving.
-2.1 Mix enough water to ground flaxseed, leave it for 15 minutes until thick and gel-like.
-3. **Mix and rest.** Combine both pastes, the ground flaxseed, baking powder, salt, and rosemary if using. Cover and rest for 20–40 minutes. The flaxseed will absorb water and the mixture should become thick enough to shape.
-4. **Shape.** Wet your hands and form a low oval loaf on parchment paper. Score the top with a knife, lightly mist or brush with water, and sprinkle with whole flaxseeds. In an air fryer, trim the paper to fit and keep it weighed down under the loaf.
-5. **Bake using either method below.** The loaf should be firm and golden, and a skewer inserted in the center should come out without wet batter. If the center is still wet, continue in 5-minute increments.
-6. **Cool completely.** Transfer the loaf to a wire rack and let it reach room temperature before slicing. Toast the slices if you like crisp edges.
+1. **Soak the lentils.** Cover the red lentils generously with water and refrigerate overnight. Rinse and drain well. Discard the soaking water.
+2. **Blend separately.** Blend the drained lentils with **3 tablespoons fresh water** until smooth. Blend the cooked chickpeas separately with **3 tablespoons fresh water** until creamy. If the blender stalls, scrape down the jar and add water **1 tablespoon at a time** as needed.
+3. **Mix and rest.** Stir both purées together with the flaxseed meal, oil, salt, and rosemary if using. Cover and rest for **10 minutes** while the oven preheats. The flaxseed will thicken the mixture.
+4. **Adjust the batter.** Stir in extra water **1 tablespoon at a time** if needed. Aim for a thick batter that drops from a spatula in soft mounds and spreads easily in the pan. Sprinkle the baking powder evenly over the batter and fold it in thoroughly.
+5. **Fill the pan.** Spoon the batter into a parchment-lined **8 × 4-inch metal loaf pan**. For an air fryer, use a metal pan that fits with space around it for airflow. Fill the pan up to **two-thirds full** and bake any extra batter in a small greased oven-safe dish, checking it earlier than the loaf. Smooth the top with a damp spatula and sprinkle with whole flaxseeds if desired.
+6. **Bake using either method below.** Start checking at the time listed. Take the loaf out once the center is set and a skewer comes out clean or with a few moist crumbs. If you see wet paste, bake for **5 more minutes** and check again. In the conventional oven, if the top browns well before the center sets, tent loosely with foil.
+7. **Cool and store.** Let the loaf sit in the pan for **15 minutes**, then lift it onto a rack and cool completely before slicing. Wrap airtight once cool to keep the crust soft. Refrigerate, or freeze individual slices and warm them gently before serving.
 
 | Method | Temperature | Time |
 | --- | --- | --- |
-| Air fryer | 340°F (170°C) | About 60 minutes. Check at 40 minutes, then continue for about 20 minutes. |
-| Conventional oven | 350°F (about 175–180°C), preheated | 50–60 minutes on a parchment-lined baking sheet. |
+| Air fryer | 320°F (160°C), preheated | Start checking at **35 minutes**. The time depends on the pan depth and air fryer. |
+| Conventional oven | 350°F (175°C), preheated | About **45–60 minutes**. Start checking at **45 minutes**. |
 
-## Twelve flavor variations
+## Four variations
 
-Choose one variation per loaf. Stir seasonings and mix-ins in before the dough rests. Add toppings after shaping.
+Choose one variation per loaf. Stir seasonings and mix-ins in before the batter rests. Add toppings after filling the pan.
 
-| Variation | What to change                                                                                                                                                                                                                         |
-| --- |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Cumin, coriander & chili** | Omit the rosemary. Add ½ teaspoon ground cumin, ½ teaspoon ground coriander, and ⅛ teaspoon Kashmiri chili powder or couple of greem chillies.                                                                                         |
-| **Garlic & rosemary** | Keep the ¼ teaspoon dried rosemary and add ½ teaspoon garlic powder. Sprinkle 1 teaspoon sesame seeds on top.                                                                                                                          |
-| **Pumpkin & sunflower seed** | Fold in 1 tablespoon unsalted pumpkin seeds and 1 tablespoon unsalted sunflower seeds. Press an extra teaspoon of mixed seeds onto the top.                                                                                            |
-| **Olive & oregano** | Replace the rosemary with ½ teaspoon dried oregano. Fold in ¼ cup chopped, well-drained pitted olives. Halve or omit the added salt if the olives are particularly salty.                                                              |
-| **Carrot, ginger & cumin** | Omit the rosemary. Add ¼ cup finely grated carrot, squeezed dry, ½ teaspoon finely grated ginger, and ½ teaspoon ground cumin.                                                                                                         |
-| **Methi & ajwain** | Omit the rosemary. Crush 1 teaspoon kasuri methi (dried fenugreek leaves) between your palms and add it with ¼ teaspoon lightly crushed ajwain.                                                                                        |
-| **Curry leaf, mustard seed & coconut** | Omit the rosemary. Warm 1 teaspoon neutral oil, add ½ teaspoon black mustard seeds, and let them pop. Add 6 finely sliced curry leaves for a few seconds. Cool, then stir into the dough with 1 tablespoon unsweetened grated coconut. |
-| **Sun-dried tomato & basil** | Replace the rosemary with ½ teaspoon dried basil. Fold in 2 tablespoons finely chopped sun-dried tomatoes. If oil-packed, drain and blot first.                                                                                        |
-| **Spinach, garlic & sesame** | Omit the rosemary. Fold in ¼ cup cooked spinach, measured after squeezing dry and chopping, and ½ teaspoon garlic powder. Sprinkle with 1 teaspoon sesame seeds.                                                                       |
-| **Lemon, dill & black pepper** | Replace the rosemary with 1 teaspoon finely grated lemon zest, 1 tablespoon chopped fresh dill, and ¼ teaspoon freshly ground black pepper.                                                                                            |
-| **Cinnamon, raisin & walnut** | Omit the rosemary. Add ¾ teaspoon ground cinnamon, 2 tablespoons chopped raisins, and 2 tablespoons chopped unsalted walnuts. Chop the raisins finely to spread the sweetness through the loaf.                                        |
-| **Cardamom, date & almond** | Omit the rosemary. Add ½ teaspoon ground cardamom, 2 tablespoons finely chopped pitted dates, and 2 tablespoons chopped unsalted almonds.                                                                                              |
-
-**Dough texture.** For carrot, spinach, or tomato, drain and blot or squeeze well. Start with the lower end of the blending water range. After resting, the dough should hold a low oval, and you can give it the full 40 minutes if it is still soft. Check vegetable loaves for wet batter in the center before taking them out.
-
-The raisin and date loaves get their sweetness from dried fruit. Try them toasted with almond butter. The savory loaves pair well with the avocado spread below.
+| Variation | What to change |
+| --- | --- |
+| **Cumin, coriander & chili** | Omit the rosemary. Add ½ teaspoon ground cumin, ½ teaspoon ground coriander, and ⅛ teaspoon Kashmiri chili powder. |
+| **Garlic & rosemary** | Keep the ¼ teaspoon dried rosemary and add ½ teaspoon garlic powder. Sprinkle 1 teaspoon sesame seeds on top. |
+| **Pumpkin & sunflower seed** | Fold in 1 tablespoon unsalted pumpkin seeds and 1 tablespoon unsalted sunflower seeds. Press an extra teaspoon of mixed seeds onto the top. |
+| **Olive & oregano** | Replace the rosemary with ½ teaspoon dried oregano. Fold in ¼ cup chopped, well-drained pitted olives. Halve or omit the added salt if the olives are particularly salty. |
 
 ## Garlic-dill avocado spread
 
 Mash 1 ripe avocado with 1 small grated garlic clove and finely chopped fresh dill to taste. Spread over cooled or toasted slices.
-
-## Video reference
-
-[BREADOR’s original YouTube recipe](https://youtu.be/CHY7w4YmgNI) · [Shaping at 2:39](https://www.youtube.com/watch?v=CHY7w4YmgNI&t=159s) · [Air-fryer settings at 3:15](https://www.youtube.com/watch?v=CHY7w4YmgNI&t=195s) · [Checking and slicing at 3:56](https://www.youtube.com/watch?v=CHY7w4YmgNI&t=236s)
